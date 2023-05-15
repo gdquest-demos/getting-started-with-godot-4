@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bu5t3cktwblie"]
+[gd_scene load_steps=6 format=3 uid="uid://cly8xt58ent6c"]
 
 [ext_resource type="Script" path="res://fps/turret.gd" id="1_vuds5"]
 
@@ -50,6 +50,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.9
 shape = SubResource("CylinderShape3D_4wy0k")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
