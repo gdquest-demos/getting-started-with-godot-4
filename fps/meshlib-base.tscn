@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://hjxq83ufyohb"]
+
+[ext_resource type="Texture2D" uid="uid://dfeh7fbk4rmaq" path="res://addons/kenny_prototype_material/textures/dark/texture_03.png" id="1_qkdsc"]
+[ext_resource type="Script" path="res://addons/kenny_prototype_material/kenny_prototype_material_3d.gd" id="2_myehk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4bjow"]
+albedo_texture = ExtResource("1_qkdsc")
+uv1_triplanar = true
+script = ExtResource("2_myehk")
+texture_color = "dark"
+type = 3
+
+[sub_resource type="BoxMesh" id="BoxMesh_t3hkn"]
+material = SubResource("StandardMaterial3D_4bjow")
+size = Vector3(2, 2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sr7oj"]
+size = Vector3(2, 2, 2)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="floor" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_t3hkn")
+skeleton = NodePath("StaticBody3D")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
+shape = SubResource("BoxShape3D_sr7oj")
+
+[node name="floor_orange" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("BoxMesh_t3hkn")
+skeleton = NodePath("StaticBody3D")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor_orange"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_orange/StaticBody3D"]
+shape = SubResource("BoxShape3D_sr7oj")

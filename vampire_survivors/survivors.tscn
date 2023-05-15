@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://culof44ypm2u"]
+
+[ext_resource type="Script" path="res://vampire_survivors/game.gd" id="1_aiquj"]
+[ext_resource type="PackedScene" uid="uid://blefffgq42g6v" path="res://vampire_survivors/player.tscn" id="2_oekym"]
+[ext_resource type="PackedScene" uid="uid://dxmisl2k2kiwm" path="res://vampire_survivors/mob.tscn" id="5_iqmcr"]
+
+[sub_resource type="Curve2D" id="Curve2D_cp6e5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1055, -697, 0, 0, 0, 0, 1057, -697, 0, 0, 0, 0, 1057, 671, 0, 0, 0, 0, -1055, 663, 0, 0, 0, 0, -1055, -689)
+}
+point_count = 5
+
+[node name="Game" type="Node"]
+script = ExtResource("1_aiquj")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Player" parent="." instance=ExtResource("2_oekym")]
+
+[node name="Path2D" type="Path2D" parent="Player"]
+curve = SubResource("Curve2D_cp6e5")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-1055, -697)
+
+[node name="Mob" parent="." instance=ExtResource("5_iqmcr")]
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.439216)
+
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -358.0
+offset_top = -107.0
+offset_right = 358.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 124
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlrkovf8lbjy2"]
+
+[ext_resource type="Script" path="res://vampire_survivors/Gun.gd" id="1_sluxj"]
+[ext_resource type="Texture2D" uid="uid://bwmctu35vktfj" path="res://icon.svg" id="2_dyoc6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nthgb"]
+radius = 987.0
+
+[node name="Gun" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("1_sluxj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nthgb")
+
+[node name="WeaponPivot" type="Marker2D" parent="."]
+position = Vector2(116, 0)
+gizmo_extents = 47.7
+
+[node name="Icon" type="Sprite2D" parent="WeaponPivot"]
+scale = Vector2(0.25, 0.53125)
+texture = ExtResource("2_dyoc6")
+
+[node name="Icon2" type="Sprite2D" parent="WeaponPivot"]
+position = Vector2(49, -24)
+scale = Vector2(1, 0.1875)
+texture = ExtResource("2_dyoc6")
+
+[node name="ShootingPoint" type="Marker2D" parent="WeaponPivot"]
+position = Vector2(112, -24)
+gizmo_extents = 30.6
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.353
+one_shot = true
