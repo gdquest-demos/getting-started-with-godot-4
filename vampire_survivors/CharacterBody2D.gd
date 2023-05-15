@@ -4,8 +4,8 @@ signal health_depleted
 
 var health = 100.0
 
-@onready var hurt_box = $HurtBox
-@onready var health_bar = $HealthBar
+@onready var hurt_box = %HurtBox
+@onready var health_bar = %HealthBar
 
 
 func _physics_process(delta):

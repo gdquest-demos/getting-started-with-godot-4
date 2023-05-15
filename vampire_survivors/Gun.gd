@@ -1,7 +1,7 @@
 extends Area2D
 
-@onready var timer = $Timer
-@onready var shooting_point = $WeaponPivot/ShootingPoint
+@onready var timer = %Timer
+@onready var shooting_point = %ShootingPoint
 
 func _process(delta):
 	var enemies_in_range = get_overlapping_bodies()

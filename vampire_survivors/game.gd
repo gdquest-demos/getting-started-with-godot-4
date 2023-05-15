@@ -1,8 +1,8 @@
 extends Node
 
 @onready var path_follow_2d = %PathFollow2D
-@onready var label = $Label
-@onready var game_over = $GameOver
+@onready var label = %Label
+@onready var game_over = %GameOver
 
 
 func spawn_mob():
