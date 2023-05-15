@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-# Unecessary at the beginning, it's fine to have the mouse not be captured
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -8,10 +7,7 @@ func _ready():
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		rotation_degrees.y -= event.relative.x * 0.5
-		# Start with:
-		# rotation_degrees.x -= event.relative.y * 0.5
 		rotation_degrees.x = clamp(rotation_degrees.x - event.relative.y / 5, -80, 80)
-	# Ref _ready(): uncesseary in the beginning
 	elif event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
