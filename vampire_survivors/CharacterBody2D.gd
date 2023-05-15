@@ -22,4 +22,6 @@ func _physics_process(delta):
 		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
 		health_bar.value = health
 		if health <= 0.0:
+			# consider using queue_free and listening to tree_exited
+			# unless you mean to have an animation / juice
 			health_depleted.emit()
