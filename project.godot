@@ -21,7 +21,7 @@ window/size/viewport_height=1080
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/kenny_prototype_material/plugin.cfg")
+enabled=PackedStringArray("res://addons/kenny_prototype_material/plugin.cfg", "res://addons/colorpicker_presets/plugin.cfg")
 
 [input]
 
