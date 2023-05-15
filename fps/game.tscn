@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://bawouct4sv3vp"]
 
-[ext_resource type="PackedScene" uid="uid://b31mfiegc7ph0" path="res://fps/character_body_3d.tscn" id="1_fqdcw"]
+[ext_resource type="PackedScene" path="res://fps/character_body_3d.tscn" id="1_fqdcw"]
 [ext_resource type="MeshLibrary" uid="uid://cptau8ajj8e15" path="res://fps/test mesh lib.tres" id="2_n16q7"]
-[ext_resource type="PackedScene" uid="uid://bu5t3cktwblie" path="res://fps/turret.tscn" id="4_wrrt3"]
+[ext_resource type="PackedScene" uid="uid://cly8xt58ent6c" path="res://fps/turret.tscn" id="4_wrrt3"]
 [ext_resource type="PackedScene" uid="uid://of282i1rs8j2" path="res://fps/button.tscn" id="4_ywlvn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fnwus"]
@@ -38,6 +38,7 @@ shadow_enabled = true
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_fqdcw")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.26828, 2.86949, 0)
+collision_mask = 3
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("2_n16q7")
@@ -78,4 +79,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6276, 8.74787, 2.42495)
 omni_range = 8.98867
 
 [node name="Turret" parent="." instance=ExtResource("4_wrrt3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2, 18)

@@ -1,4 +1,4 @@
-extends Area3D
+extends StaticBody3D
 
 @export var speed = 10
 

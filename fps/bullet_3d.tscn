@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg16q6dpbb4hy"]
+[gd_scene load_steps=4 format=3 uid="uid://dv3d3iqnhccjj"]
 
 [ext_resource type="Script" path="res://fps/bullet_3d.gd" id="1_gxepa"]
 
@@ -9,9 +9,9 @@ radius = 0.35
 radius = 0.35
 height = 0.7
 
-[node name="Bullet3D" type="Area3D"]
+[node name="Bullet3D" type="StaticBody3D"]
 top_level = true
-collision_layer = 0
+collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_gxepa")
 
