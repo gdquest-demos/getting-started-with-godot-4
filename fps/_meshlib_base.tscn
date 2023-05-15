@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://hjxq83ufyohb"]
 
-[ext_resource type="Texture2D" uid="uid://dfeh7fbk4rmaq" path="res://addons/kenny_prototype_material/textures/dark/texture_03.png" id="1_qkdsc"]
-[ext_resource type="Script" path="res://addons/kenny_prototype_material/kenny_prototype_material_3d.gd" id="2_myehk"]
+[ext_resource type="Texture2D" uid="uid://dfeh7fbk4rmaq" path="res://addons/kenny_prototype_material/textures/dark/texture_03.png" id="1_jkg87"]
+[ext_resource type="Script" path="res://addons/kenny_prototype_material/kenny_prototype_material_3d.gd" id="2_rv3lx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4bjow"]
-albedo_texture = ExtResource("1_qkdsc")
+albedo_texture = ExtResource("1_jkg87")
 uv1_triplanar = true
-script = ExtResource("2_myehk")
+script = ExtResource("2_rv3lx")
 texture_color = "dark"
 type = 3
 

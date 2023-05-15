@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cwrwj8dl5xgoh"
-path="res://.godot/imported/level.blend-08197778a545e20e4927823da4c9d258.scn"
+path="res://.godot/imported/_level_greybox_blender_export.blend-1a444ed68a7f6a9cddb395d645cb720a.scn"
 
 [deps]
 
-source_file="res://fps/level.blend"
-dest_files=["res://.godot/imported/level.blend-08197778a545e20e4927823da4c9d258.scn"]
+source_file="res://fps/_level_greybox_blender_export.blend"
+dest_files=["res://.godot/imported/_level_greybox_blender_export.blend-1a444ed68a7f6a9cddb395d645cb720a.scn"]
 
 [params]
 
