@@ -21,8 +21,9 @@ func _physics_process(delta):
 	const GRAVITY = 20
 	const JUMP_VELOCITY = 10
 
-	var input_direction = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
-	var direction = transform.basis * Vector3(input_direction.x, 0, input_direction.y)
+	var input_direction_2D = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
+	var input_direction_3D = Vector3(input_direction_2D.x, 0, input_direction_2D.y)
+	var direction = transform.basis * input_direction_3D
 	direction = direction.normalized()
 	
 	velocity.x = direction.x * SPEED
