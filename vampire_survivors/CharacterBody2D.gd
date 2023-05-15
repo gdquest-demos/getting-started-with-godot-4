@@ -4,8 +4,8 @@ signal health_depleted
 
 var health = 100.0
 
-@onready var hurt_box = $HurtBox
-@onready var health_bar = $HealthBar
+@onready var hurt_box = %HurtBox
+@onready var health_bar = %HealthBar
 
 
 func _physics_process(delta):
@@ -22,4 +22,6 @@ func _physics_process(delta):
 		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
 		health_bar.value = health
 		if health <= 0.0:
+			# consider using queue_free and listening to tree_exited
+			# unless you mean to have an animation / juice
 			health_depleted.emit()

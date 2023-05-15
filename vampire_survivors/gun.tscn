@@ -29,9 +29,13 @@ scale = Vector2(1, 0.1875)
 texture = ExtResource("2_dyoc6")
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot"]
+unique_name_in_owner = true
 position = Vector2(112, -24)
 gizmo_extents = 30.6
 
 [node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
 wait_time = 0.353
-one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -28,6 +28,7 @@ position = Vector2(-1055, -697)
 [node name="Mob" parent="." instance=ExtResource("5_iqmcr")]
 
 [node name="GameOver" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="GameOver"]
@@ -39,6 +40,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.439216)
 
 [node name="Label" type="Label" parent="GameOver/ColorRect"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

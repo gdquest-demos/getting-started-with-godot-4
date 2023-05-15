@@ -1,7 +1,7 @@
 extends StaticBody3D
 
-@onready var timer = $Timer
-@onready var marker_3d = $MeshInstance3D2/Marker3D
+@onready var timer = %Timer
+@onready var marker_3d = %Marker3D
 
 
 func _on_area_3d_body_entered(body):

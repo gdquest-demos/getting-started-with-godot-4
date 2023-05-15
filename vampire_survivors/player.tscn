@@ -24,6 +24,7 @@ shape = SubResource("RectangleShape2D_csncd")
 [node name="Gun" parent="." instance=ExtResource("3_bt0kc")]
 
 [node name="HurtBox" type="Area2D" parent="."]
+unique_name_in_owner = true
 collision_layer = 0
 collision_mask = 2
 monitorable = false
@@ -32,6 +33,7 @@ monitorable = false
 shape = SubResource("RectangleShape2D_kfffa")
 
 [node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
 z_index = 100
 offset_left = -127.0
 offset_top = -149.0

@@ -1,6 +1,6 @@
 extends Area3D
 
-@onready var animation_player = $AnimationPlayer
+@onready var animation_player = %AnimationPlayer
 
 
 func _on_body_entered(body):
