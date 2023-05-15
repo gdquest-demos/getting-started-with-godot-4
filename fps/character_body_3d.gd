@@ -1,3 +1,5 @@
+# Note: Name this by the name of the final player mesh, do not keep the file name
+# "character_body_3d"
 extends CharacterBody3D
 
 func _ready():
