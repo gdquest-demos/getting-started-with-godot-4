@@ -15,8 +15,9 @@ func _enter_tree() -> void:
 		presets_raw = presets_raw.slice(presets_raw.find("#") + 1)
 		var presets := Array(presets_raw).map(
 			func(s: String):
-				var rgb := Array(s.strip_edges().split(" ").slice(0, -1)).map(
-					func(s: String): return s.to_int()
+				var rgb := (Array(s.strip_edges().split(" ").slice(0, -1))
+					.filter(func(s: String): return not s.is_empty())
+					.map(func(s: String): return s.to_int())
 				)
 				return Color8(rgb[0], rgb[1], rgb[2])
 		)
