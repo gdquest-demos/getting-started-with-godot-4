@@ -1,0 +1,102 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbra81svcey10"]
+
+[ext_resource type="PackedScene" uid="uid://copvdmva1mitl" path="res://assets/characters/bat/bat.tscn" id="1_1qf7g"]
+[ext_resource type="PackedScene" uid="uid://f64cyd0psfvd" path="res://assets/trees/pine_tree.tscn" id="1_q7jyy"]
+[ext_resource type="PackedScene" uid="uid://csda0c7jdxpqn" path="res://assets/characters/slime/slime.tscn" id="2_qdjtg"]
+[ext_resource type="PackedScene" uid="uid://h7rqjexsb2a0" path="res://assets/test_player/test_player.tscn" id="3_kq48k"]
+
+[node name="TestScene" type="Node"]
+
+[node name="World2D" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Trees" type="Node2D" parent="World2D"]
+y_sort_enabled = true
+
+[node name="PineTree" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(304, 569)
+
+[node name="PineTree2" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(373, 502)
+
+[node name="PineTree3" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(242, 491)
+
+[node name="PineTree4" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(1190, 829)
+
+[node name="PineTree6" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(90, 678)
+
+[node name="PineTree7" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(1259, 892)
+
+[node name="PineTree8" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(1838, 589)
+
+[node name="PineTree9" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(1331, 382)
+
+[node name="PineTree10" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(1350, 783)
+
+[node name="PineTree11" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(1217, 645)
+
+[node name="PineTree12" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(1717, 1035)
+
+[node name="PineTree13" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(417, 983)
+
+[node name="PineTree14" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(486, 916)
+
+[node name="PineTree15" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(355, 905)
+
+[node name="PineTree16" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(1608, 360)
+
+[node name="PineTree17" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(1677, 293)
+
+[node name="PineTree18" parent="World2D/Trees" instance=ExtResource("1_q7jyy")]
+position = Vector2(1546, 282)
+
+[node name="Bat" parent="World2D" instance=ExtResource("1_1qf7g")]
+position = Vector2(354, 386)
+
+[node name="Bat2" parent="World2D" instance=ExtResource("1_1qf7g")]
+position = Vector2(564, 522)
+
+[node name="Bat3" parent="World2D" instance=ExtResource("1_1qf7g")]
+position = Vector2(788, 282)
+
+[node name="Slime" parent="World2D" instance=ExtResource("2_qdjtg")]
+position = Vector2(970, 499)
+
+[node name="Slime3" parent="World2D" instance=ExtResource("2_qdjtg")]
+position = Vector2(363, 639)
+
+[node name="Slime2" parent="World2D" instance=ExtResource("2_qdjtg")]
+position = Vector2(742, 820)
+
+[node name="TestPlayer" parent="World2D" instance=ExtResource("3_kq48k")]
+position = Vector2(1049, 872)
+
+[node name="Camera2D" type="Camera2D" parent="World2D/TestPlayer"]
+position = Vector2(0, -87)
+position_smoothing_enabled = true
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.976471, 0.941176, 1)
+metadata/_edit_lock_ = true

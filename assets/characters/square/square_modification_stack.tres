@@ -1,0 +1,23 @@
+[gd_resource type="SkeletonModificationStack2D" load_steps=3 format=3 uid="uid://dtf0pmja4mcaa"]
+
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_7lb5u"]
+target_nodepath = NodePath("FootLIK")
+flip_bend_direction = true
+joint_one_bone_idx = 1
+joint_one_bone2d_node = NodePath("Center/UpperLegL")
+joint_two_bone_idx = 2
+joint_two_bone2d_node = NodePath("Center/UpperLegL/LowerLegL")
+editor/draw_gizmo = false
+
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_h82yt"]
+target_nodepath = NodePath("FootRIK")
+joint_one_bone_idx = 4
+joint_one_bone2d_node = NodePath("Center/UpperLegR")
+joint_two_bone_idx = 5
+joint_two_bone2d_node = NodePath("Center/UpperLegR/LowerLegR")
+
+[resource]
+enabled = true
+modification_count = 2
+modifications/0 = SubResource("SkeletonModification2DTwoBoneIK_7lb5u")
+modifications/1 = SubResource("SkeletonModification2DTwoBoneIK_h82yt")

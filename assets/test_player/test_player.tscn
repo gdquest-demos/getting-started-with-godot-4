@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://h7rqjexsb2a0"]
+
+[ext_resource type="Script" path="res://assets/test_player/test_player.gd" id="1_7erpc"]
+[ext_resource type="PackedScene" uid="uid://brlskhr02ywga" path="res://assets/characters/square/square.tscn" id="2_v150i"]
+
+[node name="TestPlayer" type="Node2D"]
+script = ExtResource("1_7erpc")
+
+[node name="square" parent="." instance=ExtResource("2_v150i")]
+unique_name_in_owner = true

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxo32i8xhrrmc"]
+
+[ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://assets/pistol/pistol.png" id="1_wlqsu"]
+
+[node name="Pistol" type="Node2D"]
+
+[node name="Pistol" type="Sprite2D" parent="."]
+texture = ExtResource("1_wlqsu")
+offset = Vector2(16, 0)
+
+[node name="End" type="Marker2D" parent="Pistol"]
+position = Vector2(41, -11)
