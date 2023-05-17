@@ -1,11 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://csda0c7jdxpqn"]
+[gd_scene load_steps=21 format=3 uid="uid://csda0c7jdxpqn"]
 
 [ext_resource type="Texture2D" uid="uid://dvgfmy6vtvjji" path="res://assets/characters/slime/parts/slime_body.png" id="1_3j35h"]
 [ext_resource type="Script" path="res://assets/characters/slime/slime.gd" id="1_87y5x"]
 [ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://assets/ground_shadow.png" id="1_cq7ej"]
 [ext_resource type="Texture2D" uid="uid://c078jrp2yvc4s" path="res://assets/characters/slime/parts/slime_face.png" id="2_ygydt"]
 [ext_resource type="Texture2D" uid="uid://cai2ijnbypqtr" path="res://assets/characters/slime/parts/slime_hurt_eyes.png" id="4_hi70h"]
-[ext_resource type="Texture2D" uid="uid://btbxea1f3vwot" path="res://assets/characters/slime/parts/slime_body_hurt.png" id="5_2eutw"]
 
 [sub_resource type="Animation" id="Animation_y4lve"]
 length = 0.001
@@ -36,14 +35,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Anchor:position")
+tracks/2/path = NodePath("Anchor:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [0.0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -60,14 +59,26 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Anchor/SlimeBody:texture")
+tracks/4/path = NodePath("Anchor/SlimeBody:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_3j35h")]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Anchor:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_lu163"]
@@ -88,38 +99,38 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Anchor/SlimeBody:texture")
+tracks/1/path = NodePath("Anchor/Face:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("5_2eutw"), ExtResource("1_3j35h")]
+"update": 0,
+"values": [-25.0, -35.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Anchor/SlimeBody:scale")
-tracks/2/interp = 0
+tracks/2/path = NodePath("Anchor/SlimeBody:modulate")
+tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(-2, -2, -2),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(0.8, 1.2), Vector2(1, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Anchor/Face:position:y")
+tracks/3/path = NodePath("Anchor:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(-2, -2, -2),
 "update": 0,
-"values": [-25.0, -35.0]
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_71vdi"]
@@ -152,14 +163,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Anchor:position")
+tracks/2/path = NodePath("Anchor:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_l6fy2"]
@@ -215,6 +226,8 @@ _data = {
 animation = &"hurt"
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_rtvnm"]
+filter_enabled = true
+filters = ["Anchor/Face/SlimeFace:texture", "Anchor/Face:position:y", "Anchor/SlimeBody:modulate", "Anchor/SlimeBody:texture", "Anchor:scale"]
 fadein_time = 0.05
 fadeout_time = 0.05
 
@@ -239,16 +252,16 @@ states/Start/position = Vector2(215, 103)
 states/idle/node = SubResource("AnimationNodeAnimation_oboc6")
 states/idle/position = Vector2(330, 103)
 states/walk/node = SubResource("AnimationNodeAnimation_nyrw1")
-states/walk/position = Vector2(432, 103)
+states/walk/position = Vector2(433, 103)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_nsqbj"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_pami4"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_6m35t")]
 graph_offset = Vector2(-354, -38)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_b1ecp"]
-graph_offset = Vector2(-213, 107)
+graph_offset = Vector2(-244, 81)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_ssj5e")
-nodes/Animation/position = Vector2(15, 291)
+nodes/Animation/position = Vector2(60, 240)
 nodes/HurtShot/node = SubResource("AnimationNodeOneShot_rtvnm")
-nodes/HurtShot/position = Vector2(260, 160)
+nodes/HurtShot/position = Vector2(240, 120)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_pb0rs")
 nodes/StateMachine/position = Vector2(40, 80)
 nodes/output/position = Vector2(400, 100)

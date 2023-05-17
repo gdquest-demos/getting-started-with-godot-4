@@ -1,12 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxo32i8xhrrmc"]
+[gd_scene load_steps=3 format=3 uid="uid://cxo32i8xhrrmc"]
 
+[ext_resource type="Script" path="res://assets/pistol/pistol.gd" id="1_8m5tp"]
 [ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://assets/pistol/pistol.png" id="1_wlqsu"]
 
 [node name="Pistol" type="Node2D"]
+script = ExtResource("1_8m5tp")
 
 [node name="Pistol" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 texture = ExtResource("1_wlqsu")
 offset = Vector2(16, 0)
 
 [node name="End" type="Marker2D" parent="Pistol"]
-position = Vector2(41, -11)
+unique_name_in_owner = true
+position = Vector2(46, -11)
