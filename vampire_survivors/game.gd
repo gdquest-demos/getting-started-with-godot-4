@@ -8,7 +8,7 @@ extends Node
 func spawn_mob():
 	path_follow_2d.progress_ratio = randf()
 	var new_mob = preload("res://vampire_survivors/mob.tscn").instantiate()
-	new_mob.global_transform = path_follow_2d.global_transform
+	new_mob.global_position = path_follow_2d.global_position
 	add_child(new_mob)
 
 

@@ -1,24 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://dxmisl2k2kiwm"]
 
 [ext_resource type="Script" path="res://vampire_survivors/Mob.gd" id="1_xhyow"]
-[ext_resource type="Texture2D" uid="uid://bwmctu35vktfj" path="res://icon.svg" id="2_haoyl"]
+[ext_resource type="PackedScene" path="res://vampire_survivors/characters/slime/slime.tscn" id="3_n2uyc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ypitm"]
-radius = 71.0211
+radius = 42.0476
 
 [node name="Mob" type="CharacterBody2D"]
-position = Vector2(1411, 406)
 collision_layer = 2
 script = ExtResource("1_xhyow")
 
-[node name="Icon" type="Sprite2D" parent="."]
-self_modulate = Color(1, 0.219608, 0.729412, 1)
-texture = ExtResource("2_haoyl")
+[node name="Slime" parent="." instance=ExtResource("3_n2uyc")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -28)
 shape = SubResource("CircleShape2D_ypitm")
 debug_color = Color(0.701961, 0.282353, 0.352941, 0.419608)
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

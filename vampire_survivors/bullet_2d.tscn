@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhi28qb8ht0n1"]
 
 [ext_resource type="Script" path="res://vampire_survivors/bullet_2d.gd" id="1_fq4v7"]
-[ext_resource type="Texture2D" uid="uid://bwmctu35vktfj" path="res://icon.svg" id="1_giiom"]
+[ext_resource type="Texture2D" uid="uid://dftkbqwsfd68r" path="res://vampire_survivors/pistol/projectile/projectile.png" id="2_q2ikq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_naqkr"]
-radius = 9.0
+radius = 15.0333
 
 [node name="Bullet2D" type="Area2D"]
 top_level = true
@@ -13,10 +13,9 @@ collision_mask = 3
 monitorable = false
 script = ExtResource("1_fq4v7")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(0, -1)
-scale = Vector2(0.109375, 0.109375)
-texture = ExtResource("1_giiom")
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-11, -1)
+texture = ExtResource("2_q2ikq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_naqkr")

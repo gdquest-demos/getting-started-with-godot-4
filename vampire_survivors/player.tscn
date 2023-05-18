@@ -1,20 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://blefffgq42g6v"]
+[gd_scene load_steps=7 format=3 uid="uid://obsvqw8kcgg"]
 
 [ext_resource type="Script" path="res://vampire_survivors/CharacterBody2D.gd" id="1_73bic"]
-[ext_resource type="Texture2D" uid="uid://bwmctu35vktfj" path="res://icon.svg" id="2_e5aps"]
+[ext_resource type="PackedScene" path="res://vampire_survivors/characters/happy_boo/happy_boo.tscn" id="2_bl5ih"]
 [ext_resource type="PackedScene" uid="uid://dlrkovf8lbjy2" path="res://vampire_survivors/gun.tscn" id="3_bt0kc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_csncd"]
-size = Vector2(126, 126)
+size = Vector2(66, 38)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kfffa"]
-size = Vector2(142, 142)
+size = Vector2(84, 54)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5sny"]
+bg_color = Color(0.623529, 0.866667, 0.317647, 1)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_73bic")
 
-[node name="Icon" type="Sprite2D" parent="."]
-texture = ExtResource("2_e5aps")
+[node name="HappyBoo" parent="." instance=ExtResource("2_bl5ih")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_csncd")
@@ -22,6 +24,7 @@ shape = SubResource("RectangleShape2D_csncd")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Gun" parent="." instance=ExtResource("3_bt0kc")]
+position = Vector2(0, -40)
 
 [node name="HurtBox" type="Area2D" parent="."]
 unique_name_in_owner = true
@@ -35,9 +38,10 @@ shape = SubResource("RectangleShape2D_kfffa")
 [node name="HealthBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
 z_index = 100
-offset_left = -127.0
-offset_top = -149.0
-offset_right = 131.0
-offset_bottom = -96.0
+offset_left = -83.0
+offset_top = -185.0
+offset_right = 87.0
+offset_bottom = -150.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_a5sny")
 value = 100.0
 show_percentage = false

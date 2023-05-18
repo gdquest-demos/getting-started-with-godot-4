@@ -1,0 +1,207 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://vampire_survivors/ground_shadow.png" id="1_s6me0"]
+[ext_resource type="Texture2D" uid="uid://ce3knynqcic4g" path="res://vampire_survivors/characters/bat/bat_wing.png" id="1_ylg8o"]
+[ext_resource type="Texture2D" uid="uid://7cxk5tx8ok48" path="res://vampire_survivors/characters/bat/bat_head.png" id="2_ivd55"]
+
+[sub_resource type="Animation" id="Animation_84x66"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/Body:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/Body/BatWing:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Anchor/Body/BatWing2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Anchor/Body:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Anchor/Body:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vvyxb"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/Body:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [0.0, -10.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/Body/BatWing:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.125, 0.375, 0.625, 0.875, 1.125),
+"transitions": PackedFloat32Array(-2, -2, -2, -2, -2),
+"update": 0,
+"values": [0.349066, -0.349066, 0.349066, -0.349066, 0.349066]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Anchor/Body/BatWing2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.125, 0.375, 0.625, 0.875, 1.125),
+"transitions": PackedFloat32Array(-2, -2, -2, -2, -2),
+"update": 0,
+"values": [-0.349066, 0.349066, -0.349066, 0.349066, -0.349066]
+}
+
+[sub_resource type="Animation" id="Animation_oltpx"]
+resource_name = "hurt"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor/Body:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Anchor/Body:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q82ch"]
+_data = {
+"RESET": SubResource("Animation_84x66"),
+"hurt": SubResource("Animation_oltpx"),
+"idle": SubResource("Animation_vvyxb")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_37wlt"]
+animation = &"hurt"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jacc3"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_mxv8j"]
+filter_enabled = true
+filters = ["Anchor/Body:modulate", "Anchor/Body:scale"]
+fadein_time = 0.1
+fadeout_time = 0.1
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_avncd"]
+graph_offset = Vector2(-533, 14)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_jacc3")
+nodes/Animation/position = Vector2(-100, 100)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_37wlt")
+"nodes/Animation 2/position" = Vector2(-100, 200)
+nodes/OneShot/node = SubResource("AnimationNodeOneShot_mxv8j")
+nodes/OneShot/position = Vector2(100, 100)
+node_connections = [&"output", 0, &"OneShot", &"OneShot", 0, &"Animation", &"OneShot", 1, &"Animation 2"]
+
+[node name="Bat" type="Node2D"]
+
+[node name="GroundShadow" type="Sprite2D" parent="."]
+modulate = Color(0.898039, 0.878431, 0.831373, 1)
+z_index = -1
+z_as_relative = false
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_s6me0")
+
+[node name="Anchor" type="Marker2D" parent="."]
+position = Vector2(0, -44)
+scale = Vector2(0.8, 0.8)
+
+[node name="Body" type="Marker2D" parent="Anchor"]
+
+[node name="BatWing" type="Sprite2D" parent="Anchor/Body"]
+position = Vector2(20, -4)
+texture = ExtResource("1_ylg8o")
+offset = Vector2(42, -20)
+
+[node name="BatWing2" type="Sprite2D" parent="Anchor/Body"]
+position = Vector2(-20, -4)
+texture = ExtResource("1_ylg8o")
+offset = Vector2(-42, -20)
+flip_h = true
+
+[node name="BatHead" type="Sprite2D" parent="Anchor/Body"]
+texture = ExtResource("2_ivd55")
+offset = Vector2(0, -12)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q82ch")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeBlendTree_avncd")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/OneShot/active = false
+parameters/OneShot/request = 0

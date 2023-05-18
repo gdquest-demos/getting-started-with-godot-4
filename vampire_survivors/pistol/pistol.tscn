@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://gi52a3al3lw1"]
+
+[ext_resource type="Script" path="res://vampire_survivors/pistol/pistol.gd" id="1_8m5tp"]
+[ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://vampire_survivors/pistol/pistol.png" id="1_wlqsu"]
+
+[node name="Pistol" type="Node2D"]
+script = ExtResource("1_8m5tp")
+
+[node name="Pistol" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_wlqsu")
+offset = Vector2(16, 0)

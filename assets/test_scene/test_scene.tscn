@@ -1,14 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://bbra81svcey10"]
+[gd_scene load_steps=10 format=3]
 
-[ext_resource type="PackedScene" uid="uid://copvdmva1mitl" path="res://assets/characters/bat/bat.tscn" id="1_1qf7g"]
-[ext_resource type="PackedScene" uid="uid://f64cyd0psfvd" path="res://assets/trees/pine_tree.tscn" id="1_q7jyy"]
-[ext_resource type="PackedScene" uid="uid://csda0c7jdxpqn" path="res://assets/characters/slime/slime.tscn" id="2_qdjtg"]
-[ext_resource type="PackedScene" uid="uid://h7rqjexsb2a0" path="res://assets/test_player/test_player.tscn" id="3_kq48k"]
+[ext_resource type="PackedScene" path="res://vampire_survivors/characters/bat/bat.tscn" id="1_1qf7g"]
+[ext_resource type="PackedScene" path="res://assets/trees/pine_tree.tscn" id="1_q7jyy"]
+[ext_resource type="PackedScene" path="res://vampire_survivors/characters/slime/slime.tscn" id="2_qdjtg"]
+[ext_resource type="PackedScene" path="res://assets/test_player/test_player.tscn" id="3_kq48k"]
 [ext_resource type="Script" path="res://assets/test_scene/TestPistol.gd" id="5_vq8xg"]
-[ext_resource type="PackedScene" uid="uid://cxo32i8xhrrmc" path="res://assets/pistol/pistol.tscn" id="5_x8mh6"]
-[ext_resource type="PackedScene" uid="uid://b0m81ypg1ach7" path="res://assets/projectile/projectile.tscn" id="7_kciyk"]
-[ext_resource type="PackedScene" uid="uid://btkm58vd04257" path="res://assets/pistol/muzzle_flash.tscn" id="8_ibwt7"]
-[ext_resource type="PackedScene" uid="uid://hhxw84urekfn" path="res://assets/impact/impact.tscn" id="9_nr1nm"]
+[ext_resource type="PackedScene" path="res://vampire_survivors/pistol/pistol.tscn" id="5_x8mh6"]
+[ext_resource type="PackedScene" path="res://vampire_survivors/pistol/projectile/projectile.tscn" id="7_kciyk"]
+[ext_resource type="PackedScene" path="res://vampire_survivors/pistol/muzzle_flash.tscn" id="8_ibwt7"]
+[ext_resource type="PackedScene" path="res://vampire_survivors/pistol/impact/impact.tscn" id="9_nr1nm"]
 
 [node name="TestScene" type="Node"]
 
