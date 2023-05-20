@@ -1,11 +1,16 @@
 extends StaticBody3D
 
-@export var speed = 10
+const SPEED = 10
+const RANGE = 20
+
+var travelled_distance = 0
 
 
 func _physics_process(delta):
-	position += transform.basis.z * speed * delta
-
+	position += transform.basis.z * SPEED * delta
+	travelled_distance += SPEED * delta
+	if travelled_distance > RANGE:
+		queue_free()
 
 func _on_body_entered(body):
 	queue_free()

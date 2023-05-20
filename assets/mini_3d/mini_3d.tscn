@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" path="res://assets/mini_3d/elements/button/button.tscn" id="1_ri3u5"]
 [ext_resource type="Script" path="res://assets/mini_3d/elements/platform/Platform.gd" id="2_it0na"]
 [ext_resource type="PackedScene" path="res://assets/mini_3d/elements/lever/lever.tscn" id="2_wnmie"]
-[ext_resource type="PackedScene" path="res://assets/mini_3d/elements/door/door.tscn" id="4_r32mh"]
+[ext_resource type="PackedScene" uid="uid://cgc6clnckn3fb" path="res://assets/mini_3d/elements/door/door.tscn" id="4_r32mh"]
 [ext_resource type="PackedScene" uid="uid://bs8k42pj2yfdi" path="res://assets/mini_3d/elements/cube.glb" id="5_nvcjl"]
 [ext_resource type="PackedScene" uid="uid://blw2r74j4jpy4" path="res://assets/mini_3d/elements/goal/goal.tscn" id="7_anfgc"]
 [ext_resource type="PackedScene" path="res://assets/mini_3d/elements/gears/gears.tscn" id="8_d70j0"]

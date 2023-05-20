@@ -10,6 +10,7 @@ shader = ExtResource("2_pdycc")
 shader_parameter/albedo_color = Color(1, 0.435294, 0.0784314, 1)
 
 [node name="Goal" instance=ExtResource("1_gjsm0")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="GoalBody" parent="." index="0"]
 material_override = ExtResource("2_nc066")
