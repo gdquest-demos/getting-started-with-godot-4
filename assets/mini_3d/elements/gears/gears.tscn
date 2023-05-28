@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://dvp47pvssfvpb"]
 
 [ext_resource type="PackedScene" uid="uid://c3om34qgfl6qa" path="res://assets/mini_3d/elements/gears/gears.glb" id="1_65ivy"]
-[ext_resource type="Material" uid="uid://bpr3r6smcmxwr" path="res://assets/mini_3d/second_color.tres" id="2_3ig0g"]
 [ext_resource type="Script" path="res://assets/mini_3d/elements/gears/gears.gd" id="2_kmcl4"]
 [ext_resource type="AudioStream" uid="uid://cmxvvet7e1m16" path="res://assets/mini_3d/sounds/PM_MMM_FREE_9_BONUS_PM_Steampunk_Mechanical_Loop_120BPM_9.mp3" id="3_io63p"]
+[ext_resource type="Material" uid="uid://b3f3nkfx4o4uv" path="res://fps/color_blue.tres" id="4_xrwii"]
 
 [node name="Gears" instance=ExtResource("1_65ivy")]
 script = ExtResource("2_kmcl4")
@@ -16,8 +16,8 @@ max_distance = 30.0
 
 [node name="BigGear" parent="." index="1"]
 unique_name_in_owner = true
-material_override = ExtResource("2_3ig0g")
+material_override = ExtResource("4_xrwii")
 
 [node name="SmallGear" parent="Empty" index="0"]
 unique_name_in_owner = true
-material_override = ExtResource("2_3ig0g")
+material_override = ExtResource("4_xrwii")

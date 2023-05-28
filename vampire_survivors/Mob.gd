@@ -7,6 +7,9 @@ var health = 3
 @onready var player := get_node("/root/Game/Player")
 
 
+func _ready():
+	print([false, true, true].reduce(func(accum, number): return accum + int(number), 0))
+
 func _physics_process(delta):
 	if not is_instance_valid(player):
 		return

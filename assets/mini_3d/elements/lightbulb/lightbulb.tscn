@@ -1,23 +1,28 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://c8aasetoyewfn"]
 
 [ext_resource type="PackedScene" uid="uid://rpdp50np4l67" path="res://assets/mini_3d/elements/lightbulb/lightbulb.glb" id="1_6u35p"]
 [ext_resource type="Script" path="res://assets/mini_3d/elements/lightbulb/lightbulb.gd" id="2_3qbm5"]
-[ext_resource type="Material" uid="uid://bpr3r6smcmxwr" path="res://assets/mini_3d/second_color.tres" id="2_64uuo"]
 [ext_resource type="Material" uid="uid://c6oq4wm7pg5n5" path="res://assets/mini_3d/elements/lightbulb/bulb_mat.tres" id="2_jo41x"]
 [ext_resource type="AudioStream" uid="uid://b75ehbiq014lv" path="res://assets/mini_3d/sounds/PM_OF_Electro_Magnetic_One_Shots_5.mp3" id="3_qrf0w"]
+[ext_resource type="Material" uid="uid://b3f3nkfx4o4uv" path="res://fps/color_blue.tres" id="5_fy074"]
 
 [node name="LightBulb" instance=ExtResource("1_6u35p")]
 script = ExtResource("2_3qbm5")
 
-[node name="Sound" type="AudioStreamPlayer3D" parent="." index="0"]
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 7.10543e-15, 0, -7.10543e-15, 1, -0.0668333, 0.842239, -0.0790598)
+light_color = Color(1, 0.835294, 0, 1)
+
+[node name="Sound" type="AudioStreamPlayer3D" parent="." index="1"]
 unique_name_in_owner = true
 stream = ExtResource("3_qrf0w")
 volume_db = -10.0
 max_distance = 40.0
 
-[node name="Bulb" parent="." index="1"]
+[node name="Bulb" parent="." index="2"]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.876458, 0)
 material_override = ExtResource("2_jo41x")
 
-[node name="BulbBase" parent="." index="2"]
-material_override = ExtResource("2_64uuo")
+[node name="BulbBase" parent="." index="3"]
+material_override = ExtResource("5_fy074")

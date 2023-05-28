@@ -1,0 +1,114 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.4.50",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "extras" : {
+                "batch_export_preferences" : {},
+                "gltf_batch_export_preferences" : {
+                    "export_format" : 2
+                },
+                "sourceFilename" : "/home/gdquest/Repositories/godot-4-getting-started/assets/environment_meshes.blend"
+            },
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "extras" : {
+                "batch_export" : 1
+            },
+            "mesh" : 0,
+            "name" : "pipe_straight_1m"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cylinder.005",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 34,
+            "max" : [
+                0.2000000923871994,
+                0.25,
+                0.20000004768371582
+            ],
+            "min" : [
+                -0.2000000923871994,
+                -0.25,
+                -0.20000004768371582
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 34,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 34,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 96,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 408,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 272,
+            "byteOffset" : 408,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 408,
+            "byteOffset" : 680,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 192,
+            "byteOffset" : 1088,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1280,
+            "uri" : "data:application/octet-stream;base64,aSEiMwAAgL7QzEy+aSEiMwAAgL7QzEy+aSEiswAAgD7QzEy+aSEiswAAgD7QzEy+TL+cPQAAgL7oNT2+Qr+cPQAAgD7oNT2+yNAQPgAAgL7F0BC+wtAQPgAAgD7F0BC+6zU9PgAAgL5Hv5y95TU9PgAAgD5Hv5y908xMPgAAgL4AAACAzcxMPgAAgD4AAACA6zU9PgAAgL5Hv5w95TU9PgAAgD5Hv5w9yNAQPgAAgL7F0BA+wtAQPgAAgD7F0BA+TL+cPQAAgL7oNT0+Qr+cPQAAgD7oNT0+aSEiMwAAgL7QzEw+aSEiswAAgD7QzEw+Qr+cvQAAgL7oNT0+TL+cvQAAgD7oNT0+wtAQvgAAgL7F0BA+yNAQvgAAgD7F0BA+5TU9vgAAgL5Hv5w96zU9vgAAgD5Hv5w9zcxMvgAAgL4AAACA08xMvgAAgD4AAACA5TU9vgAAgL5Hv5y96zU9vgAAgD5Hv5y9wtAQvgAAgL7F0BC+yNAQvgAAgD7F0BC+Qr+cvQAAgL7oNT2+TL+cvQAAgD7oNT2+AAAAAAAAAD8AAIA/AAAAPwAAAAAAAAAAAACAPwAAAAAAAHA/AAAAPwAAcD8AAAAAAABgPwAAAD8AAGA/AAAAAAAAUD8AAAA/AABQPwAAAAAAAEA/AAAAPwAAQD8AAAAAAAAwPwAAAD8AADA/AAAAAAAAID8AAAA/AAAgPwAAAAAAABA/AAAAPwAAED8AAAAAAAAAPwAAAD8AAAA/AAAAAAAA4D4AAAA/AADgPgAAAAAAAMA+AAAAPwAAwD4AAAAAAACgPgAAAD8AAKA+AAAAAAAAgD4AAAA/AACAPgAAAAAAAEA+AAAAPwAAQD4AAAAAAAAAPgAAAD8AAAA+AAAAAAAAgD0AAAA/AACAPQAAAADjKqYyIk6CLgAAgL/jKqYyIk6CLgAAgL/jKqayPUqCLgAAgL/jKqayPUqCLgAAgL8X78M+LJNyM16DbL8U78M+J5NyM16DbL/0BDU/xTv6M/QENb/zBDU/wzv6M/MENb9eg2w/tb4wNBXvw75eg2w/tr4wNBfvw74AAIA/51tANAAAAIAAAIA/5ltANAAAAIBeg2w/h2QvNBXvwz5eg2w/iGQvNBfvwz70BDU/CXznM/QENT/zBDU/B3znM/MENT8X78M+qstQM16DbD8U78M+p8tQM16DbD/jKqYyPUqCrgAAgD/jKqayIk6CrgAAgD8U78O+J5Nys16DbD8X78O+LJNys16DbD/zBDW/wzv6s/MENT/0BDW/xTv6s/QENT9eg2y/tr4wtBfvwz5eg2y/tb4wtBXvwz4AAIC/5ltAtAAAAIAAAIC/51tAtAAAAIBeg2y/iGQvtBfvw75eg2y/h2QvtBXvw77zBDW/B3zns/MENb/0BDW/CXzns/QENb8U78O+p8tQs16DbL8X78O+qstQs16DbL8BAAMABQABAAUABAAEAAUABwAEAAcABgAGAAcACQAGAAkACAAIAAkACwAIAAsACgAKAAsADQAKAA0ADAAMAA0ADwAMAA8ADgAOAA8AEQAOABEAEAAQABEAEwAQABMAEgASABMAFQASABUAFAAUABUAFwAUABcAFgAWABcAGQAWABkAGAAYABkAGwAYABsAGgAaABsAHQAaAB0AHAAcAB0AHwAcAB8AHgAeAB8AIQAeACEAIAAgACEAAgAgAAIAAAA="
+        }
+    ]
+}

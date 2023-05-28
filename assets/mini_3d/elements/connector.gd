@@ -9,6 +9,7 @@ var state = false : set = set_state
 signal state_changed(state : bool)
 
 func _ready():
+	return
 	for switch in switches:
 		switch.connect("state_changed", check_switches)
 

@@ -1,19 +1,19 @@
 [gd_scene load_steps=5 format=3 uid="uid://blw2r74j4jpy4"]
 
 [ext_resource type="PackedScene" uid="uid://drkqkt2fp2jca" path="res://assets/mini_3d/elements/goal/goal.glb" id="1_gjsm0"]
-[ext_resource type="Material" uid="uid://bpr3r6smcmxwr" path="res://assets/mini_3d/second_color.tres" id="2_nc066"]
 [ext_resource type="Shader" path="res://assets/mini_3d/elements/goal/goal_flag.gdshader" id="2_pdycc"]
+[ext_resource type="Material" uid="uid://b3f3nkfx4o4uv" path="res://fps/color_blue.tres" id="2_qphgf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jw1k0"]
 render_priority = 0
 shader = ExtResource("2_pdycc")
-shader_parameter/albedo_color = Color(1, 0.435294, 0.0784314, 1)
+shader_parameter/albedo_color = Color(1, 0.835294, 0, 1)
 
 [node name="Goal" instance=ExtResource("1_gjsm0")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="GoalBody" parent="." index="0"]
-material_override = ExtResource("2_nc066")
+material_override = ExtResource("2_qphgf")
 
 [node name="GoalFlag" parent="." index="1"]
 material_override = SubResource("ShaderMaterial_jw1k0")

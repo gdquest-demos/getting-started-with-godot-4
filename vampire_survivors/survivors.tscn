@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://vampire_survivors/game.gd" id="1_aiquj"]
 [ext_resource type="PackedScene" uid="uid://obsvqw8kcgg" path="res://vampire_survivors/player.tscn" id="2_oekym"]
-[ext_resource type="PackedScene" path="res://vampire_survivors/trees/pine_tree.tscn" id="3_k7jxk"]
+[ext_resource type="PackedScene" uid="uid://ds7ex6w70riel" path="res://vampire_survivors/trees/pine_tree.tscn" id="3_k7jxk"]
 
 [sub_resource type="Curve2D" id="Curve2D_cp6e5"]
 _data = {

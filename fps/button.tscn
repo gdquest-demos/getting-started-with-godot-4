@@ -1,108 +1,25 @@
-[gd_scene load_steps=11 format=3 uid="uid://of282i1rs8j2"]
+[gd_scene load_steps=5 format=3 uid="uid://of282i1rs8j2"]
 
-[ext_resource type="Script" path="res://fps/button.gd" id="1_sgo7i"]
+[ext_resource type="PackedScene" uid="uid://c8g15ke3j8y73" path="res://assets/mini_3d/elements/button/button.glb" id="2_4fl7l"]
+[ext_resource type="Material" uid="uid://dv70qy2wjm0bd" path="res://assets/mini_3d/first_color.tres" id="3_q4t1g"]
+[ext_resource type="Material" uid="uid://b3f3nkfx4o4uv" path="res://fps/color_blue.tres" id="4_jv5r2"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_r4eh6"]
 height = 0.481
 radius = 0.791
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qomiv"]
-albedo_color = Color(1, 0, 0.192157, 1)
+[node name="Button" instance=ExtResource("2_4fl7l")]
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_uv0uk"]
-material = SubResource("StandardMaterial3D_qomiv")
-height = 0.4
-radial_segments = 32
-rings = 1
+[node name="Button" parent="." index="0"]
+surface_material_override/0 = ExtResource("4_jv5r2")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eu7lj"]
+[node name="ButtonBase" parent="." index="1"]
+surface_material_override/0 = ExtResource("3_q4t1g")
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_t6rlr"]
-material = SubResource("StandardMaterial3D_eu7lj")
-top_radius = 0.7
-bottom_radius = 0.7
-height = 0.2
-radial_segments = 32
-rings = 1
-
-[sub_resource type="Animation" id="Animation_yruxh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D3:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0.23429, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_csa73"]
-resource_name = "press"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D3:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0.23429, 0), Vector3(0, 0.0219009, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_jg58d"]
-resource_name = "release"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D3:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0.0219009, 0), Vector3(0, 0.23429, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_8xept"]
-_data = {
-"RESET": SubResource("Animation_yruxh"),
-"press": SubResource("Animation_csa73"),
-"release": SubResource("Animation_jg58d")
-}
-
-[node name="Button" type="Area3D"]
+[node name="Area3D" type="Area3D" parent="." index="2"]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_sgo7i")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23429, 0)
 shape = SubResource("CylinderShape3D_r4eh6")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23429, 0)
-mesh = SubResource("CylinderMesh_uv0uk")
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0974143, 0)
-mesh = SubResource("CylinderMesh_t6rlr")
-skeleton = NodePath("../..")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-unique_name_in_owner = true
-libraries = {
-"": SubResource("AnimationLibrary_8xept")
-}
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -3,13 +3,16 @@
 [ext_resource type="Script" path="res://fps/turret.gd" id="1_vuds5"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_iyud6"]
+top_radius = 0.25
+bottom_radius = 0.25
+height = 1.0
 radial_segments = 32
 rings = 1
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_b8m36"]
-top_radius = 0.2
-bottom_radius = 0.2
-height = 1.0
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.5
 radial_segments = 16
 rings = 1
 
@@ -29,7 +32,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.482963, 0)
 mesh = SubResource("CylinderMesh_iyud6")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.575874)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.684999, -0.289532)
 mesh = SubResource("CylinderMesh_b8m36")
 
 [node name="Marker3D" type="Marker3D" parent="MeshInstance3D2"]
