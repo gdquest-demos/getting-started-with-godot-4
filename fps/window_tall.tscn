@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://btegbfjk2rqll"]
+[gd_scene load_steps=5 format=3 uid="uid://btegbfjk2rqll"]
 
 [ext_resource type="PackedScene" uid="uid://c5ksenj3ul5wf" path="res://assets/window_tall.gltf" id="1_6q0ai"]
 
@@ -16,8 +16,16 @@ refraction_scale = 0.02
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2agcr"]
 albedo_color = Color(0.152941, 0.168627, 0.188235, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ffyei"]
+size = Vector3(2.02471, 2.95602, 0.643637)
+
 [node name="window_tall" instance=ExtResource("1_6q0ai")]
 
 [node name="window_tall2" parent="." index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_t78qw")
 surface_material_override/1 = SubResource("StandardMaterial3D_2agcr")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_ffyei")
