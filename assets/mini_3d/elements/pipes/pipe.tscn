@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://2lc2vbxpnmcg"]
-
-[ext_resource type="PackedScene" uid="uid://bb174uqemf8ud" path="res://assets/mini_3d/elements/pipes/pipe.glb" id="1_i3jk3"]
-[ext_resource type="Material" uid="uid://b3f3nkfx4o4uv" path="res://fps/color_blue.tres" id="2_3q0rx"]
-
-[node name="Pipe" instance=ExtResource("1_i3jk3")]
-
-[node name="Pipe" parent="." index="0"]
-material_override = ExtResource("2_3q0rx")

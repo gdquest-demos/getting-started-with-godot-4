@@ -1,1 +1,0 @@
-extends Area3D
