@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfwbq2vombjvr"]
+
+[ext_resource type="Script" path="res://mob.gd" id="1_e60uy"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_7xh84"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_gkbwe"]
+
+[node name="Mob" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66374, 14)
+gravity_scale = 0.0
+script = ExtResource("1_e60uy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_7xh84")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_gkbwe")
