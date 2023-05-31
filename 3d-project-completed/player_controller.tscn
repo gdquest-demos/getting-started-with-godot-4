@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3kp34dihjeyd"]
+
+[ext_resource type="Script" path="res://player_controller.gd" id="1_g3eiy"]
+[ext_resource type="PackedScene" uid="uid://yeft3e2irxdx" path="res://plasma_gun/plasma_gun_root.tscn" id="2_ud6mf"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ctapl"]
+radius = 0.338193
+height = 1.5
+
+[node name="PlayerController" type="CharacterBody3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, 0)
+collision_layer = 2
+script = ExtResource("1_g3eiy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.257239, 0)
+shape = SubResource("CapsuleShape3D_ctapl")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0920136, 0)
+
+[node name="PlasmaGunRoot" parent="Camera3D" instance=ExtResource("2_ud6mf")]
+transform = Transform3D(-0.429184, -0.0148464, 0.00824617, -0.0135637, 0.425161, 0.0595133, -0.0102195, 0.0592064, -0.425297, 0.887676, -0.230186, -0.947001)
+
+[node name="Marker3D" type="Marker3D" parent="Camera3D/PlasmaGunRoot"]
+unique_name_in_owner = true
+transform = Transform3D(1, 6.98492e-10, 0, -1.35042e-08, 1, 5.96046e-08, 0, 0, 1, 0.0170091, 0.0364718, 0.950928)

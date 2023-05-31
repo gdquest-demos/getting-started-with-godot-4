@@ -1,0 +1,124 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="PackedScene" uid="uid://c8g15ke3j8y73" path="res://assets/mini_3d/elements/button/button.glb" id="2_4fl7l"]
+[ext_resource type="Script" path="res://button.gd" id="2_f7k8k"]
+[ext_resource type="Material" uid="uid://dv70qy2wjm0bd" path="res://assets/mini_3d/first_color.tres" id="3_q4t1g"]
+[ext_resource type="Material" uid="uid://b3f3nkfx4o4uv" path="res://color_blue.tres" id="4_jv5r2"]
+[ext_resource type="AudioStream" uid="uid://3k8v216l4poc" path="res://assets/mini_3d/sounds/zapsplat_vehicles_car_column_stalk_lever_single_movement_002_80087.mp3" id="5_1wg82"]
+[ext_resource type="AudioStream" uid="uid://c3o3xs1bm1xd7" path="res://assets/mini_3d/sounds/zapsplat_household_remote_control_plastic_button_press_cheap_single_007_73400.mp3" id="6_grj0d"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_r4eh6"]
+height = 0.481
+radius = 0.791
+
+[sub_resource type="Animation" id="Animation_6jegy"]
+resource_name = "press"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.258816, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.094, 0)]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.243638,
+"start_offset": 0.0,
+"stream": ExtResource("5_1wg82")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_rbwe2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_n3say"]
+resource_name = "release"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.170755, 1),
+"update": 0,
+"values": [Vector3(0, -0.094, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_grj0d")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cifbk"]
+_data = {
+"RESET": SubResource("Animation_rbwe2"),
+"press": SubResource("Animation_6jegy"),
+"release": SubResource("Animation_n3say")
+}
+
+[node name="Button" instance=ExtResource("2_4fl7l")]
+script = ExtResource("2_f7k8k")
+
+[node name="Button" parent="." index="0"]
+surface_material_override/0 = ExtResource("4_jv5r2")
+
+[node name="ButtonBase" parent="." index="1"]
+surface_material_override/0 = ExtResource("3_q4t1g")
+
+[node name="Area3D" type="Area3D" parent="." index="2"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23429, 0)
+shape = SubResource("CylinderShape3D_r4eh6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_cifbk")
+}
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="4"]
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
