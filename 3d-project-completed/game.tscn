@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://game.gd" id="1_xym6k"]
 [ext_resource type="Sky" path="res://sky/sky.tres" id="2_ixrad"]
 [ext_resource type="MeshLibrary" uid="uid://b8dsyehebhq1j" path="res://floor.tres" id="4_15xx1"]
-[ext_resource type="PackedScene" uid="uid://dfwbq2vombjvr" path="res://mob.tscn" id="5_otjwq"]
+[ext_resource type="PackedScene" uid="uid://xtl5acmpaa04" path="res://spawner_3d.tscn" id="5_7vlo8"]
 
 [sub_resource type="Environment" id="Environment_pev5d"]
 background_mode = 2
@@ -59,16 +59,13 @@ metadata/_editor_floor_ = Vector3(-5, 0, 3)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.370168, 0.928965, 0, -0.928965, -0.370168, -0.515401, 8.99704, 0)
 
-[node name="Mob" parent="." instance=ExtResource("5_otjwq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.41596, 14)
+[node name="MobSpawner3D" parent="." instance=ExtResource("5_7vlo8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.877757, 0, 20.8173)
 
-[node name="Mob2" parent="." instance=ExtResource("5_otjwq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7228, 3.41596, 18.7163)
+[node name="MobSpawner3D2" parent="." instance=ExtResource("5_7vlo8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7262, 0, 20.8173)
 
-[node name="Mob3" parent="." instance=ExtResource("5_otjwq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2267, 3.41596, 7.50158)
-
-[node name="Mob4" parent="." instance=ExtResource("5_otjwq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.15658, 3.41596, 9.87135)
+[node name="MobSpawner3D3" parent="." instance=ExtResource("5_7vlo8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7262, 0, 0.15167)
 
 [connection signal="body_entered" from="KillPlane" to="." method="_on_kill_plane_body_entered"]
