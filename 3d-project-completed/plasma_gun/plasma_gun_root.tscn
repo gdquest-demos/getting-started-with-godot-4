@@ -5,17 +5,19 @@
 [ext_resource type="Material" uid="uid://ctrcsj4kq5b8u" path="res://plasma_gun/plasma_gun_light_mat.tres" id="3_mvi4x"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_k0w5v"]
-radius = 1.0
 
-[node name="PlasmaGunRoot" type="Node3D"]
+[node name="PlasmaGun" type="Node3D"]
 
 [node name="plasma_gun" parent="." instance=ExtResource("1_wuxdl")]
+transform = Transform3D(0.455491, 0, 0, 0, 0.455491, 0, 0, 0, 0.455491, 0, 0, 0)
 
 [node name="plasma_gun2" parent="plasma_gun" index="0"]
 surface_material_override/1 = ExtResource("2_pctgy")
 surface_material_override/3 = ExtResource("3_mvi4x")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("SphereShape3D_k0w5v")

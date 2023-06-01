@@ -4,6 +4,8 @@ extends CharacterBody3D
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	%Marker3D.look_at(%Camera3D.global_position + %Camera3D.global_transform.basis.z * 1000)
+	%Marker3D.rotation_degrees.y += 2.0
 
 
 func _unhandled_input(event):
@@ -11,9 +13,6 @@ func _unhandled_input(event):
 		rotation_degrees.y -= event.relative.x * 0.5
 		rotation_degrees.x -= event.relative.y * 0.2
 		rotation_degrees.x = clamp(rotation_degrees.x, -80, 80)
-	elif event.is_action_pressed("shoot"):
-		var new_bullet = preload("res://bullet_3d.tscn").instantiate()
-		%Marker3D.add_child(new_bullet)
 	elif event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
@@ -38,3 +37,17 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 
 	move_and_slide()
+
+	if Input.is_action_pressed("shoot") and %Timer.is_stopped():
+		shoot_bullet()
+
+
+func shoot_bullet():
+	const MAX_RECOIL_ANGLE = 2.0
+
+	var new_bullet = preload("res://bullet_3d.tscn").instantiate()
+	%Marker3D.add_child(new_bullet)
+	new_bullet.transform = %Marker3D.global_transform
+	new_bullet.rotation_degrees.x += randf_range(-MAX_RECOIL_ANGLE, MAX_RECOIL_ANGLE)
+	new_bullet.rotation_degrees.y += randf_range(-MAX_RECOIL_ANGLE, MAX_RECOIL_ANGLE)
+	%Timer.start()
