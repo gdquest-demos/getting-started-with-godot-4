@@ -8,6 +8,7 @@
 
 [node name="Mob" type="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66374, 14)
+top_level = true
 gravity_scale = 0.0
 script = ExtResource("1_e60uy")
 
@@ -16,3 +17,9 @@ mesh = SubResource("SphereMesh_7xh84")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_gkbwe")
+
+[node name="DeathTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

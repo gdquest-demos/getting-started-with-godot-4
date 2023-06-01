@@ -37,7 +37,7 @@ script = ExtResource("1_xym6k")
 environment = SubResource("Environment_pev5d")
 
 [node name="KillPlane" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 collision_layer = 0
 collision_mask = 2
 monitorable = false
@@ -60,13 +60,13 @@ metadata/_editor_floor_ = Vector3(-5, 0, 3)
 transform = Transform3D(1, 0, 0, 0, -0.370168, 0.928965, 0, -0.928965, -0.370168, -0.515401, 8.99704, 0)
 
 [node name="MobSpawner3D" parent="." instance=ExtResource("5_7vlo8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.877757, 1.60562, 18.8959)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.12224, 1.5, 17.8959)
 
 [node name="MobSpawner3D2" parent="." instance=ExtResource("5_7vlo8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7262, 1.41616, 19.4995)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7262, 1.5, 18.4995)
 
 [node name="MobSpawner3D3" parent="." instance=ExtResource("5_7vlo8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7262, 1.72935, 0.15167)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7262, 1.5, -0.699634)
 
 [node name="ScoreLabel" type="Label" parent="."]
 unique_name_in_owner = true

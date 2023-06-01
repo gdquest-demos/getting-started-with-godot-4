@@ -26,3 +26,8 @@ func take_damage():
 		var direction_back = player.global_position.direction_to(global_position)
 		var random_upward_force = Vector3.UP * randf() * 5.0
 		apply_central_impulse(direction_back.rotated(Vector3.UP, randf_range(-0.2, 0.2)) * 10.0 + random_upward_force)
+		%DeathTimer.start()
+
+
+func _on_death_timer_timeout():
+	queue_free()
