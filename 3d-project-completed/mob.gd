@@ -1,5 +1,7 @@
 extends RigidBody3D
 
+signal died
+
 var speed = randf_range(2, 4)
 var health = 3
 
@@ -13,8 +15,12 @@ func _physics_process(delta):
 
 
 func take_damage():
+	if health <= 0:
+		return
+	
 	health -= 1
 	if health == 0:
+		died.emit()
 		set_physics_process(false)
 		gravity_scale = 1.0
 		var direction_back = player.global_position.direction_to(global_position)

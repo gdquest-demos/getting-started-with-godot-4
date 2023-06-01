@@ -68,4 +68,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7262, 1.41616, 19.4995)
 [node name="MobSpawner3D3" parent="." instance=ExtResource("5_7vlo8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7262, 1.72935, 0.15167)
 
+[node name="ScoreLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 28.0
+offset_top = 15.0
+offset_right = 256.0
+offset_bottom = 101.0
+theme_override_font_sizes/font_size = 60
+text = "Score: 0"
+
 [connection signal="body_entered" from="KillPlane" to="." method="_on_kill_plane_body_entered"]
+[connection signal="mob_spawned" from="MobSpawner3D" to="." method="_on_mob_spawner_3d_mob_spawned"]
+[connection signal="mob_spawned" from="MobSpawner3D2" to="." method="_on_mob_spawner_3d_mob_spawned"]
+[connection signal="mob_spawned" from="MobSpawner3D3" to="." method="_on_mob_spawner_3d_mob_spawned"]
