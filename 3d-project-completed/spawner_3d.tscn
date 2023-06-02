@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://xtl5acmpaa04"]
+[gd_scene load_steps=5 format=3 uid="uid://xtl5acmpaa04"]
 
 [ext_resource type="Script" path="res://spawner_3d.gd" id="1_5kn8d"]
+[ext_resource type="PackedScene" uid="uid://c2oal6rrmeo67" path="res://spawner/spawner.tscn" id="2_vlo78"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_siai5"]
 albedo_color = Color(0.152941, 0.168627, 0.188235, 1)
@@ -23,10 +24,14 @@ wait_time = 2.5
 autostart = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("TorusMesh_ulr28")
 
 [node name="Marker3D" type="Marker3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Spawner" parent="." instance=ExtResource("2_vlo78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

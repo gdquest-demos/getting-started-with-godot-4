@@ -1,27 +1,43 @@
-[gd_scene load_steps=8 format=3 uid="uid://bpqvmc7qt8xut"]
+[gd_scene load_steps=14 format=3 uid="uid://bpqvmc7qt8xut"]
 
 [ext_resource type="PackedScene" uid="uid://d3kp34dihjeyd" path="res://player_controller.tscn" id="1_fqdcw"]
 [ext_resource type="Script" path="res://game.gd" id="1_xym6k"]
-[ext_resource type="Sky" path="res://sky/sky.tres" id="2_ixrad"]
+[ext_resource type="Shader" path="res://sky/sky.gdshader" id="2_0bgh6"]
 [ext_resource type="MeshLibrary" uid="uid://b8dsyehebhq1j" path="res://floor.tres" id="4_15xx1"]
 [ext_resource type="PackedScene" uid="uid://xtl5acmpaa04" path="res://spawner_3d.tscn" id="5_7vlo8"]
 
+[sub_resource type="Curve" id="Curve_yn8x2"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 4.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_vlsog"]
+texture_mode = 1
+curve = SubResource("Curve_yn8x2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_klx8j"]
+shader = ExtResource("2_0bgh6")
+shader_parameter/top_color = Color(0.419608, 0.819608, 0.956863, 1)
+shader_parameter/bottom_color = Color(0.509804, 0.8, 0.380392, 1)
+shader_parameter/gradient_curve = SubResource("CurveTexture_vlsog")
+
+[sub_resource type="Sky" id="Sky_uckjo"]
+sky_material = SubResource("ShaderMaterial_klx8j")
+
 [sub_resource type="Environment" id="Environment_pev5d"]
 background_mode = 2
-background_color = Color(0, 0.478431, 0.764706, 1)
-sky = ExtResource("2_ixrad")
-ambient_light_color = Color(0.835294, 0.560784, 0.282353, 1)
+sky = SubResource("Sky_uckjo")
+ambient_light_source = 2
+ambient_light_color = Color(0.6, 0.6, 0.6, 1)
 ambient_light_sky_contribution = 0.5
 tonemap_mode = 2
 tonemap_exposure = 1.05
-tonemap_white = 1.24
+tonemap_white = 0.95
 ssao_enabled = true
+ssao_intensity = 1.0
 glow_normalized = true
 glow_intensity = 0.2
-fog_enabled = true
 fog_light_color = Color(0, 0.478431, 0.764706, 1)
-fog_density = 0.0005
-fog_aerial_perspective = 1.0
+fog_density = 0.002
 fog_height = -0.08
 fog_height_density = 0.4089
 volumetric_fog_density = 0.1525
@@ -30,6 +46,15 @@ volumetric_fog_emission = Color(0.0431373, 0.0431373, 0.0431373, 1)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xiq5r"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x7ab4"]
+shading_mode = 0
+albedo_color = Color(0.419608, 0.819608, 0.956863, 1)
+proximity_fade_enabled = true
+proximity_fade_distance = 4.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8txlb"]
+size = Vector2(100, 100)
+
 [node name="Game" type="Node3D"]
 script = ExtResource("1_xym6k")
 
@@ -37,13 +62,18 @@ script = ExtResource("1_xym6k")
 environment = SubResource("Environment_pev5d")
 
 [node name="KillPlane" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 collision_layer = 0
 collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="KillPlane"]
 shape = SubResource("WorldBoundaryShape3D_xiq5r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="KillPlane"]
+material_override = SubResource("StandardMaterial3D_x7ab4")
+mesh = SubResource("PlaneMesh_8txlb")
+skeleton = NodePath("../..")
 
 [node name="Player" parent="." instance=ExtResource("1_fqdcw")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2.00724, 0)
@@ -57,7 +87,9 @@ data = {
 metadata/_editor_floor_ = Vector3(-5, 0, 3)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.370168, 0.928965, 0, -0.928965, -0.370168, -0.515401, 8.99704, 0)
+transform = Transform3D(0.707107, -0.612373, 0.353553, 0, 0.5, 0.866026, -0.707107, -0.612373, 0.353553, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 40.0
 
 [node name="MobSpawner3D" parent="." instance=ExtResource("5_7vlo8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.12224, 1.5, 17.8959)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://wawlsqcberu6"]
+[gd_scene load_steps=6 format=3 uid="uid://wawlsqcberu6"]
 
 [ext_resource type="Script" path="res://bullet_3d.gd" id="1_gxepa"]
+[ext_resource type="PackedScene" uid="uid://caxbqhwe5nxb3" path="res://projectile/projectile.tscn" id="2_pfejm"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4mnn0"]
 radius = 0.1
@@ -22,6 +23,10 @@ script = ExtResource("1_gxepa")
 shape = SubResource("SphereShape3D_4mnn0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("SphereMesh_oa25q")
+
+[node name="Projectile" parent="." instance=ExtResource("2_pfejm")]
+transform = Transform3D(-2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 0, 0, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

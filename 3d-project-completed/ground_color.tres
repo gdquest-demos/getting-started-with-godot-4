@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cp4gi8r3s3twb"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i4h33"]
+load_path = "res://.godot/imported/checkboard.png-4cb8f9b1adddcfd77a23f6e46684261b.s3tc.ctex"
+
+[resource]
+albedo_color = Color(0.286275, 0.682353, 0.427451, 1)
+albedo_texture = SubResource("CompressedTexture2D_i4h33")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 4.0

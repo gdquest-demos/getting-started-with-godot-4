@@ -1,7 +1,7 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3]
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dsguj33eot7nf"]
 
 [ext_resource type="Shader" path="res://sky/sky.gdshader" id="1_wgu54"]
-[ext_resource type="Texture2D" path="res://sky/clouds_noise_texture.tres" id="2_wi2hi"]
+[ext_resource type="Texture2D" uid="uid://c23mmrlq58wrp" path="res://sky/clouds_noise_texture.tres" id="2_wi2hi"]
 
 [resource]
 shader = ExtResource("1_wgu54")
