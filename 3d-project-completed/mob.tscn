@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfwbq2vombjvr"]
+[gd_scene load_steps=7 format=3 uid="uid://dfwbq2vombjvr"]
 
 [ext_resource type="Script" path="res://mob.gd" id="1_e60uy"]
 [ext_resource type="PackedScene" uid="uid://brv1jmhrpfw7p" path="res://bat/bat_skin.tscn" id="2_uiqx7"]
+[ext_resource type="AudioStream" uid="uid://cfqxr34ohgplo" path="res://sounds/kick_3.ogg" id="3_2g6y0"]
+[ext_resource type="AudioStream" uid="uid://ha0bp3cygkq1" path="res://sounds/squeak toy - squeak1.wav" id="4_dxm5x"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_7xh84"]
 
@@ -13,6 +15,7 @@ gravity_scale = 0.0
 script = ExtResource("1_e60uy")
 
 [node name="BatSkin" parent="." instance=ExtResource("2_uiqx7")]
+unique_name_in_owner = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 visible = false
@@ -24,5 +27,16 @@ shape = SubResource("SphereShape3D_gkbwe")
 [node name="DeathTimer" type="Timer" parent="."]
 unique_name_in_owner = true
 one_shot = true
+
+[node name="HurtSound" type="AudioStreamPlayer3D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_2g6y0")
+max_db = -10.0
+max_polyphony = 4
+
+[node name="KOSound" type="AudioStreamPlayer3D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_dxm5x")
+max_db = -10.0
 
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

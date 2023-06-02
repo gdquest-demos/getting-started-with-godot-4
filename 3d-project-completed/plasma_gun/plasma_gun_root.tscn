@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://yeft3e2irxdx"]
+[gd_scene load_steps=7 format=3 uid="uid://yeft3e2irxdx"]
 
 [ext_resource type="PackedScene" uid="uid://b6nrg32r2wq86" path="res://simple_gun/blue_gun.tscn" id="1_oibds"]
+[ext_resource type="Script" path="res://plasma_gun/plasma_gun_root.gd" id="1_u12ia"]
 [ext_resource type="PackedScene" uid="uid://hnr4843o7s6d" path="res://plasma_gun/plasma_gun.glb" id="1_wuxdl"]
 [ext_resource type="Material" uid="uid://bed2xegx18ift" path="res://plasma_gun/plasma_gun_glass_mat.tres" id="2_pctgy"]
 [ext_resource type="Material" uid="uid://ctrcsj4kq5b8u" path="res://plasma_gun/plasma_gun_light_mat.tres" id="3_mvi4x"]
@@ -8,9 +9,13 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_k0w5v"]
 
 [node name="PlasmaGun" type="Node3D"]
+script = ExtResource("1_u12ia")
 
-[node name="simple_gun" parent="." instance=ExtResource("1_oibds")]
+[node name="Anchor" type="Node3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, -0.0128148, 0.0378865)
+
+[node name="simple_gun" parent="Anchor" instance=ExtResource("1_oibds")]
 
 [node name="plasma_gun" parent="." instance=ExtResource("1_wuxdl")]
 transform = Transform3D(0.455491, 0, 0, 0, 0.455491, 0, 0, 0, 0.455491, 0, 0, 0)
