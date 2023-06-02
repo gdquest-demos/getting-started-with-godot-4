@@ -1,14 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://xtl5acmpaa04"]
+[gd_scene load_steps=4 format=3 uid="uid://xtl5acmpaa04"]
 
 [ext_resource type="Script" path="res://spawner_3d.gd" id="1_5kn8d"]
 
-[node name="MobSpawner3D" type="Marker3D"]
-gizmo_extents = 1.0
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_siai5"]
+albedo_color = Color(0.152941, 0.168627, 0.188235, 1)
+emission_enabled = true
+emission = Color(0.552941, 0.0980392, 0.843137, 1)
+emission_energy_multiplier = 4.7
+
+[sub_resource type="TorusMesh" id="TorusMesh_ulr28"]
+material = SubResource("StandardMaterial3D_siai5")
+inner_radius = 0.887
+rings = 40
+ring_segments = 8
+
+[node name="MobSpawner3D" type="Node3D"]
 script = ExtResource("1_5kn8d")
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 2.5
 autostart = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("TorusMesh_ulr28")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

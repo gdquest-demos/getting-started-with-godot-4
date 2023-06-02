@@ -13,7 +13,7 @@ func _ready():
 func _on_timer_timeout():
 	var new_mob = mob_to_spawn.instantiate()
 	add_child(new_mob)
-	new_mob.global_position = global_position
+	new_mob.global_position = %Marker3D.global_position
 	mob_spawned.emit(new_mob)
 	
 	# Each time a mob spawns, we make the game a little harder

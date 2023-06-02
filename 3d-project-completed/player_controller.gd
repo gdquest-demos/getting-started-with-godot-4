@@ -33,6 +33,8 @@ func _physics_process(delta):
 
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
+		if velocity.y > 0.0 and not Input.is_action_pressed("jump"):
+			velocity.y = 0.0
 	elif Input.is_action_just_pressed("jump"):
 		velocity.y = JUMP_VELOCITY
 
