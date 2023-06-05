@@ -309,6 +309,7 @@ script = ExtResource("1_kg7lb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
+playback_default_blend_time = 0.2
 libraries = {
 "": SubResource("AnimationLibrary_wrcpu")
 }
@@ -324,43 +325,43 @@ texture = ExtResource("2_62bos")
 modulate = Color(1, 0.572549, 0.176471, 1)
 
 [node name="SquareFootL" type="Sprite2D" parent="Remote"]
-position = Vector2(-18.9461, -3.42474)
+position = Vector2(-20, -9)
 rotation = -0.436332
 scale = Vector2(0.999807, 0.999807)
 texture = ExtResource("3_186qq")
 offset = Vector2(-4, 0)
 
 [node name="SquareLowerLegL" type="Sprite2D" parent="Remote"]
-position = Vector2(-14.2254, -14.4547)
-rotation = 0.404401
+position = Vector2(-21.1752, -20.94)
+rotation = -0.0981065
 scale = Vector2(0.999807, 0.999807)
 texture = ExtResource("4_plnsd")
 offset = Vector2(0, 6)
 
 [node name="SquareUpperLegL" type="Sprite2D" parent="Remote"]
 position = Vector2(-8.71794, -27.3229)
-rotation = 0.404401
+rotation = 1.09729
 scale = Vector2(0.999807, 0.999807)
 texture = ExtResource("5_q2t1e")
 offset = Vector2(0, 6)
 
 [node name="SquareFootR" type="Sprite2D" parent="Remote"]
-position = Vector2(26.5215, -7.69549)
+position = Vector2(6.04973, -3.24451)
 rotation = -2.70526
 scale = Vector2(0.999807, 0.999807)
 texture = ExtResource("3_186qq")
 offset = Vector2(-4, 0)
 
 [node name="SquareLowerLegR" type="Sprite2D" parent="Remote"]
-position = Vector2(19.4643, -17.3981)
-rotation = -0.62884
+position = Vector2(8.4411, -15.0015)
+rotation = 0.200663
 scale = Vector2(0.999807, 0.999807)
 texture = ExtResource("4_plnsd")
 offset = Vector2(0, 6)
 
 [node name="SquareUpperLegR" type="Sprite2D" parent="Remote"]
 position = Vector2(11.231, -28.7179)
-rotation = -0.62884
+rotation = 0.200663
 scale = Vector2(0.999807, 0.999807)
 texture = ExtResource("5_q2t1e")
 offset = Vector2(0, 6)
@@ -387,13 +388,15 @@ rest = Transform2D(1, 0, 0, 1, 0, -37)
 
 [node name="UpperLegL" type="Bone2D" parent="Skeleton2D/Center"]
 position = Vector2(-10, 8)
-rotation = 0.474214
+rotation = 1.1671
 scale = Vector2(0.999923, 0.999923)
 rest = Transform2D(1, 0, 0, 1, -14, 8)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="LowerLegL" type="Bone2D" parent="Skeleton2D/Center/UpperLegL"]
 position = Vector2(0, 14)
 rest = Transform2D(1, 0, 0, 1, 0, 14)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="FootL" type="Bone2D" parent="Skeleton2D/Center/UpperLegL/LowerLegL"]
 position = Vector2(0, 12)
@@ -415,13 +418,15 @@ remote_path = NodePath("../../../../Remote/SquareUpperLegL")
 
 [node name="UpperLegR" type="Bone2D" parent="Skeleton2D/Center"]
 position = Vector2(10, 8)
-rotation = -0.559027
+rotation = 0.270476
 scale = Vector2(0.999923, 0.999923)
 rest = Transform2D(1, 0, 0, 1, 14, 8)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="LowerLegR" type="Bone2D" parent="Skeleton2D/Center/UpperLegR"]
 position = Vector2(0, 14)
 rest = Transform2D(1, 0, 0, 1, 0, 14)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="FootR" type="Bone2D" parent="Skeleton2D/Center/UpperLegR/LowerLegR"]
 position = Vector2(0, 12)

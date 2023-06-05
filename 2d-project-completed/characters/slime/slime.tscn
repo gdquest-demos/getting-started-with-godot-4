@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3]
+[gd_scene load_steps=22 format=3 uid="uid://ogik4s70pgwl"]
 
 [ext_resource type="Texture2D" uid="uid://dvgfmy6vtvjji" path="res://characters/slime/slime_body.png" id="1_3j35h"]
 [ext_resource type="Script" path="res://characters/slime/slime.gd" id="1_87y5x"]
 [ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://characters/ground_shadow.png" id="1_cq7ej"]
 [ext_resource type="Texture2D" uid="uid://c078jrp2yvc4s" path="res://characters/slime/slime_face.png" id="2_ygydt"]
+[ext_resource type="Texture2D" uid="uid://btbxea1f3vwot" path="res://characters/slime/slime_body_hurt.png" id="4_0qu0c"]
 [ext_resource type="Texture2D" uid="uid://cai2ijnbypqtr" path="res://characters/slime/slime_hurt_eyes.png" id="4_hi70h"]
 
 [sub_resource type="Animation" id="Animation_y4lve"]
@@ -59,22 +60,10 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Anchor/SlimeBody:modulate")
+tracks/4/path = NodePath("Anchor:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Anchor:scale")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -111,26 +100,26 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Anchor/SlimeBody:modulate")
+tracks/2/path = NodePath("Anchor:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(-2, -2, -2),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Anchor:scale")
+tracks/3/path = NodePath("Anchor/SlimeBody/SlimeBodyHurt:modulate:a")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(-2, -2, -2),
+"transitions": PackedFloat32Array(1, -2, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
+"values": [0.0, 1.0, 0.0]
 }
 
 [sub_resource type="Animation" id="Animation_71vdi"]
@@ -227,7 +216,7 @@ animation = &"hurt"
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_rtvnm"]
 filter_enabled = true
-filters = ["Anchor/Face/SlimeFace:texture", "Anchor/Face:position:y", "Anchor/SlimeBody:modulate", "Anchor/SlimeBody:texture", "Anchor:scale"]
+filters = ["Anchor/Face/SlimeFace:texture", "Anchor/Face:position:y", "Anchor/SlimeBody/SlimeBodyHurt:modulate:a", "Anchor/SlimeBody:modulate", "Anchor/SlimeBody:texture", "Anchor:scale"]
 fadein_time = 0.05
 fadeout_time = 0.05
 
@@ -257,7 +246,6 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(-354, -38)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_b1ecp"]
-graph_offset = Vector2(-244, 81)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_ssj5e")
 nodes/Animation/position = Vector2(60, 240)
 nodes/HurtShot/node = SubResource("AnimationNodeOneShot_rtvnm")
@@ -282,11 +270,17 @@ texture = ExtResource("1_cq7ej")
 [node name="Anchor" type="Marker2D" parent="."]
 
 [node name="SlimeBody" type="Sprite2D" parent="Anchor"]
+scale = Vector2(1.02486, 0.975142)
 texture = ExtResource("1_3j35h")
 offset = Vector2(0, -36)
 
+[node name="SlimeBodyHurt" type="Sprite2D" parent="Anchor/SlimeBody"]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("4_0qu0c")
+offset = Vector2(0, -36)
+
 [node name="Face" type="Marker2D" parent="Anchor"]
-position = Vector2(0, -25)
+position = Vector2(0, -26.0114)
 
 [node name="SlimeFace" type="Sprite2D" parent="Anchor/Face"]
 texture = ExtResource("2_ygydt")
