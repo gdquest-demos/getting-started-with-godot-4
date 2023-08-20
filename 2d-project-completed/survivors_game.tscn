@@ -68,34 +68,37 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PineTree" parent="." instance=ExtResource("3_6h7ij")]
-position = Vector2(226, 951)
+position = Vector2(66, 591)
 
 [node name="PineTree2" parent="." instance=ExtResource("3_6h7ij")]
-position = Vector2(315, 1003)
+position = Vector2(155, 643)
 
 [node name="PineTree3" parent="." instance=ExtResource("3_6h7ij")]
-position = Vector2(150, 1047)
+position = Vector2(-9.99997, 687)
 
 [node name="PineTree4" parent="." instance=ExtResource("3_6h7ij")]
-position = Vector2(1490, 254)
+position = Vector2(682, 254)
 
 [node name="PineTree5" parent="." instance=ExtResource("3_6h7ij")]
-position = Vector2(1637, 384)
+position = Vector2(829, 384)
+
+[node name="PineTree11" parent="." instance=ExtResource("3_6h7ij")]
+position = Vector2(781, -296)
 
 [node name="PineTree6" parent="." instance=ExtResource("3_6h7ij")]
-position = Vector2(-741, 313)
+position = Vector2(-677, 313)
 
 [node name="PineTree7" parent="." instance=ExtResource("3_6h7ij")]
-position = Vector2(-852, 370)
+position = Vector2(-788, 370)
 
 [node name="PineTree8" parent="." instance=ExtResource("3_6h7ij")]
-position = Vector2(-893, 229)
+position = Vector2(-829, 229)
 
 [node name="PineTree9" parent="." instance=ExtResource("3_6h7ij")]
-position = Vector2(-346, -667)
+position = Vector2(-346, -355)
 
 [node name="PineTree10" parent="." instance=ExtResource("3_6h7ij")]
-position = Vector2(-573, -543)
+position = Vector2(-573, -231)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
