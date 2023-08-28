@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Getting started with Godot 4: Your first 2D character"
 run/main_scene="res://game.tscn"
-config/features=PackedStringArray("4.0", "Forward Plus")
+config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [input]
