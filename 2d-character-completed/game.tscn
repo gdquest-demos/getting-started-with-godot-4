@@ -1,22 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxd5y1yluj4tq"]
+[gd_scene load_steps=4 format=3 uid="uid://bxd5y1yluj4tq"]
 
+[ext_resource type="Texture2D" uid="uid://dne1gifmdrt56" path="res://assets/ground.png" id="1_mm1as"]
 [ext_resource type="PackedScene" uid="uid://b6uim8y3n6r5s" path="res://obstacle.tscn" id="1_nj6sa"]
 [ext_resource type="PackedScene" uid="uid://x38aolnvlbd" path="res://player.tscn" id="2_evddu"]
 
 [node name="Game" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -2072.0
+offset_top = -1419.0
+offset_right = 3956.0
+offset_bottom = 3116.0
+texture = ExtResource("1_mm1as")
+stretch_mode = 1
 
 [node name="Obstacle" parent="." instance=ExtResource("1_nj6sa")]
 position = Vector2(554, 309)
 
 [node name="Player" parent="." instance=ExtResource("2_evddu")]
 position = Vector2(234, 160)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -32
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
