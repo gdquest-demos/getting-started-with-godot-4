@@ -5,8 +5,8 @@
 
 [sub_resource type="Gradient" id="Gradient_obal6"]
 interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.7)
-colors = PackedColorArray(0.98, 0.98, 0.98, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0.105691, 0.7)
+colors = PackedColorArray(0.878431, 0.878431, 0.878431, 1, 0.878431, 0.878431, 0.878431, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_mxd0d"]
 gradient = SubResource("Gradient_obal6")
@@ -35,6 +35,45 @@ shader_parameter/texture_offset = Vector2(0, 0)
 shader_parameter/voronoi_sampler = SubResource("NoiseTexture2D_uji5e")
 shader_parameter/edge_curve = SubResource("CurveTexture_p664q")
 shader_parameter/color_gradient = SubResource("GradientTexture1D_mxd0d")
+
+[sub_resource type="Animation" id="Animation_6fv2e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Smoke:material:shader_parameter/offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Smoke:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Smoke:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.396078, 0.396078, 0.396078, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_viyco"]
 resource_name = "explosion"
@@ -75,45 +114,6 @@ tracks/2/keys = {
 "values": [1.0, 0.0]
 }
 
-[sub_resource type="Animation" id="Animation_6fv2e"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Smoke:material:shader_parameter/offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [2.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Smoke:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Smoke:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8msef"]
 _data = {
 "RESET": SubResource("Animation_6fv2e"),
@@ -125,6 +125,7 @@ script = ExtResource("1_kb8ql")
 
 [node name="Smoke" type="ColorRect" parent="."]
 unique_name_in_owner = true
+modulate = Color(0.396078, 0.396078, 0.396078, 1)
 material = SubResource("ShaderMaterial_dssfe")
 anchors_preset = 8
 anchor_left = 0.5
@@ -138,6 +139,7 @@ offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(64, 64)
+color = Color(0.568627, 0.568627, 0.568627, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
