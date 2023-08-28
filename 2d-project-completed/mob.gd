@@ -4,7 +4,7 @@ var speed = randf_range(200, 300)
 
 var health = 3
 
-@onready var player := get_node("/root/Game/Player")
+@onready var player = get_node("/root/Game/Player")
 @onready var slime = %Slime
 
 signal KO
