@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 func _physics_process(delta):
 	const SPEED = 600.0
 	const ACCELERATION = 30

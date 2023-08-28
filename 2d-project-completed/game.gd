@@ -10,8 +10,10 @@ func spawn_mob():
 	new_mob.global_position = %PathFollow2D.global_position
 	add_child(new_mob)
 
+
 func _on_timer_timeout():
 	spawn_mob()
+
 
 func make_smoke(position : Vector2):
 	var smoke_scene = preload("res://smoke_explosion/smoke_explosion.tscn")
@@ -19,6 +21,7 @@ func make_smoke(position : Vector2):
 	smoke.z_index = 10
 	add_child(smoke)
 	smoke.global_position = position
+
 
 func _on_player_health_depleted():
 	%GameOver.show()

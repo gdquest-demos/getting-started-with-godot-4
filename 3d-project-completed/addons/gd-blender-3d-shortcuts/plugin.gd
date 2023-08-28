@@ -63,6 +63,7 @@ func _init():
 
 	overlay_label.set("custom_colors/font_color_shadow", Color.BLACK)
 
+
 func _ready():
 	var spatial_editor = Utils.get_spatial_editor(get_editor_interface().get_base_control())
 	var snap_dialog = Utils.get_snap_dialog(spatial_editor)
@@ -81,6 +82,7 @@ func _ready():
 	if spatial_editor_viewport_container:
 		spatial_editor_viewports = Utils.get_spatial_editor_viewports(spatial_editor_viewport_container)
 	sync_settings()
+
 
 func _input(event):
 	if event is InputEventKey:
@@ -114,6 +116,7 @@ func _input(event):
 					Input.warp_mouse(overlay_control.global_position + warp_pos)
 					_is_warping_mouse = true
 
+
 func _on_snap_value_changed(text, session):
 	match session:
 		SESSION.TRANSLATE:
@@ -123,11 +126,14 @@ func _on_snap_value_changed(text, session):
 		SESSION.SCALE:
 			scale_snap = text.to_float() / 100.0
 
+
 func _on_local_space_button_toggled(pressed):
 	is_global = !pressed
 
+
 func _on_snap_button_toggled(pressed):
 	is_snapping = pressed
+
 
 func _handles(object):
 	if object is Node3D:
@@ -137,6 +143,7 @@ func _handles(object):
 		_is_editing = get_editor_interface().get_selection().get_transformable_selected_nodes().size() > 0
 		return _is_editing
 	return false
+
 
 func _edit(object):
 	var scene_root = get_editor_interface().get_edited_scene_root()
@@ -153,6 +160,7 @@ func _edit(object):
 			if axis_mesh_inst.get_parent() != scene_root:
 				axis_mesh_inst.get_parent().remove_child(axis_mesh_inst)
 				scene_root.get_parent().add_child(axis_mesh_inst)
+
 
 func _forward_3d_gui_input(camera, event):
 	var forward = false
@@ -304,6 +312,7 @@ func _forward_3d_draw_over_viewport(overlay):
 	var screen_origin = overlay.size / 2.0 if is_pivot_point_behind_camera else _camera.unproject_position(pivot_point)
 	Utils.draw_dashed_line(overlay, screen_origin, overlay.get_local_mouse_position(), line_color, 1, 5, true, true)
 
+
 func text_transform(text):
 	var input_value = text.to_float()
 	match current_session:
@@ -325,6 +334,7 @@ func text_transform(text):
 		Utils.apply_global_transform(nodes, t, _cache_transforms)
 	else:
 		Utils.apply_transform(nodes, t, _cache_global_transforms)
+
 
 func mouse_transform(event):
 	var nodes = get_editor_interface().get_selection().get_transformable_selected_nodes()
@@ -420,6 +430,7 @@ func mouse_transform(event):
 	_last_angle = angle
 	_is_warping_mouse = false
 
+
 func cache_selected_nodes_transforms():
 	var nodes = get_editor_interface().get_selection().get_transformable_selected_nodes()
 	var inversed_pivot_transform = Transform3D().translated(pivot_point).affine_inverse()
@@ -427,6 +438,7 @@ func cache_selected_nodes_transforms():
 		var node = nodes[i]
 		_cache_global_transforms.append(node.global_transform)
 		_cache_transforms.append(inversed_pivot_transform * node.global_transform)
+
 
 func update_pivot_point():
 	var nodes = get_editor_interface().get_selection().get_transformable_selected_nodes()
@@ -437,6 +449,7 @@ func update_pivot_point():
 			aabb.position = node.global_transform.origin
 		aabb = aabb.expand(node.global_transform.origin)
 	pivot_point = aabb.position + aabb.size / 2.0
+
 
 func start_session(session, camera, event):
 	if get_editor_interface().get_selection().get_transformable_selected_nodes().size() == 0:
@@ -456,6 +469,7 @@ func start_session(session, camera, event):
 	var spatial_editor_viewport = Utils.get_focused_spatial_editor_viewport(spatial_editor_viewports)
 	overlay_control = Utils.get_spatial_editor_viewport_control(spatial_editor_viewport) if spatial_editor_viewport else null
 
+
 func end_session():
 	_is_editing = get_editor_interface().get_selection().get_transformable_selected_nodes().size() > 0
 	# Manually set is_global to avoid triggering revert()
@@ -464,6 +478,7 @@ func end_session():
 	is_global = _is_global_on_session
 	clear_session()
 	update_overlays()
+
 
 func commit_session():
 	var undo_redo = get_undo_redo()
@@ -478,6 +493,7 @@ func commit_session():
 		undo_redo.add_do_method(Utils, "apply_transform", nodes, t, _cache_global_transforms)
 	undo_redo.add_undo_method(Utils, "revert_transform", nodes, _cache_global_transforms)
 	undo_redo.commit_action()
+
 
 func commit_reset_transform():
 	var undo_redo = get_undo_redo()
@@ -500,6 +516,7 @@ func commit_reset_transform():
 			undo_redo.commit_action()
 	current_session = SESSION.NONE
 
+
 func commit_hide_nodes():
 	var undo_redo = get_undo_redo()
 	var nodes = get_editor_interface().get_selection().get_transformable_selected_nodes()
@@ -508,6 +525,7 @@ func commit_hide_nodes():
 	undo_redo.add_undo_method(Utils, "hide_nodes", nodes, false)
 	undo_redo.commit_action()
 
+
 func revert():
 	var nodes = get_editor_interface().get_selection().get_transformable_selected_nodes()
 	Utils.revert_transform(nodes, _cache_global_transforms)
@@ -515,6 +533,7 @@ func revert():
 	_applying_transform = Transform3D.IDENTITY
 	_last_world_pos = Vector3.ZERO
 	axis_im.clear_surfaces()
+
 
 func clear_session():
 	current_session = SESSION.NONE
@@ -536,6 +555,7 @@ func clear_session():
 	_is_warping_mouse = false
 	axis_im.clear_surfaces()
 
+
 func sync_settings():
 	if translate_snap_line_edit:
 		translate_snap = translate_snap_line_edit.text.to_float()
@@ -547,6 +567,7 @@ func sync_settings():
 		is_global = !local_space_button.button_pressed
 	if snap_button:
 		is_snapping = snap_button.button_pressed
+
 
 func switch_display_mode():
 	var spatial_editor_viewport = Utils.get_focused_spatial_editor_viewport(spatial_editor_viewports)
@@ -579,6 +600,7 @@ func toggle_constraint_axis(axis):
 			# Others situation
 			set_constraint_axis(axis)
 
+
 func toggle_input_string_sign():
 	if _input_string.begins_with("-"):
 		_input_string = _input_string.trim_prefix("-")
@@ -586,9 +608,11 @@ func toggle_input_string_sign():
 		_input_string = "-" + _input_string
 	input_string_changed()
 
+
 func trim_input_string():
 	_input_string = _input_string.substr(0, _input_string.length() - 1)
 	input_string_changed()
+
 
 func append_input_string(text):
 	text = "." if text == "Period" else text
@@ -596,6 +620,7 @@ func append_input_string(text):
 		_input_string += text
 		input_string_changed()
 		return true
+
 
 func input_string_changed():
 	if not _input_string.is_empty():
@@ -606,6 +631,7 @@ func input_string_changed():
 		Utils.revert_transform(nodes, _cache_global_transforms)
 	update_overlays()
 
+
 func get_constraint_axis_count():
 	var axis_count = 3
 	if constraint_axis.x == 0:
@@ -615,6 +641,7 @@ func get_constraint_axis_count():
 	if constraint_axis.z == 0:
 		axis_count -= 1
 	return axis_count
+
 
 func set_constraint_axis(v):
 	revert()
@@ -627,6 +654,7 @@ func set_constraint_axis(v):
 		text_transform(_input_string)
 	update_overlays()
 
+
 func set_is_global(v):
 	if is_global != v:
 		if is_instance_valid(local_space_button):
@@ -637,6 +665,7 @@ func set_is_global(v):
 		if not _input_string.is_empty():
 			text_transform(_input_string)
 		update_overlays()
+
 
 func draw_axises():
 	if not constraint_axis.is_equal_approx(Vector3.ONE):

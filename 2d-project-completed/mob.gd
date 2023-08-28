@@ -9,8 +9,10 @@ var health = 3
 
 signal KO
 
+
 func _ready():
 	slime.play_walk()
+
 
 func _physics_process(delta):
 	if not is_instance_valid(player):

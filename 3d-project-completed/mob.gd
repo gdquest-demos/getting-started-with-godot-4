@@ -11,11 +11,13 @@ var health = 3
 @onready var hurt_sound = %HurtSound
 @onready var ko_sound = %KOSound
 
+
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
 	direction.y = 0.0
 	linear_velocity = direction * speed
 	bat_skin.rotation.y = -Vector2(direction.x, direction.z).angle() - PI / 2.0
+
 
 func take_damage():
 	if health <= 0:
