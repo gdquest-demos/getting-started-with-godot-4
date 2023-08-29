@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://pbmyh1qru7p"]
+[gd_scene load_steps=12 format=3 uid="uid://pbmyh1qru7p"]
 
 [ext_resource type="Script" path="res://characters/happy_boo/happy_boo.gd" id="1_kg7lb"]
 [ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://characters/ground_shadow.png" id="2_62bos"]
@@ -7,105 +7,200 @@
 [ext_resource type="Texture2D" uid="uid://qmqpm6asge1i" path="res://characters/happy_boo/square_upper_leg.png" id="5_q2t1e"]
 [ext_resource type="Texture2D" uid="uid://cksiu5gst6fmp" path="res://characters/happy_boo/square_body.png" id="6_w3ck4"]
 [ext_resource type="Texture2D" uid="uid://cvs0lh814pk7h" path="res://characters/happy_boo/square_face.png" id="7_h5h8s"]
-[ext_resource type="SkeletonModificationStack2D" uid="uid://dtf0pmja4mcaa" path="res://characters/happy_boo/square_modification_stack.tres" id="8_nxvha"]
 
 [sub_resource type="Animation" id="Animation_hed62"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Skeleton2D/Center:position:y")
+tracks/0/path = NodePath("Colorizer/SquareUpperLegL:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-36.0]
+"values": [Vector2(-10.6303, -27.3998)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Skeleton2D/Center/UpperLegL:position")
+tracks/1/path = NodePath("Colorizer/SquareUpperLegL:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-10, 8)]
+"values": [0.4009]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Skeleton2D/Center/UpperLegR:position")
+tracks/2/path = NodePath("Colorizer/SquareUpperLegL/SquareLowerLegL:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(10, 8)]
+"values": [Vector2(0, 14)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Skeleton2D/FootLIK:rotation")
+tracks/3/path = NodePath("Colorizer/SquareUpperLegL/SquareLowerLegL:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.436332]
+"values": [-2.98023e-08]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Skeleton2D/FootRIK:rotation")
+tracks/4/path = NodePath("Colorizer/SquareUpperLegL/SquareLowerLegL/SquareFootL:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.436332]
+"values": [Vector2(0, 12)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Skeleton2D/Center:rotation")
+tracks/5/path = NodePath("Colorizer/SquareUpperLegL/SquareLowerLegL/SquareFootL:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.0698132]
+"values": [-3.40666]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Skeleton2D/FootRIK:position")
+tracks/6/path = NodePath("Colorizer/SquareUpperLegR:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(6, -3)]
+"values": [Vector2(9.20459, -29.9444)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Skeleton2D/FootLIK:position")
+tracks/7/path = NodePath("Colorizer/SquareUpperLegR:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-20, -9)]
+"values": [-0.213676]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Colorizer/SquareUpperLegR/SquareLowerLegR:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4.76837e-07, 14)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Colorizer/SquareUpperLegR/SquareLowerLegR:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Colorizer/SquareUpperLegR/SquareLowerLegR/SquareFootR:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 12)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Colorizer/SquareUpperLegR/SquareLowerLegR/SquareFootR:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-2.92296]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Colorizer/SquareBody:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1.73067, -36.6061)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Colorizer/SquareBody:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0250386]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Colorizer/SquareBody/SquareFace:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -17)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Colorizer/SquareBody/SquareFace:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_sablf"]
@@ -114,187 +209,368 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Skeleton2D/Center:position:y")
+tracks/0/path = NodePath("Colorizer/SquareUpperLegL:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
-"transitions": PackedFloat32Array(-2, -2, -2, -2, -2),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-34.0, -35.0, -34.0, -35.0, -34.0]
+"values": [Vector2(-10.6303, -27.3998)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Skeleton2D/Center:position:x")
+tracks/1/path = NodePath("Colorizer/SquareUpperLegL:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.2, 0.7, 1.2),
-"transitions": PackedFloat32Array(-2, -2, -2),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [2.0, -2.0, 2.0]
+"values": [0.4009]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Skeleton2D/Center/UpperLegL:position")
+tracks/2/path = NodePath("Colorizer/SquareUpperLegL/SquareLowerLegL:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-10, 8)]
+"values": [Vector2(0, 14)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Skeleton2D/Center/UpperLegR:position")
+tracks/3/path = NodePath("Colorizer/SquareUpperLegL/SquareLowerLegL:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(10, 8)]
+"values": [-2.98023e-08]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Skeleton2D/FootLIK:rotation")
+tracks/4/path = NodePath("Colorizer/SquareUpperLegL/SquareLowerLegL/SquareFootL:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.436332]
+"values": [Vector2(0, 12)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Skeleton2D/FootRIK:rotation")
+tracks/5/path = NodePath("Colorizer/SquareUpperLegL/SquareLowerLegL/SquareFootL:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.436332]
+"values": [-3.40666]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Skeleton2D/Center:rotation")
+tracks/6/path = NodePath("Colorizer/SquareUpperLegR:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.4, 0.9, 1.4),
-"transitions": PackedFloat32Array(-2, -2, -2),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0698132, -0.0698132, 0.0698132]
+"values": [Vector2(9.20459, -29.9444)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Skeleton2D/FootLIK:position")
+tracks/7/path = NodePath("Colorizer/SquareUpperLegR:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-14, -3)]
+"values": [-0.213676]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Skeleton2D/FootRIK:position")
+tracks/8/path = NodePath("Colorizer/SquareUpperLegR/SquareLowerLegR:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(14, -3)]
+"values": [Vector2(-4.76837e-07, 14)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Colorizer/SquareUpperLegR/SquareLowerLegR:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Colorizer/SquareUpperLegR/SquareLowerLegR/SquareFootR:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 12)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Colorizer/SquareUpperLegR/SquareLowerLegR/SquareFootR:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-2.92296]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Colorizer/SquareBody:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(0.466516, 0.189465, 1),
+"update": 0,
+"values": [Vector2(-1.73067, -36.6061), Vector2(-1.731, -32), Vector2(-1.731, -38)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Colorizer/SquareBody:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(2.46229, 0.535887),
+"update": 0,
+"values": [-0.0250386, 0.0698132]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Colorizer/SquareBody/SquareFace:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -17)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Colorizer/SquareBody/SquareFace:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_74kqe"]
 resource_name = "walk"
 length = 0.6
 loop_mode = 1
+step = 0.0333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Skeleton2D/Center:position:y")
+tracks/0/path = NodePath("Colorizer/SquareUpperLegL:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.466666),
+"transitions": PackedFloat32Array(1, 0.5, 2),
 "update": 0,
-"values": [-36.0, -30.0, -45.0, -36.0, -30.0, -45.0, -36.0]
+"values": [Vector2(-10.6303, -27.3998), Vector2(-10.6303, -27.3998), Vector2(-16, -40)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Skeleton2D/FootRIK:rotation")
+tracks/1/path = NodePath("Colorizer/SquareUpperLegL:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6),
-"transitions": PackedFloat32Array(-2, -2, -2),
+"times": PackedFloat32Array(0, 0.3, 0.466666),
+"transitions": PackedFloat32Array(1, 0.5, 2),
 "update": 0,
-"values": [-0.0872665, 2.0944, -0.0872665]
+"values": [0.4009, 0.4009, -0.197871]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Skeleton2D/FootRIK:position")
+tracks/2/path = NodePath("Colorizer/SquareUpperLegL/SquareLowerLegL:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6),
-"transitions": PackedFloat32Array(-2, -2, -2),
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 0.5),
 "update": 0,
-"values": [Vector2(11, -2), Vector2(11, -23), Vector2(11, -2)]
+"values": [Vector2(0, 14), Vector2(0, 14)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Skeleton2D/FootLIK:position")
+tracks/3/path = NodePath("Colorizer/SquareUpperLegL/SquareLowerLegL:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6),
-"transitions": PackedFloat32Array(-2, -2, -2),
+"times": PackedFloat32Array(0, 0.3, 0.466667),
+"transitions": PackedFloat32Array(1, 0.5, 2),
 "update": 0,
-"values": [Vector2(-11, -23), Vector2(-11, -2), Vector2(-11, -23)]
+"values": [-2.98023e-08, -2.98023e-08, 1.12966]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Skeleton2D/FootLIK:rotation")
+tracks/4/path = NodePath("Colorizer/SquareUpperLegL/SquareLowerLegL/SquareFootL:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6),
-"transitions": PackedFloat32Array(-2, -2, -2),
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 0.5),
 "update": 0,
-"values": [-2.0944, 0.0546129, -2.0944]
+"values": [Vector2(0, 12), Vector2(0, 12)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Skeleton2D/Center:rotation")
+tracks/5/path = NodePath("Colorizer/SquareUpperLegL/SquareLowerLegL/SquareFootL:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.1, 0.4, 0.7),
-"transitions": PackedFloat32Array(-2, -2, -2),
+"times": PackedFloat32Array(0, 0.3, 0.466667),
+"transitions": PackedFloat32Array(1, 0.5, 2),
 "update": 0,
-"values": [0.139626, -0.139626, 0.139626]
+"values": [-3.40666, -3.40666, -3.92035]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Colorizer/SquareUpperLegR:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.3),
+"transitions": PackedFloat32Array(0.5, 2, 1),
+"update": 0,
+"values": [Vector2(9, -27), Vector2(11, -44), Vector2(9, -27)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Colorizer/SquareUpperLegR:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.3),
+"transitions": PackedFloat32Array(0.5, 2, 1),
+"update": 0,
+"values": [-0.213676, -0.458455, -0.213676]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Colorizer/SquareUpperLegR/SquareLowerLegR:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(-4.76837e-07, 14), Vector2(-4.76837e-07, 14)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Colorizer/SquareUpperLegR/SquareLowerLegR:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.3),
+"transitions": PackedFloat32Array(0.5, 2, 1),
+"update": 0,
+"values": [0.0, 0.888296, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Colorizer/SquareUpperLegR/SquareLowerLegR/SquareFootR:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0, 12), Vector2(0, 12)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Colorizer/SquareUpperLegR/SquareLowerLegR/SquareFootR:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.3),
+"transitions": PackedFloat32Array(0.5, 2, 1),
+"update": 0,
+"values": [-2.92296, -3.45549, -2.92296]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Colorizer/SquareBody:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1.73067, -36.6061)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Colorizer/SquareBody:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.3, 0.466667),
+"transitions": PackedFloat32Array(0.392292, 1.31951, 0.267943, 1.8025),
+"update": 0,
+"values": [-0.0250386, -0.209487, 0.0372028, 0.23927]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wrcpu"]
@@ -320,162 +596,56 @@ z_index = -1
 z_as_relative = false
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_62bos")
+metadata/_edit_lock_ = true
 
-[node name="Remote" type="Node2D" parent="."]
+[node name="Colorizer" type="Node2D" parent="."]
 modulate = Color(1, 0.572549, 0.176471, 1)
 
-[node name="SquareFootL" type="Sprite2D" parent="Remote"]
-position = Vector2(-20, -9)
-rotation = -0.436332
-scale = Vector2(0.999807, 0.999807)
-texture = ExtResource("3_186qq")
-offset = Vector2(-4, 0)
-
-[node name="SquareLowerLegL" type="Sprite2D" parent="Remote"]
-position = Vector2(-21.1752, -20.94)
-rotation = -0.0981065
-scale = Vector2(0.999807, 0.999807)
-texture = ExtResource("4_plnsd")
-offset = Vector2(0, 6)
-
-[node name="SquareUpperLegL" type="Sprite2D" parent="Remote"]
-position = Vector2(-8.71794, -27.3229)
-rotation = 1.09729
-scale = Vector2(0.999807, 0.999807)
+[node name="SquareUpperLegL" type="Sprite2D" parent="Colorizer"]
+position = Vector2(-10.6303, -27.3998)
+rotation = 0.4009
+scale = Vector2(0.997829, 0.999794)
 texture = ExtResource("5_q2t1e")
 offset = Vector2(0, 6)
 
-[node name="SquareFootR" type="Sprite2D" parent="Remote"]
-position = Vector2(6.04973, -3.24451)
-rotation = -2.70526
-scale = Vector2(0.999807, 0.999807)
-texture = ExtResource("3_186qq")
-offset = Vector2(-4, 0)
-
-[node name="SquareLowerLegR" type="Sprite2D" parent="Remote"]
-position = Vector2(8.4411, -15.0015)
-rotation = 0.200663
-scale = Vector2(0.999807, 0.999807)
+[node name="SquareLowerLegL" type="Sprite2D" parent="Colorizer/SquareUpperLegL"]
+position = Vector2(0, 14)
 texture = ExtResource("4_plnsd")
 offset = Vector2(0, 6)
 
-[node name="SquareUpperLegR" type="Sprite2D" parent="Remote"]
-position = Vector2(11.231, -28.7179)
-rotation = 0.200663
-scale = Vector2(0.999807, 0.999807)
+[node name="SquareFootL" type="Sprite2D" parent="Colorizer/SquareUpperLegL/SquareLowerLegL"]
+position = Vector2(0, 12)
+rotation = -3.40666
+scale = Vector2(1.01116, 1)
+texture = ExtResource("3_186qq")
+offset = Vector2(-4, 0)
+
+[node name="SquareUpperLegR" type="Sprite2D" parent="Colorizer"]
+position = Vector2(9.20459, -29.9444)
+rotation = -0.213676
+scale = Vector2(0.999794, 0.999794)
 texture = ExtResource("5_q2t1e")
 offset = Vector2(0, 6)
 
-[node name="SquareBody" type="Sprite2D" parent="Remote"]
-position = Vector2(0.698561, -36)
-rotation = -0.0698132
-scale = Vector2(0.999884, 0.999884)
+[node name="SquareLowerLegR" type="Sprite2D" parent="Colorizer/SquareUpperLegR"]
+position = Vector2(-4.76837e-07, 14)
+texture = ExtResource("4_plnsd")
+offset = Vector2(0, 6)
+
+[node name="SquareFootR" type="Sprite2D" parent="Colorizer/SquareUpperLegR/SquareLowerLegR"]
+position = Vector2(0, 12)
+rotation = -2.92296
+texture = ExtResource("3_186qq")
+offset = Vector2(-4, 0)
+
+[node name="SquareBody" type="Sprite2D" parent="Colorizer"]
+position = Vector2(-1.73067, -36.6061)
+rotation = -0.0250386
+scale = Vector2(0.9842, 0.990263)
 texture = ExtResource("6_w3ck4")
 offset = Vector2(0, -23)
 
-[node name="SquareFace" type="Sprite2D" parent="Remote/SquareBody"]
+[node name="SquareFace" type="Sprite2D" parent="Colorizer/SquareBody"]
 position = Vector2(0, -17)
 texture = ExtResource("7_h5h8s")
-
-[node name="Skeleton2D" type="Skeleton2D" parent="."]
-modification_stack = ExtResource("8_nxvha")
-
-[node name="Center" type="Bone2D" parent="Skeleton2D"]
-position = Vector2(0.698561, -36)
-rotation = -0.0698132
-scale = Vector2(0.999884, 0.999884)
-rest = Transform2D(1, 0, 0, 1, 0, -37)
-
-[node name="UpperLegL" type="Bone2D" parent="Skeleton2D/Center"]
-position = Vector2(-10, 8)
-rotation = 1.1671
-scale = Vector2(0.999923, 0.999923)
-rest = Transform2D(1, 0, 0, 1, -14, 8)
-metadata/_local_pose_override_enabled_ = true
-
-[node name="LowerLegL" type="Bone2D" parent="Skeleton2D/Center/UpperLegL"]
-position = Vector2(0, 14)
-rest = Transform2D(1, 0, 0, 1, 0, 14)
-metadata/_local_pose_override_enabled_ = true
-
-[node name="FootL" type="Bone2D" parent="Skeleton2D/Center/UpperLegL/LowerLegL"]
-position = Vector2(0, 12)
-rest = Transform2D(1, 0, 0, 1, 0, 12)
-auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
-editor_settings/show_bone_gizmo = false
-
-[node name="FootLTransform" type="RemoteTransform2D" parent="Skeleton2D/Center/UpperLegL/LowerLegL/FootL"]
-remote_path = NodePath("../../../../../../Remote/SquareFootL")
-update_rotation = false
-
-[node name="LowerLegLTransform" type="RemoteTransform2D" parent="Skeleton2D/Center/UpperLegL/LowerLegL"]
-remote_path = NodePath("../../../../../Remote/SquareLowerLegL")
-
-[node name="UpperLegLTransform" type="RemoteTransform2D" parent="Skeleton2D/Center/UpperLegL"]
-remote_path = NodePath("../../../../Remote/SquareUpperLegL")
-
-[node name="UpperLegR" type="Bone2D" parent="Skeleton2D/Center"]
-position = Vector2(10, 8)
-rotation = 0.270476
-scale = Vector2(0.999923, 0.999923)
-rest = Transform2D(1, 0, 0, 1, 14, 8)
-metadata/_local_pose_override_enabled_ = true
-
-[node name="LowerLegR" type="Bone2D" parent="Skeleton2D/Center/UpperLegR"]
-position = Vector2(0, 14)
-rest = Transform2D(1, 0, 0, 1, 0, 14)
-metadata/_local_pose_override_enabled_ = true
-
-[node name="FootR" type="Bone2D" parent="Skeleton2D/Center/UpperLegR/LowerLegR"]
-position = Vector2(0, 12)
-rest = Transform2D(1, 0, 0, 1, 0, 12)
-auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
-editor_settings/show_bone_gizmo = false
-
-[node name="FootRTransform" type="RemoteTransform2D" parent="Skeleton2D/Center/UpperLegR/LowerLegR/FootR"]
-remote_path = NodePath("../../../../../../Remote/SquareFootR")
-update_rotation = false
-
-[node name="LowerLegRTransform" type="RemoteTransform2D" parent="Skeleton2D/Center/UpperLegR/LowerLegR"]
-remote_path = NodePath("../../../../../Remote/SquareLowerLegR")
-
-[node name="UpperLegRTransform" type="RemoteTransform2D" parent="Skeleton2D/Center/UpperLegR"]
-remote_path = NodePath("../../../../Remote/SquareUpperLegR")
-
-[node name="CenterTransform" type="RemoteTransform2D" parent="Skeleton2D/Center"]
-remote_path = NodePath("../../../Remote/SquareBody")
-
-[node name="FootLIK" type="Bone2D" parent="Skeleton2D"]
-position = Vector2(-20, -9)
-rotation = -0.436332
-scale = Vector2(0.999988, 0.999988)
-rest = Transform2D(1, 0, 0, 1, -14, -3)
-auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
-editor_settings/show_bone_gizmo = false
-
-[node name="FootLTransformRotation" type="RemoteTransform2D" parent="Skeleton2D/FootLIK"]
-remote_path = NodePath("../../../Remote/SquareFootL")
-update_position = false
-update_scale = false
-
-[node name="FootRIK" type="Bone2D" parent="Skeleton2D"]
-position = Vector2(6, -3)
-rotation = 0.436332
-scale = Vector2(0.999991, 0.999991)
-rest = Transform2D(1, 0, 0, 1, 14, -3)
-auto_calculate_length_and_angle = false
-length = 16.0
-bone_angle = 0.0
-editor_settings/show_bone_gizmo = false
-
-[node name="FootRTransformRotation" type="RemoteTransform2D" parent="Skeleton2D/FootRIK"]
-rotation = 3.14159
-remote_path = NodePath("../../../Remote/SquareFootR")
-update_position = false
-update_scale = false
+metadata/_edit_lock_ = true
