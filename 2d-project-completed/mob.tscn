@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ogik4s70pgwl" path="res://characters/slime/slime.tscn" id="3_n2uyc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ypitm"]
-radius = 42.0476
+radius = 67.0
 
 [node name="Mob" type="CharacterBody2D"]
 collision_layer = 2

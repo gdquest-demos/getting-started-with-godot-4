@@ -12,8 +12,15 @@ config_version=5
 
 config/name="Getting started with Godot 4: Your first 2D character"
 run/main_scene="res://game.tscn"
-config/features=PackedStringArray("4.0", "Forward Plus")
+config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
 
 [input]
 

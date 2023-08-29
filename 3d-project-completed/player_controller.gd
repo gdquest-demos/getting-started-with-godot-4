@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var shot_sound = %ShotSound
 @onready var plasma_gun = %PlasmaGun
 
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	%Marker3D.look_at(%Camera3D.global_position + %Camera3D.global_transform.basis.z * 1000)

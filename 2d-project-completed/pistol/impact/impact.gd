@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var sprite = %Sprite
 
+
 func _ready():
 	var t = create_tween().set_parallel(true).set_ease(Tween.EASE_OUT)
 	t.tween_property(sprite, "scale", Vector2.ONE * 1.35, 0.3).from(Vector2.ONE * 0.6)
