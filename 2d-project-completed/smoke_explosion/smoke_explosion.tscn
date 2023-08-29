@@ -121,6 +121,7 @@ _data = {
 }
 
 [node name="SmokeExplosion" type="Node2D"]
+z_index = 10
 script = ExtResource("1_kb8ql")
 
 [node name="Smoke" type="ColorRect" parent="."]
@@ -143,6 +144,7 @@ color = Color(0.568627, 0.568627, 0.568627, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
+autoplay = "RESET"
 libraries = {
 "": SubResource("AnimationLibrary_8msef")
 }

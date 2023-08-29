@@ -16,14 +16,14 @@ script = ExtResource("1_sluxj")
 shape = SubResource("CircleShape2D_nthgb")
 
 [node name="WeaponPivot" type="Marker2D" parent="."]
-position = Vector2(68, 0)
+position = Vector2(62, 0)
 gizmo_extents = 47.7
 
 [node name="Pistol" parent="WeaponPivot" instance=ExtResource("2_1hh50")]
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/Pistol"]
 unique_name_in_owner = true
-position = Vector2(42, -11)
+position = Vector2(35, -11)
 gizmo_extents = 30.6
 
 [node name="Timer" type="Timer" parent="."]
