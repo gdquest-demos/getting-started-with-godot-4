@@ -1,18 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://bxd5y1yluj4tq"]
 
-[ext_resource type="Texture2D" uid="uid://dne1gifmdrt56" path="res://assets/ground.png" id="1_mm1as"]
+[ext_resource type="Material" uid="uid://cgvnmpq6vnska" path="res://assets/background/space_material.tres" id="1_avb6r"]
 [ext_resource type="PackedScene" uid="uid://b6uim8y3n6r5s" path="res://obstacle.tscn" id="1_nj6sa"]
 [ext_resource type="PackedScene" uid="uid://x38aolnvlbd" path="res://player.tscn" id="2_evddu"]
 
 [node name="Game" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="ColorRect" parent="."]
+material = ExtResource("1_avb6r")
 offset_left = -2072.0
 offset_top = -1419.0
 offset_right = 3956.0
 offset_bottom = 3116.0
-texture = ExtResource("1_mm1as")
-stretch_mode = 1
 
 [node name="Obstacle" parent="." instance=ExtResource("1_nj6sa")]
 position = Vector2(554, 309)
