@@ -76,7 +76,7 @@ Settings/Show_Tooltips=true
 
 config/name="Your First 2D Game With Godot 4: START (GDQuest)"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [display]
 
