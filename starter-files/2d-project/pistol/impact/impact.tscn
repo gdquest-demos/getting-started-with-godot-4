@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://kcl4efkvrany"]
+
+[ext_resource type="Script" path="res://pistol/impact/impact.gd" id="1_4vum2"]
+[ext_resource type="Texture2D" uid="uid://dn80eu1qs371v" path="res://pistol/impact/circle.png" id="2_wp1di"]
+
+[node name="Impact" type="Node2D"]
+top_level = true
+script = ExtResource("1_4vum2")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 0.831373, 0.239216, 1)
+texture = ExtResource("2_wp1di")
