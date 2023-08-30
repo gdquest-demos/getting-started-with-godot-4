@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ogik4s70pgwl"]
+[gd_scene load_steps=21 format=3 uid="uid://ogik4s70pgwl"]
 
 [ext_resource type="Texture2D" uid="uid://dvgfmy6vtvjji" path="res://characters/slime/slime_body.png" id="1_3j35h"]
 [ext_resource type="Script" path="res://characters/slime/slime.gd" id="1_87y5x"]
@@ -255,8 +255,6 @@ nodes/StateMachine/position = Vector2(40, 80)
 nodes/output/position = Vector2(400, 100)
 node_connections = [&"output", 0, &"HurtShot", &"HurtShot", 0, &"StateMachine", &"HurtShot", 1, &"Animation"]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_o6qu4"]
-
 [node name="Slime" type="Node2D"]
 script = ExtResource("1_87y5x")
 
@@ -270,7 +268,6 @@ texture = ExtResource("1_cq7ej")
 [node name="Anchor" type="Marker2D" parent="."]
 
 [node name="SlimeBody" type="Sprite2D" parent="Anchor"]
-scale = Vector2(1.02486, 0.975142)
 texture = ExtResource("1_3j35h")
 offset = Vector2(0, -36)
 
@@ -280,7 +277,7 @@ texture = ExtResource("4_0qu0c")
 offset = Vector2(0, -36)
 
 [node name="Face" type="Marker2D" parent="Anchor"]
-position = Vector2(0, -26.0114)
+position = Vector2(0, -25)
 
 [node name="SlimeFace" type="Sprite2D" parent="Anchor/Face"]
 texture = ExtResource("2_ygydt")
@@ -296,5 +293,5 @@ tree_root = SubResource("AnimationNodeBlendTree_b1ecp")
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/HurtShot/active = false
+parameters/HurtShot/internal_active = false
 parameters/HurtShot/request = 0
-parameters/StateMachine/playback = SubResource("AnimationNodeStateMachinePlayback_o6qu4")
