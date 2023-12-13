@@ -13,7 +13,7 @@ func _ready():
 	%Slime.play_walk()
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = global_position.direction_to(player.global_position)
 	velocity = direction * speed
 	move_and_slide()
