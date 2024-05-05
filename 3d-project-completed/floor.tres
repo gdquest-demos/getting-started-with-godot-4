@@ -1,7 +1,7 @@
 [gd_resource type="MeshLibrary" load_steps=10 format=3 uid="uid://b8dsyehebhq1j"]
 
-[ext_resource type="Material" path="res://first_color.tres" id="1_vwwh7"]
-[ext_resource type="Material" uid="uid://cp4gi8r3s3twb" path="res://ground_color.tres" id="2_ki2w5"]
+[ext_resource type="Material" path="res://bridges.tres" id="1_vwwh7"]
+[ext_resource type="Material" uid="uid://cp4gi8r3s3twb" path="res://platforms.tres" id="2_ki2w5"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_2b3vn"]
 material = ExtResource("1_vwwh7")

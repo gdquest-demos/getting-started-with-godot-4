@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://dsg1eeb214fgt"]
-
-[node name="cube"]
-
-[node name="Cube" parent="." index="0"]
-material_override = null

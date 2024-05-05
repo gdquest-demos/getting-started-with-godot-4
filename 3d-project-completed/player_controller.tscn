@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://d3kp34dihjeyd"]
 
 [ext_resource type="Script" path="res://player_controller.gd" id="1_g3eiy"]
-[ext_resource type="PackedScene" uid="uid://yeft3e2irxdx" path="res://plasma_gun/plasma_gun_root.tscn" id="2_ud6mf"]
+[ext_resource type="PackedScene" uid="uid://yeft3e2irxdx" path="res://gun_root.tscn" id="2_ud6mf"]
 [ext_resource type="Texture2D" uid="uid://courndspfmq8n" path="res://reticle.png" id="3_r7as2"]
 [ext_resource type="AudioStream" uid="uid://b60djage857j5" path="res://sounds/boop_1.wav" id="4_0d82q"]
 

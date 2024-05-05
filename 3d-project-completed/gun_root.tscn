@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://yeft3e2irxdx"]
 
 [ext_resource type="PackedScene" uid="uid://b6nrg32r2wq86" path="res://simple_gun/blue_gun.tscn" id="1_oibds"]
-[ext_resource type="Script" path="res://plasma_gun/plasma_gun_root.gd" id="1_u12ia"]
+[ext_resource type="Script" path="res://gun.gd" id="1_u12ia"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_k0w5v"]
 
