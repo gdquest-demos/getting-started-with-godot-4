@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsg1eeb214fgt"]
+[gd_scene format=3 uid="uid://dsg1eeb214fgt"]
 
-[ext_resource type="PackedScene" uid="uid://bs8k42pj2yfdi" path="res://assets/mini_3d/elements/cube.glb" id="1_3o8l0"]
-[ext_resource type="Material" uid="uid://dv70qy2wjm0bd" path="res://assets/mini_3d/first_color.tres" id="2_r1c1v"]
-
-[node name="cube" instance=ExtResource("1_3o8l0")]
+[node name="cube"]
 
 [node name="Cube" parent="." index="0"]
-material_override = ExtResource("2_r1c1v")
+material_override = null

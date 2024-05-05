@@ -194,7 +194,7 @@ nodes/hurt/position = Vector2(120, 240)
 nodes/idle/node = SubResource("AnimationNodeAnimation_mgbye")
 nodes/idle/position = Vector2(120, 120)
 nodes/output/position = Vector2(880, 140)
-node_connections = [&"output", 0, &"HurtShot", &"HurtShot", 0, &"idle", &"HurtShot", 1, &"hurt"]
+node_connections = [&"HurtShot", 0, &"idle", &"HurtShot", 1, &"hurt", &"output", 0, &"HurtShot"]
 
 [node name="BatSkin" type="Node3D"]
 script = ExtResource("1_ppjak")
