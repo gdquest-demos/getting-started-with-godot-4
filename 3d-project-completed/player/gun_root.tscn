@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://yeft3e2irxdx"]
+
+[ext_resource type="PackedScene" uid="uid://b6nrg32r2wq86" path="res://player/simple_gun/blue_gun.tscn" id="1_oibds"]
+[ext_resource type="Script" path="res://player/gun.gd" id="1_u12ia"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_k0w5v"]
+
+[node name="PlasmaGun" type="Node3D"]
+script = ExtResource("1_u12ia")
+
+[node name="Anchor" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, -0.0128148, 0.0378865)
+
+[node name="simple_gun" parent="Anchor" instance=ExtResource("1_oibds")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("SphereShape3D_k0w5v")
