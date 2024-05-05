@@ -6,5 +6,5 @@ uniform sampler2D gradient_curve;
 
 void sky() {
 	// gradient
-	COLOR = mix(bottom_color.rgb, top_color.rgb, texture(gradient_curve, vec2(SKY_COORDS.y, 0.0)).x);
+	COLOR = mix(top_color.rgb, bottom_color.rgb, texture(gradient_curve, vec2(SKY_COORDS.y, 0.0)).x);
 }

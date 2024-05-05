@@ -187,13 +187,14 @@ animation = &"custom/hurt"
 animation = &"Idle"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_3jn1r"]
+graph_offset = Vector2(-83.3271, 21.3876)
 nodes/HurtShot/node = SubResource("AnimationNodeOneShot_1tyul")
-nodes/HurtShot/position = Vector2(614, 107)
+nodes/HurtShot/position = Vector2(515.556, 88.8889)
 nodes/hurt/node = SubResource("AnimationNodeAnimation_u5h77")
-nodes/hurt/position = Vector2(120, 240)
+nodes/hurt/position = Vector2(115.556, 240)
 nodes/idle/node = SubResource("AnimationNodeAnimation_mgbye")
-nodes/idle/position = Vector2(120, 120)
-nodes/output/position = Vector2(880, 140)
+nodes/idle/position = Vector2(115.556, 115.556)
+nodes/output/position = Vector2(720, 97.7778)
 node_connections = [&"HurtShot", 0, &"idle", &"HurtShot", 1, &"hurt", &"output", 0, &"HurtShot"]
 
 [node name="BatSkin" type="Node3D"]
@@ -204,19 +205,19 @@ unique_name_in_owner = true
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="bat/Armature" index="0"]
-bones/0/position = Vector3(0, 0.0115647, 0)
-bones/1/rotation = Quaternion(0.0627008, 0.0980845, -0.684435, 0.71972)
-bones/2/rotation = Quaternion(0.0857301, 0.0304814, 0.33021, 0.939512)
-bones/3/rotation = Quaternion(0.15169, 0.102202, 0.317962, 0.930293)
-bones/4/rotation = Quaternion(0.0627008, -0.0980845, 0.684435, 0.71972)
-bones/5/rotation = Quaternion(0.0857301, -0.0304814, -0.33021, 0.939512)
-bones/6/rotation = Quaternion(0.15169, -0.102202, -0.317962, 0.930293)
+bones/0/position = Vector3(0, -0.0225748, 0)
+bones/1/rotation = Quaternion(-0.0581698, 0.209315, -0.658248, 0.720773)
+bones/2/rotation = Quaternion(-0.170766, -0.0462484, 0.257132, 0.950044)
+bones/3/rotation = Quaternion(-0.112016, 0.02248, 0.219696, 0.968855)
+bones/4/rotation = Quaternion(-0.0581698, -0.209315, 0.658248, 0.720773)
+bones/5/rotation = Quaternion(-0.170766, 0.0462484, -0.257132, 0.950044)
+bones/6/rotation = Quaternion(-0.112016, -0.02248, -0.219696, 0.968855)
 bones/7/position = Vector3(0.130992, -0.227392, -0.0878515)
-bones/7/rotation = Quaternion(0.261968, 0.0834551, 0.265751, 0.924004)
-bones/8/rotation = Quaternion(3.85581e-08, 0.702774, 0.711413, 2.28011e-08)
+bones/7/rotation = Quaternion(0.261968, 0.0834552, 0.265751, 0.924005)
+bones/8/rotation = Quaternion(3.82006e-08, 0.632693, 0.774403, 2.37569e-08)
 bones/10/position = Vector3(-0.130992, -0.227392, -0.0878515)
-bones/10/rotation = Quaternion(0.261968, -0.0834551, -0.265751, 0.924004)
-bones/11/rotation = Quaternion(2.1234e-08, 0.702774, 0.711413, 3.5112e-08)
+bones/10/rotation = Quaternion(0.261968, -0.0834552, -0.265751, 0.924005)
+bones/11/rotation = Quaternion(2.9281e-08, 0.632693, 0.774403, 3.77609e-08)
 
 [node name="bat2" parent="bat/Armature/Skeleton3D" index="0"]
 material_override = SubResource("StandardMaterial3D_7gvx8")
@@ -230,10 +231,11 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 unique_name_in_owner = true
+root_node = NodePath("%bat")
 tree_root = SubResource("AnimationNodeBlendTree_3jn1r")
 anim_player = NodePath("../bat/AnimationPlayer")
-active = true
 parameters/HurtShot/active = false
+parameters/HurtShot/internal_active = false
 parameters/HurtShot/request = 0
 
 [editable path="bat"]

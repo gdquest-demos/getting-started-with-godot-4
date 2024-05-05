@@ -3,11 +3,11 @@ extends Node3D
 signal mob_spawned(mob)
 
 @export var mob_to_spawn: PackedScene = preload("res://mob.tscn")
-@export var start_time_between_spawn = 4.0
+@export var cooldown_time := 4.0
 
 
 func _ready():
-	%Timer.wait_time = start_time_between_spawn
+	%Timer.wait_time = cooldown_time
 
 
 func _on_timer_timeout():
