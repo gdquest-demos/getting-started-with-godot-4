@@ -77,7 +77,7 @@ Settings/Show_Tooltips=true
 config/name="Your First 3D Game With Godot 4 (GDQuest)"
 run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [audio]
 
