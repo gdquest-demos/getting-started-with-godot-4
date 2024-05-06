@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ctnipgxo3l72h"]
+
+[ext_resource type="Shader" path="res://mob/smoke_puff/material/outer_smoke.gdshader" id="1_0emiy"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_0emiy")
+shader_parameter/albedo = Color(0.937255, 0.698039, 1, 1)
+shader_parameter/progress = 1.8
+shader_parameter/smoothness = 0.1
+shader_parameter/ease = 3.0
+shader_parameter/base_scale = 1.2
+shader_parameter/deformation_scale = 1.5
+shader_parameter/texture_offset = -0.5

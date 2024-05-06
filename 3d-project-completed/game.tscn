@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d3kp34dihjeyd" path="res://player/player_controller.tscn" id="1_fqdcw"]
 [ext_resource type="Script" path="res://game.gd" id="1_xym6k"]
-[ext_resource type="Shader" path="res://level/sky/sky.gdshader" id="2_0bgh6"]
+[ext_resource type="Shader" path="res://level/sky.gdshader" id="2_0bgh6"]
 [ext_resource type="Material" path="res://level/bridges.tres" id="4_mc4jw"]
 [ext_resource type="PackedScene" uid="uid://xtl5acmpaa04" path="res://mob/spawner_3d.tscn" id="5_7vlo8"]
 [ext_resource type="PackedScene" uid="uid://dfwbq2vombjvr" path="res://mob/mob.tscn" id="5_787o4"]
@@ -40,8 +40,8 @@ glow_intensity = 0.2
 fog_enabled = true
 fog_light_color = Color(0, 0.478431, 0.764706, 1)
 fog_density = 0.002
-fog_height = -0.08
-fog_height_density = 0.4089
+fog_height = 0.52
+fog_height_density = 0.1319
 volumetric_fog_density = 0.1525
 volumetric_fog_albedo = Color(0.203922, 0.203922, 1, 1)
 volumetric_fog_emission = Color(0.0431373, 0.0431373, 0.0431373, 1)

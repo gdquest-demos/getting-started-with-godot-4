@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://jvnbftghahty"]
+
+[ext_resource type="Shader" path="res://mob/spawner/spawner_screen.gdshader" id="1_3sboa"]
+[ext_resource type="Texture2D" uid="uid://bjejntalao5yv" path="res://mob/spawner/spawner_text.png" id="2_871b8"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_3sboa")
+shader_parameter/screen_color = Color(0.239216, 0.784314, 0.576471, 0.027451)
+shader_parameter/ratio = 0.25
+shader_parameter/pixel_size = 32.0
+shader_parameter/intensity = 1.5
+shader_parameter/text_sampler = ExtResource("2_871b8")

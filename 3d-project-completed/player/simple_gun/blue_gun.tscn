@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6nrg32r2wq86"]
 
-[ext_resource type="PackedScene" uid="uid://dr6h6dnv0o8w5" path="res://player/simple_gun/simple_gun.glb" id="1_uwe33"]
+[ext_resource type="PackedScene" uid="uid://dr6h6dnv0o8w5" path="res://player/simple_gun/gun_model.glb" id="1_uwe33"]
 [ext_resource type="Texture2D" uid="uid://c5l565gg1dwk6" path="res://player/simple_gun/simple_gun_gun_palette.png" id="2_jeync"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sij1c"]
