@@ -2,7 +2,7 @@ extends Node3D
 
 var player_score = 0
 
-var poof_vfx = preload("res://smoke_puff/smoke_puff.tscn")
+var poof_vfx = preload("res://mob/smoke_puff/smoke_puff.tscn")
 
 
 func increase_score():

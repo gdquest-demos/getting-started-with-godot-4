@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ha0bp3cygkq1"
-path="res://.godot/imported/squeak toy - squeak1.wav-143153c1e66f491d5a5ea4241b23472b.sample"
+path="res://.godot/imported/mob_ko.wav-a84710604b4b98be9d6d7dfe1978d9ee.sample"
 
 [deps]
 
-source_file="res://sounds/squeak toy - squeak1.wav"
-dest_files=["res://.godot/imported/squeak toy - squeak1.wav-143153c1e66f491d5a5ea4241b23472b.sample"]
+source_file="res://mob/mob_ko.wav"
+dest_files=["res://.godot/imported/mob_ko.wav-a84710604b4b98be9d6d7dfe1978d9ee.sample"]
 
 [params]
 

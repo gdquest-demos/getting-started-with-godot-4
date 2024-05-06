@@ -175,6 +175,7 @@ animation = &"custom/hurt"
 animation = &"Idle"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_3jn1r"]
+graph_offset = Vector2(-36, 43.5556)
 nodes/HurtShot/node = SubResource("AnimationNodeOneShot_1tyul")
 nodes/HurtShot/position = Vector2(515.556, 88.8889)
 nodes/hurt/node = SubResource("AnimationNodeAnimation_u5h77")
@@ -192,19 +193,19 @@ unique_name_in_owner = true
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="bat/Armature" index="0"]
-bones/0/position = Vector3(0, 0.0210376, 0)
-bones/1/rotation = Quaternion(0.131405, 0.034714, -0.664374, 0.734938)
-bones/2/rotation = Quaternion(0.153061, 0.061582, 0.367263, 0.915367)
-bones/3/rotation = Quaternion(0.168718, 0.114367, 0.346328, 0.915703)
-bones/4/rotation = Quaternion(0.131405, -0.034714, 0.664374, 0.734938)
-bones/5/rotation = Quaternion(0.153061, -0.061582, -0.367263, 0.915367)
-bones/6/rotation = Quaternion(0.168718, -0.114367, -0.346328, 0.915703)
+bones/0/position = Vector3(0, 0.0049879, 0)
+bones/1/rotation = Quaternion(0.0260107, 0.133295, -0.690319, 0.710644)
+bones/2/rotation = Quaternion(0.0372676, 0.012441, 0.309049, 0.950234)
+bones/3/rotation = Quaternion(0.121165, 0.0884758, 0.299659, 0.942176)
+bones/4/rotation = Quaternion(0.0260107, -0.133295, 0.690319, 0.710644)
+bones/5/rotation = Quaternion(0.0372676, -0.012441, -0.309049, 0.950234)
+bones/6/rotation = Quaternion(0.121165, -0.0884758, -0.299659, 0.942176)
 bones/7/position = Vector3(0.130992, -0.227392, -0.0878515)
 bones/7/rotation = Quaternion(0.261968, 0.0834552, 0.265751, 0.924005)
-bones/8/rotation = Quaternion(3.40432e-08, 0.685107, 0.728442, 2.14777e-08)
+bones/8/rotation = Quaternion(3.84036e-08, 0.702774, 0.711413, 2.26466e-08)
 bones/10/position = Vector3(-0.130992, -0.227392, -0.0878515)
 bones/10/rotation = Quaternion(0.261968, -0.0834552, -0.265751, 0.924005)
-bones/11/rotation = Quaternion(2.39313e-08, 0.685107, 0.728442, 3.99969e-08)
+bones/11/rotation = Quaternion(2.13885e-08, 0.702774, 0.711413, 3.52665e-08)
 
 [node name="bat" parent="bat/Armature/Skeleton3D" index="0"]
 surface_material_override/0 = ExtResource("3_41uov")

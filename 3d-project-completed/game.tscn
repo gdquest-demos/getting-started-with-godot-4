@@ -5,8 +5,8 @@
 [ext_resource type="Shader" path="res://level/sky/sky.gdshader" id="2_0bgh6"]
 [ext_resource type="Material" path="res://level/bridges.tres" id="4_mc4jw"]
 [ext_resource type="PackedScene" uid="uid://xtl5acmpaa04" path="res://mob/spawner_3d.tscn" id="5_7vlo8"]
+[ext_resource type="PackedScene" uid="uid://dfwbq2vombjvr" path="res://mob/mob.tscn" id="5_787o4"]
 [ext_resource type="Material" uid="uid://cp4gi8r3s3twb" path="res://level/platforms.tres" id="5_l41we"]
-[ext_resource type="PackedScene" uid="uid://dfwbq2vombjvr" path="res://mob.tscn" id="5_sx4s1"]
 
 [sub_resource type="Curve" id="Curve_yn8x2"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 4.0, 0.0, 0, 0]
@@ -73,16 +73,16 @@ shape = SubResource("WorldBoundaryShape3D_xiq5r")
 
 [node name="MobSpawner3D" parent="." instance=ExtResource("5_7vlo8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.12224, 0.5, 11.3959)
-mob_to_spawn = ExtResource("5_sx4s1")
+mob_to_spawn = ExtResource("5_787o4")
 
 [node name="MobSpawner3D2" parent="." instance=ExtResource("5_7vlo8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.7262, 0.5, 11.9995)
-mob_to_spawn = ExtResource("5_sx4s1")
+mob_to_spawn = ExtResource("5_787o4")
 cooldown_time = 6.0
 
 [node name="MobSpawner3D3" parent="." instance=ExtResource("5_7vlo8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.7262, 0.5, -7.19963)
-mob_to_spawn = ExtResource("5_sx4s1")
+mob_to_spawn = ExtResource("5_787o4")
 cooldown_time = 3.0
 
 [node name="Bridge" type="CSGBox3D" parent="."]

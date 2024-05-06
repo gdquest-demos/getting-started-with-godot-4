@@ -1,19 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfwbq2vombjvr"]
+[gd_scene load_steps=7 format=3 uid="uid://dfwbq2vombjvr"]
 
-[ext_resource type="Script" path="res://mob/mob.gd" id="1_3pjp2"]
-[ext_resource type="PackedScene" uid="uid://brv1jmhrpfw7p" path="res://mob/bat/bat_skin.tscn" id="2_v1vaw"]
-[ext_resource type="AudioStream" uid="uid://cfqxr34ohgplo" path="res://sounds/kick_3.ogg" id="3_kd6ce"]
-[ext_resource type="AudioStream" uid="uid://ha0bp3cygkq1" path="res://sounds/squeak toy - squeak1.wav" id="4_0hjyw"]
+[ext_resource type="Script" path="res://mob/mob.gd" id="1_ebh3x"]
+[ext_resource type="PackedScene" uid="uid://brv1jmhrpfw7p" path="res://mob/bat/bat_skin.tscn" id="2_4oaqh"]
+[ext_resource type="AudioStream" uid="uid://bec5opkuf77c7" path="res://mob/mob_take_damage.wav" id="3_sikhy"]
+[ext_resource type="AudioStream" uid="uid://ha0bp3cygkq1" path="res://mob/mob_ko.wav" id="4_qnk8k"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_7xh84"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_gkbwe"]
 
 [node name="Mob" type="RigidBody3D"]
 top_level = true
 gravity_scale = 0.0
-script = ExtResource("1_3pjp2")
+script = ExtResource("1_ebh3x")
 
-[node name="BatSkin" parent="." instance=ExtResource("2_v1vaw")]
+[node name="BatSkin" parent="." instance=ExtResource("2_4oaqh")]
 unique_name_in_owner = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_7xh84")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_gkbwe")
@@ -24,13 +30,13 @@ one_shot = true
 
 [node name="HurtSound" type="AudioStreamPlayer3D" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("3_kd6ce")
+stream = ExtResource("3_sikhy")
 max_db = -10.0
 max_polyphony = 4
 
 [node name="KOSound" type="AudioStreamPlayer3D" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("4_0hjyw")
+stream = ExtResource("4_qnk8k")
 max_db = -10.0
 
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
