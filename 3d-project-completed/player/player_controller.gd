@@ -1,8 +1,6 @@
 # Note: Name this by the name of the final player mesh, do not keep the file name
 # "character_body_3d"
 extends CharacterBody3D
-@onready var shot_sound = %ShotSound
-@onready var plasma_gun = %PlasmaGun
 
 
 func _ready():
@@ -14,8 +12,8 @@ func _ready():
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		rotation_degrees.y -= event.relative.x * 0.5
-		rotation_degrees.x -= event.relative.y * 0.2
-		rotation_degrees.x = clamp(rotation_degrees.x, -80, 80)
+		%Camera3D.rotation_degrees.x -= event.relative.y * 0.2
+		%Camera3D.rotation_degrees.x = clamp(%Camera3D.rotation_degrees.x, -80, 80)
 	elif event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
@@ -57,7 +55,7 @@ func shoot_bullet():
 	new_bullet.rotation_degrees.y += randf_range(-MAX_RECOIL_ANGLE, MAX_RECOIL_ANGLE)
 	%Timer.start()
 	
-	shot_sound.pitch_scale = randfn(1.0, 0.1)
-	shot_sound.play()
+	%ShotSound.pitch_scale = randfn(1.0, 0.1)
+	%ShotSound.play()
 	
-	plasma_gun.shoot()
+	%PlasmaGun.shoot()
