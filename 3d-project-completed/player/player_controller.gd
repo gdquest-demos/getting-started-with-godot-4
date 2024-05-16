@@ -26,8 +26,6 @@ func _physics_process(delta):
 	var input_direction_2D = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var input_direction_3D = Vector3(input_direction_2D.x, 0, input_direction_2D.y)
 	var direction = transform.basis * input_direction_3D
-	direction.y = 0.0
-	direction = direction.normalized()
 	
 	velocity.x = direction.x * SPEED
 	velocity.z = direction.z * SPEED
