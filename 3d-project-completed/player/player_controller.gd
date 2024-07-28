@@ -53,7 +53,6 @@ func shoot_bullet():
 	new_bullet.rotation_degrees.y += randf_range(-MAX_RECOIL_ANGLE, MAX_RECOIL_ANGLE)
 	%Timer.start()
 	
-	%ShotSound.pitch_scale = randfn(1.0, 0.1)
 	%ShotSound.play()
 	
 	%Gun.shoot()

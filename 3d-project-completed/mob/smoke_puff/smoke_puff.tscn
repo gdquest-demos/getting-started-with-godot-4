@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjk3frr43yesb"]
+[gd_scene load_steps=7 format=3 uid="uid://cjk3frr43yesb"]
 
-[ext_resource type="Script" path="res://mob/smoke_puff/smoke_puff.gd" id="1_nb41h"]
 [ext_resource type="Material" uid="uid://ctnipgxo3l72h" path="res://mob/smoke_puff/material/outer_smoke.tres" id="2_1f3c4"]
 [ext_resource type="ArrayMesh" uid="uid://cxh3afoly2pv6" path="res://mob/smoke_puff/smoke_sphere.obj" id="3_2ucfv"]
 [ext_resource type="Material" uid="uid://dr7gyunhpjiwf" path="res://mob/smoke_puff/material/inner_smoke.tres" id="4_8vcwr"]
@@ -13,8 +12,7 @@ _data = {
 }
 
 [node name="smoke_puff" type="Node3D"]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
-script = ExtResource("1_nb41h")
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="OuterSmoke" type="MeshInstance3D" parent="."]
 material_override = ExtResource("2_1f3c4")
@@ -29,6 +27,7 @@ unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_a08pi")
 }
+autoplay = "poof"
 
 [node name="Sound" type="AudioStreamPlayer3D" parent="."]
 unique_name_in_owner = true
