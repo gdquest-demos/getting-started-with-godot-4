@@ -2,8 +2,6 @@ extends Node3D
 
 var player_score = 0
 
-var poof_vfx = preload("res://mob/smoke_puff/smoke_puff.tscn")
-
 
 func increase_score():
 	player_score += 1
@@ -17,13 +15,13 @@ func _on_kill_plane_body_entered(body):
 func _on_mob_spawner_3d_mob_spawned(mob):
 	do_poof(mob.global_position)
 	mob.died.connect(func():
+		increase_score()
 		do_poof(mob.global_position)
 	)
-	mob.died.connect(increase_score)
 
 
-func do_poof(mob_position : Vector3):
-	var poof := poof_vfx.instantiate()
+func do_poof(mob_position):
+	const SMOKE_PUFF = preload("res://mob/smoke_puff/smoke_puff.tscn")
+	var poof := SMOKE_PUFF.instantiate()
 	add_child(poof)
-	poof.scale = Vector3.ONE * 0.5
 	poof.global_position = mob_position
