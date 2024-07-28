@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c2oal6rrmeo67"]
+[gd_scene load_steps=9 format=3 uid="uid://c2oal6rrmeo67"]
 
 [ext_resource type="PackedScene" uid="uid://cbhp570drcrsj" path="res://mob/spawner/spawner_model.glb" id="1_bfqp2"]
 [ext_resource type="Material" uid="uid://jvnbftghahty" path="res://mob/spawner/spawner_screen_material.tres" id="3_hitjy"]
@@ -14,18 +14,6 @@ albedo_color = Color(0.980392, 0.513726, 1, 1)
 roughness = 0.4
 rim_enabled = true
 rim_tint = 0.25
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fmsx"]
-shading_mode = 0
-albedo_color = Color(0, 0, 0, 1)
-proximity_fade_enabled = true
-proximity_fade_distance = 0.1
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_qjbyc"]
-top_radius = 0.6
-bottom_radius = 0.6
-height = 0.1
-cap_top = false
 
 [sub_resource type="Animation" id="Animation_uvjom"]
 resource_name = "Idle"
@@ -89,18 +77,10 @@ _data = {
 "RESET": SubResource("Animation_3s57u")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xn1ym"]
-animation = &"Idle"
-
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_5h1n2"]
-nodes/Animation/node = SubResource("AnimationNodeAnimation_xn1ym")
-nodes/Animation/position = Vector2(80, 81)
-node_connections = [&"output", 0, &"Animation"]
-
 [node name="Spawner" type="Node3D"]
 
 [node name="Anchor" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.191009, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.178748, 0)
 
 [node name="spawner" parent="Anchor" instance=ExtResource("1_bfqp2")]
 
@@ -114,20 +94,10 @@ surface_material_override/1 = ExtResource("3_hitjy")
 [node name="Top" parent="Anchor/spawner" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.783957, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Anchor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.129239, 0)
-material_override = SubResource("StandardMaterial3D_0fmsx")
-mesh = SubResource("CylinderMesh_qjbyc")
-skeleton = NodePath("../spawner")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_avbtx")
 }
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeBlendTree_5h1n2")
-anim_player = NodePath("../AnimationPlayer")
+autoplay = "Idle"
 
 [editable path="Anchor/spawner"]
