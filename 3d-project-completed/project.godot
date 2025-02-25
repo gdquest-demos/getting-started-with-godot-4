@@ -12,60 +12,60 @@ config_version=5
 
 Settings/Preview_Perspective=2
 Settings/Library_Save_File_Location=1
-Shortcuts/Change_Placement_Plane_Position=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":71,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Change_Placement_Plane_Position=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":71,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Transform_Asset_Blueprint=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":69,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":82,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Transform_Asset_Blueprint=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":69,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":82,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Select_Previous_Asset=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Select_Previous_Asset=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Select_Y_Z_Plane=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":90,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Select_Y_Z_Plane=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":90,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Select_X_Z_Plane=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Select_X_Z_Plane=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Select_X_Y_Plane=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":67,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Select_X_Y_Plane=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":67,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Reset_Transform=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":true,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":69,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Reset_Transform=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":true,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":69,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Rotate_Asset_90_Degrees_Around_X=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":65,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Rotate_Asset_90_Degrees_Around_X=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":65,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Rotate_Asset_90_Degrees_Around_Y=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":83,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Rotate_Asset_90_Degrees_Around_Y=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":83,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Rotate_Asset_90_Degrees_Around_Z=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":68,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Rotate_Asset_90_Degrees_Around_Z=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":68,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Flip_Asset_On_X_Axis=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":49,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Flip_Asset_On_X_Axis=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":49,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Flip_Asset_On_Y_Axis=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":50,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Flip_Asset_On_Y_Axis=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":50,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Flip_Asset_On_Z_Axis=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":51,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Flip_Asset_On_Z_Axis=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":51,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
 Settings/Shortcut_Shift_Rotation_Step=45.0
-Shortcuts/Rotate_Asset_Secondary_Step_Degrees_Around_X=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":true,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":65,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Rotate_Asset_Secondary_Step_Degrees_Around_X=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":true,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":65,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Rotate_Asset_Secondary_Step_Degrees_Around_Y=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":true,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":83,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Rotate_Asset_Secondary_Step_Degrees_Around_Y=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":true,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":83,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Rotate_Asset_Secondary_Step_Degrees_Around_Z=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":true,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":68,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Rotate_Asset_Secondary_Step_Degrees_Around_Z=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":true,"ctrl_pressed":false,"meta_pressed":false,"pressed":true,"keycode":68,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Double_Snap_Step=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":true,"meta_pressed":false,"pressed":true,"keycode":4194320,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Double_Snap_Step=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":true,"meta_pressed":false,"pressed":true,"keycode":4194320,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
-Shortcuts/Halve_Snap_Step=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":true,"meta_pressed":false,"pressed":true,"keycode":4194322,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+Shortcuts/Halve_Snap_Step=Object(Shortcut,"resource_local_to_scene":false,"resource_name":"","events":[Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":true,"meta_pressed":false,"pressed":true,"keycode":4194322,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ],"script":null)
 
 Settings/Use_Shift_instead_of_Alt=false
@@ -76,7 +76,7 @@ Settings/Show_Tooltips=true
 
 config/name="Your First 3D Game With Godot 4 (GDQuest)"
 run/main_scene="res://game.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.png"
 
 [audio]
@@ -101,27 +101,27 @@ enabled=PackedStringArray("res://addons/colorpicker_presets/plugin.cfg")
 
 jump={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
 ]
 }
 move_left={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
 ]
 }
 move_right={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
 ]
 }
 move_forward={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
 ]
 }
 move_back={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
 ]
 }
 shoot={
