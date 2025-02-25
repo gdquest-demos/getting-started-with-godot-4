@@ -75,7 +75,7 @@ Settings/Show_Tooltips=true
 [application]
 
 config/name="Your First 3D Game With Godot 4 (GDQuest)"
-run/main_scene="res://game.tscn"
+run/main_scene="res://lessons_reference/video_16/game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.png"
 

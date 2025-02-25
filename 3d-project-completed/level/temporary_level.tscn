@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dp7sxe5xl5shk"]
+[gd_scene load_steps=5 format=3 uid="uid://dp7sxe5xl5shk"]
 
 [ext_resource type="Texture2D" uid="uid://ismvrp3hwx22" path="res://level/checkboard.png" id="1_cig4d"]
+[ext_resource type="Material" uid="uid://cp4gi8r3s3twb" path="res://level/platforms.tres" id="2_6q8tg"]
 
 [sub_resource type="Environment" id="Environment_pev5d"]
 background_mode = 1
@@ -26,21 +27,6 @@ volumetric_fog_emission = Color(0.0431373, 0.0431373, 0.0431373, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ooyhk"]
 albedo_color = Color(1, 0.717647, 0.188235, 1)
 albedo_texture = ExtResource("1_cig4d")
-uv1_triplanar = true
-uv1_triplanar_sharpness = 4.0
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i4h33"]
-load_path = "res://.godot/imported/checkboard.png-4cb8f9b1adddcfd77a23f6e46684261b.s3tc.ctex"
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0l3b4"]
-albedo_color = Color(0.286275, 0.682353, 0.427451, 1)
-albedo_texture = SubResource("CompressedTexture2D_i4h33")
-uv1_triplanar = true
-uv1_triplanar_sharpness = 4.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fcnsb"]
-albedo_color = Color(0.286275, 0.682353, 0.427451, 1)
-albedo_texture = SubResource("CompressedTexture2D_i4h33")
 uv1_triplanar = true
 uv1_triplanar_sharpness = 4.0
 
@@ -76,10 +62,10 @@ material = SubResource("StandardMaterial3D_ooyhk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 use_collision = true
 size = Vector3(17, 11, 15)
-material = SubResource("StandardMaterial3D_0l3b4")
+material = ExtResource("2_6q8tg")
 
 [node name="Platform7" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 26)
 use_collision = true
 size = Vector3(9, 11, 9)
-material = SubResource("StandardMaterial3D_fcnsb")
+material = ExtResource("2_6q8tg")

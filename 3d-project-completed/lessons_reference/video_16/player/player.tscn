@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3kp34dihjeyd"]
+[gd_scene load_steps=6 format=3 uid="uid://d3kp34dihjeyd"]
 
-[ext_resource type="Script" path="res://player/player_controller.gd" id="1_g3eiy"]
-[ext_resource type="Script" path="res://player/gun.gd" id="2_8rywe"]
+[ext_resource type="Script" path="res://lessons_reference/video_16/player/player.gd" id="1_g3eiy"]
 [ext_resource type="PackedScene" uid="uid://b6nrg32r2wq86" path="res://player/simple_gun/blue_gun.tscn" id="3_43sda"]
 [ext_resource type="Texture2D" uid="uid://courndspfmq8n" path="res://player/reticle.png" id="3_r7as2"]
 [ext_resource type="AudioStream" uid="uid://b60djage857j5" path="res://player/gun_shoot.wav" id="4_0d82q"]
@@ -23,12 +22,11 @@ shape = SubResource("CapsuleShape3D_ctapl")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0920136, 0)
 
-[node name="Gun" parent="Camera3D" instance=ExtResource("3_43sda")]
+[node name="gun_model" parent="Camera3D" instance=ExtResource("3_43sda")]
 unique_name_in_owner = true
 transform = Transform3D(-0.300089, -0.0103925, 0.0153999, -0.0081543, 0.297613, 0.0419422, -0.0166934, 0.0414445, -0.297326, 0.362667, -0.130673, -0.446608)
-script = ExtResource("2_8rywe")
 
-[node name="ShootingPoint" type="Marker3D" parent="Camera3D"]
+[node name="Marker3D" type="Marker3D" parent="Camera3D"]
 unique_name_in_owner = true
 transform = Transform3D(-0.428699, -0.0148464, 0.0219999, -0.011649, 0.425161, 0.0599174, -0.0238477, 0.0592063, -0.424751, 0.364214, -0.0933893, -0.624222)
 gizmo_extents = 0.37

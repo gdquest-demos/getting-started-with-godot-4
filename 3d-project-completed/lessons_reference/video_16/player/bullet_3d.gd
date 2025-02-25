@@ -1,9 +1,9 @@
 extends Area3D
 
-const SPEED = 55
-const RANGE = 40
+const SPEED = 55.0
+const RANGE = 40.0
 
-var travelled_distance = 0
+var travelled_distance = 0.0
 
 
 func _physics_process(delta):

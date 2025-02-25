@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://xtl5acmpaa04"]
 
-[ext_resource type="Script" path="res://mob/spawner_3d.gd" id="1_5kn8d"]
+[ext_resource type="Script" path="res://lessons_reference/video_16/mob/spawner_3d.gd" id="1_5kn8d"]
 [ext_resource type="PackedScene" uid="uid://c2oal6rrmeo67" path="res://mob/spawner/spawner_skin.tscn" id="2_vlo78"]
 
 [node name="MobSpawner3D" type="Node3D"]
