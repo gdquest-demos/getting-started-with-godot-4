@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvundni1onryo"]
+
+[ext_resource type="Theme" uid="uid://bk3rqtt0xeorm" path="res://addons/gdpractice/assets/theme.tres" id="1_61aqm"]
+[ext_resource type="Script" path="res://addons/gdpractice/ui/ui_solution_warning.gd" id="2_as5ah"]
+
+[node name="UISolutionWarning" type="PanelContainer"]
+visible = false
+custom_minimum_size = Vector2(600, 0)
+offset_right = 620.0
+offset_bottom = 125.0
+theme = ExtResource("1_61aqm")
+theme_type_variation = &"PanelContainerSolutionWarning"
+script = ExtResource("2_as5ah")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_type_variation = &"MarginContainerInnerPractice"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_type_variation = &"RichTextLabelSolutionWarning"
+bbcode_enabled = true
+fit_content = true
+scroll_active = false

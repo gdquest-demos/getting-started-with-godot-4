@@ -1,0 +1,319 @@
+[gd_scene load_steps=12 format=3 uid="uid://bnnxfl3thl8qk"]
+
+[ext_resource type="Theme" uid="uid://bk3rqtt0xeorm" path="res://addons/gdpractice/assets/theme.tres" id="1_n7obm"]
+[ext_resource type="Script" path="res://addons/gdpractice/tester/ui_test_panel.gd" id="2_vgmr1"]
+[ext_resource type="Texture2D" uid="uid://dc6w5203e7i4w" path="res://addons/gdpractice/assets/icons/hide.svg" id="3_iivbp"]
+[ext_resource type="Texture2D" uid="uid://wgr4gdu7syvg" path="res://addons/gdpractice/assets/icons/pass.svg" id="6_7jrhn"]
+[ext_resource type="Texture2D" uid="uid://d2wi8pb6umoui" path="res://addons/gdpractice/assets/icons/hand_warn.svg" id="6_fe7lp"]
+[ext_resource type="PackedScene" uid="uid://c3ere1qqhai67" path="res://addons/gdpractice/tester/input_panel_container/input_panel_container.tscn" id="7_uxwio"]
+[ext_resource type="PackedScene" uid="uid://5l36tosihkeq" path="res://addons/gdpractice/tester/split_layout/split_layout.tscn" id="9_q10jc"]
+
+[sub_resource type="Animation" id="Animation_y1jah"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TextureRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yyykk"]
+resource_name = "default"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_p88ms"]
+resource_name = "testing"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TextureRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lbhxb"]
+_data = {
+"RESET": SubResource("Animation_y1jah"),
+"default": SubResource("Animation_yyykk"),
+"testing": SubResource("Animation_p88ms")
+}
+
+[node name="UITestPanel" type="Control"]
+custom_minimum_size = Vector2(1920, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_n7obm")
+script = ExtResource("2_vgmr1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"HBoxContainerTester"
+
+[node name="MainPanelContainer" type="PanelContainer" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+theme_type_variation = &"PanelContainerTester"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MainPanelContainer"]
+layout_mode = 2
+theme_type_variation = &"VBoxContainerTester"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"MarginContainerTesterHeader"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="ItemLabel" type="Label" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelTesterItem"
+text = "L0.P0"
+
+[node name="TitleLabel" type="Label" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(179, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"LabelTesterTitle"
+text = "Title"
+autowrap_mode = 2
+
+[node name="MarginContainerBody" type="MarginContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody"]
+layout_mode = 2
+theme_type_variation = &"PanelContainerPractices"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer"]
+layout_mode = 2
+theme_type_variation = &"MarginContainerPractices"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="ToggleX5PanelContainer" type="PanelContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"PanelContainerButtonTester"
+
+[node name="ToggleX5Button" type="Button" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer/MarginContainer/VBoxContainer/ToggleX5PanelContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(24, 21)
+layout_mode = 2
+theme_type_variation = &"ButtonTester"
+toggle_mode = true
+text = "x5"
+
+[node name="ReportMarginContainer" type="MarginContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"MarginContainerTesterReport"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer/MarginContainer/VBoxContainer/ReportMarginContainer"]
+layout_mode = 2
+
+[node name="ReportTextureRect" type="TextureRect" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer/MarginContainer/VBoxContainer/ReportMarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+texture = ExtResource("6_7jrhn")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="ReportLabel" type="Label" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer/MarginContainer/VBoxContainer/ReportMarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "test"
+
+[node name="InputPanelContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("7_uxwio")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="LogPanelContainer" type="PanelContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelContainerTesterChecks"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer/MarginContainer/VBoxContainer/LogPanelContainer"]
+layout_mode = 2
+theme_type_variation = &"MarginContainerTesterChecks"
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer/MarginContainer/VBoxContainer/LogPanelContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_type_variation = &"PanelContainerTesterChecksInner"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer/MarginContainer/VBoxContainer/LogPanelContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_type_variation = &"MarginContainerTesterChecksInner"
+
+[node name="LogVBoxContainer" type="VBoxContainer" parent="HBoxContainer/MainPanelContainer/VBoxContainer/MarginContainerBody/PanelContainer/MarginContainer/VBoxContainer/LogPanelContainer/MarginContainer/PanelContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"VBoxContainerTester"
+
+[node name="SplitLayout" parent="HBoxContainer" instance=ExtResource("9_q10jc")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PanelContainerToggle" type="PanelContainer" parent="HBoxContainer/SplitLayout"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 0
+offset_left = -144.0
+offset_right = 33.0
+offset_bottom = 38.0
+theme_type_variation = &"PanelContainerTesterShowTab"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/SplitLayout/PanelContainerToggle"]
+layout_mode = 2
+theme_type_variation = &"HBoxContainerTester"
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/SplitLayout/PanelContainerToggle/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/SplitLayout/PanelContainerToggle/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(134, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/SplitLayout/PanelContainerToggle/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+texture = ExtResource("6_fe7lp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StatusLabel" type="Label" parent="HBoxContainer/SplitLayout/PanelContainerToggle/HBoxContainer/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelTesterStatusTesting"
+text = "testing..."
+horizontal_alignment = 2
+uppercase = true
+visible_characters_behavior = 2
+visible_ratio = -0.1
+
+[node name="StatusAnimationPlayer" type="AnimationPlayer" parent="HBoxContainer/SplitLayout/PanelContainerToggle/HBoxContainer/MarginContainer/HBoxContainer/StatusLabel"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_lbhxb")
+}
+autoplay = "testing"
+
+[node name="ToggleShowButton" type="Button" parent="HBoxContainer/SplitLayout/PanelContainerToggle/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(33, 0)
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+icon = ExtResource("3_iivbp")
+flat = true
+icon_alignment = 1
+expand_icon = true

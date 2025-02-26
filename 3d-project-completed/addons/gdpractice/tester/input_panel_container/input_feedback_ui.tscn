@@ -1,0 +1,191 @@
+[gd_scene load_steps=7 format=3 uid="uid://d06tbfjylfmn4"]
+
+[ext_resource type="Texture2D" uid="uid://b4joorlr8jn0j" path="res://addons/gdpractice/assets/input_arrow.svg" id="1_eb8ki"]
+[ext_resource type="Theme" uid="uid://bk3rqtt0xeorm" path="res://addons/gdpractice/assets/theme.tres" id="1_wgobd"]
+[ext_resource type="Script" path="res://addons/gdpractice/tester/input_panel_container/input_feedback_ui.gd" id="2_4xmn8"]
+[ext_resource type="Texture2D" uid="uid://c7syvtw4ssbeb" path="res://addons/gdpractice/assets/input_mouse_base.svg" id="3_d6t12"]
+[ext_resource type="Texture2D" uid="uid://bv5xjs50niyq0" path="res://addons/gdpractice/assets/input_mouse_left_click.svg" id="4_mn6qq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rrug3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[node name="InputFeedbackUI" type="Control"]
+custom_minimum_size = Vector2(94, 94)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 94.0
+offset_bottom = 94.0
+theme = ExtResource("1_wgobd")
+script = ExtResource("2_4xmn8")
+
+[node name="ArrowLeftTextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(0.533333, 0.486275, 0.615686, 1)
+custom_minimum_size = Vector2(94, 94)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -47.0
+offset_right = 47.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(47, 47)
+texture = ExtResource("1_eb8ki")
+expand_mode = 1
+flip_h = true
+
+[node name="ArrowRightTextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(0.533333, 0.486275, 0.615686, 1)
+custom_minimum_size = Vector2(94, 94)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -47.0
+offset_right = 47.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(47, 47)
+texture = ExtResource("1_eb8ki")
+expand_mode = 1
+
+[node name="ArrowDownTextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(0.533333, 0.486275, 0.615686, 1)
+custom_minimum_size = Vector2(94, 94)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -47.0
+offset_right = 47.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+pivot_offset = Vector2(47, 47)
+texture = ExtResource("1_eb8ki")
+expand_mode = 1
+
+[node name="ArrowUpTextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(0.533333, 0.486275, 0.615686, 1)
+custom_minimum_size = Vector2(94, 94)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -47.0
+offset_right = 47.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+pivot_offset = Vector2(47, 47)
+texture = ExtResource("1_eb8ki")
+expand_mode = 1
+flip_h = true
+
+[node name="CirclePanel" type="Panel" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(0.533333, 0.486275, 0.615686, 1)
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 7.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rrug3")
+
+[node name="KeyPanelContainer" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"PanelContainerInputFeedback"
+
+[node name="KeyLabel" type="Label" parent="KeyPanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelInputFeedback"
+text = "K"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseTextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(0.533333, 0.486275, 0.615686, 1)
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 14.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_d6t12")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MouseButtonTextureRect" type="TextureRect" parent="MouseTextureRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 14.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_mn6qq")
+expand_mode = 1
+stretch_mode = 5

@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2bdexvumy07m"]
+
+[ext_resource type="Theme" uid="uid://bk3rqtt0xeorm" path="res://addons/gdpractice/assets/theme.tres" id="1_cljkq"]
+[ext_resource type="Script" path="res://addons/gdpractice/ui/ui_practice_dock.gd" id="1_p3vi5"]
+[ext_resource type="Texture2D" uid="uid://b5iik06y7nxib" path="res://addons/gdpractice/assets/gdquest_logo_gear.svg" id="3_m6wos"]
+
+[node name="GDQuest" type="PanelContainer"]
+offset_right = 418.0
+offset_bottom = 280.0
+theme = ExtResource("1_cljkq")
+script = ExtResource("1_p3vi5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="PanelContainerHeader" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"PanelContainerHeader"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainerHeader"]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"MarginContainerHeader"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainerHeader/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"HBoxContainerHeader"
+
+[node name="GDQuestLogo" type="TextureButton" parent="MarginContainer/VBoxContainer/PanelContainerHeader/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_m6wos")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="LabelTitle" type="Label" parent="MarginContainer/VBoxContainer/PanelContainerHeader/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"LabelTitle"
+text = "PRACTICES"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainerHeader/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"MarginContainerModuleNumber"
+
+[node name="LabelModuleNumber" type="Label" parent="MarginContainer/VBoxContainer/PanelContainerHeader/MarginContainer/HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelModuleNumber"
+text = "M4."
+uppercase = true
+
+[node name="LabelModuleName" type="Label" parent="MarginContainer/VBoxContainer/PanelContainerHeader/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelModule"
+text = "Test Book"
+uppercase = true
+
+[node name="PanelContainerPractices" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"PanelContainerPractices"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainerPractices"]
+layout_mode = 2
+theme_type_variation = &"MarginContainerPractices"
+
+[node name="List" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainerPractices/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"VBoxContainerPracticesList"

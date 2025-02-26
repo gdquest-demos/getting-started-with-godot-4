@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="14.999972"
+   height="14.9999"
+   viewBox="0 0 14.999972 14.9999"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="fail.svg"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="44"
+     inkscape:cx="7.9545455"
+     inkscape:cy="7.4886364"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="M 7.4999719,5.83335 13.333372,0 14.999972,1.66666 9.1666219,7.5 14.999972,13.3333 13.333372,14.9999 7.4999719,9.16664 1.6666719,14.9999 0,13.3333 5.8333319,7.5 0,1.66666 1.6666719,0 Z"
+     fill="#ff417d"
+     id="path1" />
+</svg>

@@ -1,0 +1,590 @@
+[gd_resource type="Theme" load_steps=42 format=3 uid="uid://bk3rqtt0xeorm"]
+
+[ext_resource type="FontFile" uid="uid://d3u2nhkuevn1l" path="res://addons/gdpractice/assets/fonts/Inter-Bold.ttf" id="1_rk1hk"]
+[ext_resource type="FontFile" uid="uid://deeixt6cs64ak" path="res://addons/gdpractice/assets/fonts/Inter-SemiBold.ttf" id="2_q1phb"]
+[ext_resource type="FontFile" uid="uid://b4dj3x16cr0vk" path="res://addons/gdpractice/assets/fonts/Inter-ExtraBoldItalic.otf" id="3_j31b0"]
+[ext_resource type="FontFile" uid="uid://btiybsu6acuy7" path="res://addons/gdpractice/assets/fonts/Montserrat-Bold.ttf" id="3_sfnh1"]
+[ext_resource type="FontFile" uid="uid://h13sewj2ined" path="res://addons/gdpractice/assets/fonts/Inter-BoldItalic.otf" id="4_s6jil"]
+[ext_resource type="FontFile" uid="uid://c5j5yg0bc1jec" path="res://addons/gdpractice/assets/fonts/Inter-Italic.otf" id="5_1mp7t"]
+[ext_resource type="FontFile" uid="uid://bhubmlwupfvt5" path="res://addons/gdpractice/assets/fonts/Inter-Medium.ttf" id="6_o0vcn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgui7"]
+bg_color = Color(0.0745098, 0.0352941, 0.14902, 1)
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwgsg"]
+bg_color = Color(0.0745098, 0.0352941, 0.14902, 1)
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jf6gu"]
+bg_color = Color(0.0745098, 0.0352941, 0.14902, 1)
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.207843, 0.101961, 0.384314, 1)
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mq11r"]
+bg_color = Color(0.0745098, 0.0352941, 0.14902, 1)
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plcnl"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0.282353, 0.105882, 0.588235, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 4)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuvh6"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0.282353, 0.105882, 0.588235, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 4)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w73fc"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0.282353, 0.105882, 0.588235, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 4)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dn46q"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0.282353, 0.105882, 0.588235, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 4)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1p1q"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0.282353, 0.105882, 0.588235, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 4)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8djt"]
+bg_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epvrv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vby0n"]
+bg_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sj2re"]
+content_margin_left = 8.0
+content_margin_top = 2.0
+content_margin_right = 16.0
+content_margin_bottom = 2.0
+bg_color = Color(0.85098, 0.85098, 0.85098, 1)
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyguw"]
+content_margin_left = 6.0
+content_margin_top = 2.0
+content_margin_right = 12.0
+content_margin_bottom = 2.0
+bg_color = Color(0.85098, 0.85098, 0.85098, 1)
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf1dk"]
+content_margin_left = 28.0
+content_margin_top = 14.0
+content_margin_right = 28.0
+content_margin_bottom = 14.0
+bg_color = Color(0, 0, 0, 0.188235)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k6urd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqakg"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.533333, 0.486275, 0.615686, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfwvj"]
+bg_color = Color(0.282353, 0.105882, 0.588235, 1)
+draw_center = false
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gypsw"]
+bg_color = Color(1, 0.835294, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpatc"]
+draw_center = false
+border_width_left = 4
+border_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wkr1x"]
+bg_color = Color(0.156863, 0.0784314, 0.305882, 1)
+border_color = Color(0.282353, 0.105882, 0.588235, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hs085"]
+bg_color = Color(0.870588, 0.313726, 0.168627, 1)
+corner_radius_bottom_right = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7qg0"]
+bg_color = Color(0.282353, 0.105882, 0.588235, 1)
+corner_radius_bottom_right = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_54gv8"]
+draw_center = false
+border_width_bottom = 1
+border_color = Color(0.282353, 0.105882, 0.588235, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6lw5"]
+bg_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hs5v2"]
+bg_color = Color(0.0745098, 0.0352941, 0.14902, 1)
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wiq68"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.533333, 0.486275, 0.615686, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbwnn"]
+bg_color = Color(0.282353, 0.105882, 0.588235, 1)
+corner_radius_bottom_right = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_fh8oh"]
+color = Color(0.533333, 0.486275, 0.615686, 1)
+vertical = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m5dla"]
+bg_color = Color(0.282353, 0.105882, 0.588235, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 10.0
+expand_margin_top = 36.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edg1p"]
+bg_color = Color(0.282353, 0.105882, 0.588235, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 10.0
+expand_margin_top = 36.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cb47a"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 16.0
+bg_color = Color(0.156863, 0.0784314, 0.305882, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6hu1e"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_1dsos"]
+content_margin_left = 10.0
+color = Color(1, 0.254902, 0.490196, 1)
+thickness = 2
+vertical = true
+
+[resource]
+default_font = ExtResource("6_o0vcn")
+default_font_size = 14
+ButtonPractice/base_type = &"Button"
+ButtonPractice/styles/focus = SubResource("StyleBoxFlat_kgui7")
+ButtonPractice/styles/hover = SubResource("StyleBoxFlat_pwgsg")
+ButtonPractice/styles/normal = SubResource("StyleBoxFlat_jf6gu")
+ButtonPractice/styles/pressed = SubResource("StyleBoxFlat_mq11r")
+ButtonReset/base_type = &"Button"
+ButtonReset/font_sizes/font_size = 12
+ButtonReset/fonts/font = ExtResource("1_rk1hk")
+ButtonRun/base_type = &"Button"
+ButtonRun/colors/font_color = Color(1, 1, 1, 1)
+ButtonRun/colors/font_hover_color = Color(1, 1, 1, 1)
+ButtonRun/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+ButtonRun/colors/font_pressed_color = Color(1, 1, 1, 1)
+ButtonRun/fonts/font = ExtResource("1_rk1hk")
+ButtonRun/styles/disabled = SubResource("StyleBoxFlat_plcnl")
+ButtonRun/styles/focus = SubResource("StyleBoxFlat_vuvh6")
+ButtonRun/styles/hover = SubResource("StyleBoxFlat_w73fc")
+ButtonRun/styles/normal = SubResource("StyleBoxFlat_dn46q")
+ButtonRun/styles/pressed = SubResource("StyleBoxFlat_h1p1q")
+ButtonTester/base_type = &"Button"
+ButtonTester/colors/font_color = Color(0.533333, 0.486275, 0.615686, 1)
+ButtonTester/colors/font_focus_color = Color(0.921569, 0.878431, 1, 1)
+ButtonTester/colors/font_hover_color = Color(0.921569, 0.878431, 1, 1)
+ButtonTester/colors/font_hover_pressed_color = Color(0.921569, 0.878431, 1, 1)
+ButtonTester/colors/font_pressed_color = Color(0.921569, 0.878431, 1, 1)
+ButtonTester/font_sizes/font_size = 12
+ButtonTester/styles/hover = SubResource("StyleBoxFlat_i8djt")
+ButtonTester/styles/normal = SubResource("StyleBoxEmpty_epvrv")
+ButtonTester/styles/pressed = SubResource("StyleBoxFlat_vby0n")
+HBoxContainerHeader/base_type = &"HBoxContainer"
+HBoxContainerHeader/constants/separation = 2
+HBoxContainerTester/base_type = &"HBoxContainer"
+HBoxContainerTester/constants/separation = 0
+HBoxContainerTesterInput/base_type = &"HBoxContainer"
+HBoxContainerTesterInput/constants/separation = 10
+Label/colors/font_color = Color(0.921569, 0.878431, 1, 1)
+LabelInputFeedback/base_type = &"Label"
+LabelInputFeedback/colors/font_color = Color(0.282353, 0.105882, 0.588235, 1)
+LabelInputFeedback/font_sizes/font_size = 12
+LabelInputFeedback/fonts/font = ExtResource("1_rk1hk")
+LabelItem/base_type = &"Label"
+LabelItem/colors/font_color = Color(0.133333, 0.0627451, 0.266667, 1)
+LabelItem/styles/normal = SubResource("StyleBoxFlat_sj2re")
+LabelModule/base_type = &"Label"
+LabelModule/colors/font_color = Color(1, 0.835294, 0, 1)
+LabelModule/font_sizes/font_size = 12
+LabelModuleNumber/base_type = &"Label"
+LabelModuleNumber/colors/font_color = Color(1, 0.835294, 0, 1)
+LabelModuleNumber/font_sizes/font_size = 12
+LabelModuleNumber/fonts/font = ExtResource("2_q1phb")
+LabelPracticeTitle/base_type = &"Label"
+LabelPracticeTitle/font_sizes/font_size = 16
+LabelTesterCheckDisabled/base_type = &"Label"
+LabelTesterCheckDisabled/colors/font_color = Color(0.533333, 0.486275, 0.615686, 1)
+LabelTesterCheckPass/base_type = &"Label"
+LabelTesterCheckPass/colors/font_color = Color(0.388235, 0.8, 0.372549, 1)
+LabelTesterInputSafe/base_type = &"Label"
+LabelTesterInputSafe/colors/font_color = Color(0.388235, 0.8, 0.372549, 1)
+LabelTesterInputSafe/font_sizes/font_size = 20
+LabelTesterInputSafe/fonts/font = ExtResource("3_j31b0")
+LabelTesterInputWarn/base_type = &"Label"
+LabelTesterInputWarn/colors/font_color = Color(1, 0.835294, 0, 1)
+LabelTesterInputWarn/font_sizes/font_size = 20
+LabelTesterInputWarn/fonts/font = ExtResource("3_j31b0")
+LabelTesterItem/base_type = &"Label"
+LabelTesterItem/colors/font_color = Color(0.133333, 0.0627451, 0.266667, 1)
+LabelTesterItem/font_sizes/font_size = 9
+LabelTesterItem/styles/normal = SubResource("StyleBoxFlat_vyguw")
+LabelTesterReference/base_type = &"Label"
+LabelTesterReference/colors/font_color = Color(1, 1, 1, 1)
+LabelTesterReference/font_sizes/font_size = 42
+LabelTesterReference/fonts/font = ExtResource("1_rk1hk")
+LabelTesterReference/styles/normal = SubResource("StyleBoxFlat_yf1dk")
+LabelTesterStatusFail/base_type = &"Label"
+LabelTesterStatusFail/colors/font_color = Color(1, 0.254902, 0.490196, 1)
+LabelTesterStatusFail/fonts/font = ExtResource("1_rk1hk")
+LabelTesterStatusPass/base_type = &"Label"
+LabelTesterStatusPass/colors/font_color = Color(0.388235, 0.8, 0.372549, 1)
+LabelTesterStatusPass/fonts/font = ExtResource("1_rk1hk")
+LabelTesterStatusTesting/base_type = &"Label"
+LabelTesterStatusTesting/colors/font_color = Color(1, 0.835294, 0, 1)
+LabelTesterStatusTesting/fonts/font = ExtResource("3_sfnh1")
+LabelTesterTitle/base_type = &"Label"
+LabelTesterTitle/font_sizes/font_size = 14
+LabelTitle/base_type = &"Label"
+LabelTitle/font_sizes/font_size = 14
+LabelTitle/fonts/font = ExtResource("3_sfnh1")
+MarginContainer/constants/margin_bottom = 4
+MarginContainer/constants/margin_left = 4
+MarginContainer/constants/margin_right = 4
+MarginContainerHeader/base_type = &"MarginContainer"
+MarginContainerHeader/constants/margin_bottom = 0
+MarginContainerHeader/constants/margin_top = 0
+MarginContainerInnerPractice/base_type = &"MarginContainer"
+MarginContainerInnerPractice/constants/margin_bottom = 10
+MarginContainerInnerPractice/constants/margin_left = 10
+MarginContainerInnerPractice/constants/margin_right = 10
+MarginContainerInnerPractice/constants/margin_top = 10
+MarginContainerModuleNumber/base_type = &"MarginContainer"
+MarginContainerModuleNumber/constants/margin_bottom = 0
+MarginContainerModuleNumber/constants/margin_left = 0
+MarginContainerModuleNumber/constants/margin_right = 3
+MarginContainerModuleNumber/constants/margin_top = 0
+MarginContainerPractice/base_type = &"MarginContainer"
+MarginContainerPractice/constants/margin_bottom = 0
+MarginContainerPractice/constants/margin_left = 0
+MarginContainerPractice/constants/margin_right = 0
+MarginContainerPractice/constants/margin_top = 0
+MarginContainerPractices/base_type = &"MarginContainer"
+MarginContainerPractices/constants/margin_bottom = 5
+MarginContainerPractices/constants/margin_left = 5
+MarginContainerPractices/constants/margin_right = 5
+MarginContainerPractices/constants/margin_top = 5
+MarginContainerSelectedPractice/base_type = &"MarginContainerPractice"
+MarginContainerSelectedPractice/constants/margin_bottom = 5
+MarginContainerTesterCheck/base_type = &"MarginContainer"
+MarginContainerTesterCheck/constants/margin_bottom = 5
+MarginContainerTesterCheck/constants/margin_left = 6
+MarginContainerTesterCheck/constants/margin_right = 9
+MarginContainerTesterCheck/constants/margin_top = 5
+MarginContainerTesterChecks/base_type = &"MarginContainer"
+MarginContainerTesterChecks/constants/margin_bottom = 1
+MarginContainerTesterChecks/constants/margin_left = 4
+MarginContainerTesterChecks/constants/margin_right = 1
+MarginContainerTesterChecks/constants/margin_top = 1
+MarginContainerTesterChecksInner/base_type = &"MarginContainer"
+MarginContainerTesterChecksInner/constants/margin_bottom = 9
+MarginContainerTesterChecksInner/constants/margin_left = 0
+MarginContainerTesterChecksInner/constants/margin_right = 0
+MarginContainerTesterChecksInner/constants/margin_top = 9
+MarginContainerTesterHeader/base_type = &"MarginContainer"
+MarginContainerTesterHeader/constants/margin_bottom = 0
+MarginContainerTesterHeader/constants/margin_left = 9
+MarginContainerTesterHeader/constants/margin_right = 9
+MarginContainerTesterHeader/constants/margin_top = 0
+MarginContainerTesterRadioButton/base_type = &"MarginContainer"
+MarginContainerTesterRadioButton/constants/margin_bottom = 4
+MarginContainerTesterRadioButton/constants/margin_left = 4
+MarginContainerTesterRadioButton/constants/margin_right = 4
+MarginContainerTesterRadioButton/constants/margin_top = 4
+MarginContainerTesterReport/base_type = &"MarginContainer"
+MarginContainerTesterReport/constants/margin_bottom = 20
+MarginContainerTesterReport/constants/margin_left = 10
+MarginContainerTesterReport/constants/margin_right = 10
+MarginContainerTesterReport/constants/margin_top = 0
+MarginContainerTesterSubCheck/base_type = &"MarginContainerTesterCheck"
+MarginContainerTesterSubCheck/constants/margin_left = 26
+PanelContainer/styles/panel = SubResource("StyleBoxEmpty_k6urd")
+PanelContainerButtonTester/base_type = &"PanelContainer"
+PanelContainerButtonTester/styles/panel = SubResource("StyleBoxFlat_wqakg")
+PanelContainerHeader/base_type = &"PanelContainer"
+PanelContainerHeader/styles/panel = SubResource("StyleBoxFlat_wfwvj")
+PanelContainerInputFeedback/base_type = &"PanelContainer"
+PanelContainerInputFeedback/styles/panel = SubResource("StyleBoxFlat_gypsw")
+PanelContainerPractice/base_type = &"PanelContainer"
+PanelContainerPractice/styles/panel = SubResource("StyleBoxFlat_jpatc")
+PanelContainerPractices/base_type = &"PanelContainer"
+PanelContainerPractices/styles/panel = SubResource("StyleBoxFlat_wkr1x")
+PanelContainerSolutionWarning/base_type = &"PanelContainer"
+PanelContainerSolutionWarning/styles/panel = SubResource("StyleBoxFlat_hs085")
+PanelContainerTester/base_type = &"PanelContainer"
+PanelContainerTester/styles/panel = SubResource("StyleBoxFlat_s7qg0")
+PanelContainerTesterCheck/base_type = &"PanelContainer"
+PanelContainerTesterCheck/styles/panel = SubResource("StyleBoxFlat_54gv8")
+PanelContainerTesterChecks/base_type = &"PanelContainer"
+PanelContainerTesterChecks/styles/panel = SubResource("StyleBoxFlat_v6lw5")
+PanelContainerTesterChecksInner/base_type = &"PanelContainer"
+PanelContainerTesterChecksInner/styles/panel = SubResource("StyleBoxFlat_hs5v2")
+PanelContainerTesterRadioButtons/base_type = &"PanelContainer"
+PanelContainerTesterRadioButtons/styles/panel = SubResource("StyleBoxFlat_wiq68")
+PanelContainerTesterShowTab/base_type = &"PanelContainer"
+PanelContainerTesterShowTab/styles/panel = SubResource("StyleBoxFlat_sbwnn")
+PanelSeparator/base_type = &"Panel"
+PanelSeparator/styles/panel = SubResource("StyleBoxLine_fh8oh")
+ResetAcceptDialog/base_type = &"AcceptDialog"
+ResetAcceptDialog/colors/title_color = Color(1, 0.835294, 0, 1)
+ResetAcceptDialog/font_sizes/title_font_size = 16
+ResetAcceptDialog/fonts/title_font = ExtResource("1_rk1hk")
+ResetAcceptDialog/styles/embedded_border = SubResource("StyleBoxFlat_m5dla")
+ResetAcceptDialog/styles/embedded_unfocused_border = SubResource("StyleBoxFlat_edg1p")
+ResetAcceptDialog/styles/panel = SubResource("StyleBoxFlat_cb47a")
+RichTextLabel/fonts/bold_font = ExtResource("1_rk1hk")
+RichTextLabel/fonts/bold_italics_font = ExtResource("4_s6jil")
+RichTextLabel/fonts/italics_font = ExtResource("5_1mp7t")
+RichTextLabelSolutionWarning/base_type = &"RichTextLabel"
+RichTextLabelSolutionWarning/colors/default_color = Color(1, 0.92549, 0.788235, 1)
+RichTextLabelSolutionWarning/font_sizes/bold_font_size = 20
+RichTextLabelSolutionWarning/font_sizes/bold_italics_font_size = 20
+RichTextLabelSolutionWarning/font_sizes/italics_font_size = 20
+RichTextLabelSolutionWarning/font_sizes/normal_font_size = 20
+RichTextLabelSolutionWarning/fonts/bold_font = ExtResource("1_rk1hk")
+RichTextLabelSolutionWarning/fonts/bold_italics_font = ExtResource("4_s6jil")
+RichTextLabelSolutionWarning/fonts/italics_font = ExtResource("5_1mp7t")
+RichTextLabelSolutionWarning/styles/normal = SubResource("StyleBoxEmpty_6hu1e")
+RichTextLabelTesterCheckHint/base_type = &"RichTextLabel"
+RichTextLabelTesterCheckHint/colors/default_color = Color(0.921569, 0.878431, 1, 1)
+RichTextLabelTesterCheckHint/font_sizes/bold_font_size = 16
+RichTextLabelTesterCheckHint/font_sizes/bold_italics_font_size = 16
+RichTextLabelTesterCheckHint/font_sizes/italics_font_size = 16
+RichTextLabelTesterCheckHint/font_sizes/mono_font_size = 16
+RichTextLabelTesterCheckHint/font_sizes/normal_font_size = 16
+RichTextLabelTesterCheckHint/fonts/bold_font = ExtResource("4_s6jil")
+RichTextLabelTesterCheckHint/fonts/bold_italics_font = ExtResource("4_s6jil")
+RichTextLabelTesterCheckHint/fonts/italics_font = ExtResource("5_1mp7t")
+RichTextLabelTesterCheckHint/fonts/normal_font = ExtResource("5_1mp7t")
+RichTextLabelTesterCheckHint/styles/normal = SubResource("StyleBoxLine_1dsos")
+RichTextLabelTesterDefault/base_type = &"RichTextLabel"
+RichTextLabelTesterDefault/colors/default_color = Color(0.533333, 0.486275, 0.615686, 1)
+RichTextLabelTesterDefault/font_sizes/bold_font_size = 16
+RichTextLabelTesterDefault/font_sizes/bold_italics_font_size = 16
+RichTextLabelTesterDefault/font_sizes/italics_font_size = 16
+RichTextLabelTesterDefault/font_sizes/mono_font_size = 16
+RichTextLabelTesterDefault/font_sizes/normal_font_size = 16
+RichTextLabelTesterDefault/fonts/bold_font = ExtResource("1_rk1hk")
+RichTextLabelTesterDefault/fonts/bold_italics_font = ExtResource("4_s6jil")
+RichTextLabelTesterDefault/fonts/italics_font = ExtResource("5_1mp7t")
+RichTextLabelTesterFail/base_type = &"RichTextLabel"
+RichTextLabelTesterFail/colors/default_color = Color(1, 0.254902, 0.490196, 1)
+RichTextLabelTesterFail/font_sizes/bold_font_size = 16
+RichTextLabelTesterFail/font_sizes/bold_italics_font_size = 16
+RichTextLabelTesterFail/font_sizes/italics_font_size = 16
+RichTextLabelTesterFail/font_sizes/mono_font_size = 16
+RichTextLabelTesterFail/font_sizes/normal_font_size = 16
+RichTextLabelTesterFail/fonts/bold_font = ExtResource("1_rk1hk")
+RichTextLabelTesterFail/fonts/bold_italics_font = ExtResource("4_s6jil")
+RichTextLabelTesterFail/fonts/italics_font = ExtResource("5_1mp7t")
+RichTextLabelTesterInputSafe/base_type = &"RichTextLabel"
+RichTextLabelTesterInputSafe/colors/default_color = Color(0.921569, 0.878431, 1, 1)
+RichTextLabelTesterInputSafe/font_sizes/bold_font_size = 16
+RichTextLabelTesterInputSafe/font_sizes/bold_italics_font_size = 16
+RichTextLabelTesterInputSafe/font_sizes/italics_font_size = 16
+RichTextLabelTesterInputSafe/font_sizes/mono_font_size = 16
+RichTextLabelTesterInputSafe/font_sizes/normal_font_size = 16
+RichTextLabelTesterInputSafe/fonts/bold_font = ExtResource("1_rk1hk")
+RichTextLabelTesterInputSafe/fonts/bold_italics_font = ExtResource("4_s6jil")
+RichTextLabelTesterInputSafe/fonts/italics_font = ExtResource("5_1mp7t")
+RichTextLabelTesterInputWarn/base_type = &"RichTextLabel"
+RichTextLabelTesterInputWarn/colors/default_color = Color(1, 0.835294, 0, 1)
+RichTextLabelTesterInputWarn/font_sizes/bold_font_size = 16
+RichTextLabelTesterInputWarn/font_sizes/bold_italics_font_size = 16
+RichTextLabelTesterInputWarn/font_sizes/italics_font_size = 16
+RichTextLabelTesterInputWarn/font_sizes/mono_font_size = 16
+RichTextLabelTesterInputWarn/font_sizes/normal_font_size = 16
+RichTextLabelTesterInputWarn/fonts/bold_font = ExtResource("1_rk1hk")
+RichTextLabelTesterInputWarn/fonts/bold_italics_font = ExtResource("4_s6jil")
+RichTextLabelTesterInputWarn/fonts/italics_font = ExtResource("5_1mp7t")
+RichTextLabelTesterPass/base_type = &"RichTextLabel"
+RichTextLabelTesterPass/colors/default_color = Color(0.388235, 0.8, 0.372549, 1)
+RichTextLabelTesterPass/font_sizes/bold_font_size = 16
+RichTextLabelTesterPass/font_sizes/bold_italics_font_size = 16
+RichTextLabelTesterPass/font_sizes/italics_font_size = 16
+RichTextLabelTesterPass/font_sizes/mono_font_size = 16
+RichTextLabelTesterPass/font_sizes/normal_font_size = 16
+RichTextLabelTesterPass/fonts/bold_font = ExtResource("1_rk1hk")
+RichTextLabelTesterPass/fonts/bold_italics_font = ExtResource("4_s6jil")
+RichTextLabelTesterPass/fonts/italics_font = ExtResource("5_1mp7t")
+RichTextLabelTesterRequirement/base_type = &"RichTextLabel"
+RichTextLabelTesterRequirement/colors/default_color = Color(0.921569, 0.878431, 1, 1)
+RichTextLabelTesterRequirement/font_sizes/bold_font_size = 14
+RichTextLabelTesterRequirement/font_sizes/bold_italics_font_size = 14
+RichTextLabelTesterRequirement/font_sizes/italics_font_size = 14
+RichTextLabelTesterRequirement/font_sizes/mono_font_size = 14
+RichTextLabelTesterRequirement/font_sizes/normal_font_size = 14
+RichTextLabelTesterRequirement/fonts/bold_font = ExtResource("1_rk1hk")
+RichTextLabelTesterRequirement/fonts/bold_italics_font = ExtResource("4_s6jil")
+RichTextLabelTesterRequirement/fonts/italics_font = ExtResource("5_1mp7t")
+RichTextLabelTesterRequirementHint/base_type = &"RichTextLabel"
+RichTextLabelTesterRequirementHint/colors/default_color = Color(0.921569, 0.878431, 1, 1)
+RichTextLabelTesterRequirementHint/font_sizes/bold_font_size = 14
+RichTextLabelTesterRequirementHint/font_sizes/bold_italics_font_size = 14
+RichTextLabelTesterRequirementHint/font_sizes/italics_font_size = 14
+RichTextLabelTesterRequirementHint/font_sizes/mono_font_size = 14
+RichTextLabelTesterRequirementHint/font_sizes/normal_font_size = 14
+RichTextLabelTesterRequirementHint/fonts/bold_font = ExtResource("4_s6jil")
+RichTextLabelTesterRequirementHint/fonts/bold_italics_font = ExtResource("4_s6jil")
+RichTextLabelTesterRequirementHint/fonts/italics_font = ExtResource("5_1mp7t")
+RichTextLabelTesterRequirementHint/fonts/normal_font = ExtResource("5_1mp7t")
+VBoxContainerPracticesList/base_type = &"VBoxContainer"
+VBoxContainerPracticesList/constants/separation = 5
+VBoxContainerTester/base_type = &"VBoxContainer"
+VBoxContainerTester/constants/separation = 0

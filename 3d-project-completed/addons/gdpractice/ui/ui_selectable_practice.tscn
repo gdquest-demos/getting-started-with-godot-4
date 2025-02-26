@@ -1,0 +1,116 @@
+[gd_scene load_steps=6 format=3 uid="uid://ie322xar0a3k"]
+
+[ext_resource type="Theme" uid="uid://bk3rqtt0xeorm" path="res://addons/gdpractice/assets/theme.tres" id="1_6clp7"]
+[ext_resource type="Script" path="res://addons/gdpractice/ui/ui_selectable_practice.gd" id="1_eljmn"]
+[ext_resource type="Texture2D" uid="uid://cntr4eqyhedci" path="res://addons/gdpractice/assets/icons/reset_button.svg" id="3_br2dx"]
+[ext_resource type="Texture2D" uid="uid://cjrd8lw4g0wi" path="res://addons/gdpractice/assets/checkbox_empty.svg" id="3_u2byc"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_gyoq3"]
+
+[node name="UISelectablePractice" type="MarginContainer"]
+custom_minimum_size = Vector2(256, 0)
+offset_right = 287.0
+offset_bottom = 38.0
+theme = ExtResource("1_6clp7")
+theme_type_variation = &"MarginContainerPractice"
+script = ExtResource("1_eljmn")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"PanelContainerPractice"
+
+[node name="Button" type="Button" parent="PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonPractice"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_gyoq3")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"MarginContainerInnerPractice"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="LabelItem" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabelItem"
+text = "L0.P0"
+
+[node name="LabelTitle" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"LabelPracticeTitle"
+text = "Title"
+autowrap_mode = 2
+
+[node name="ResetButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonReset"
+text = "RESET"
+icon = ExtResource("3_br2dx")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="IconCheckbox" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(18, 0)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_u2byc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RunButtonContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RunButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/RunButtonContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonRun"
+text = "RUN"
+
+[node name="ButtonShadowSpacer" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer/RunButtonContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="ResetConfirmationDialog" type="ConfirmationDialog" parent="."]
+unique_name_in_owner = true
+title = "Reset the practice?"
+initial_position = 2
+size = Vector2i(416, 155)
+theme_type_variation = &"ResetAcceptDialog"
+dialog_text = "Do  you want to reset \"%s\"? This will reset the files to the practice starting point, overwriting your changes. If you completed the practice, it will also remove the completion mark."
+dialog_autowrap = true
+
+[node name="ResetAcceptDialog" type="AcceptDialog" parent="."]
+unique_name_in_owner = true
+title = "Reset successful"
+initial_position = 2
+size = Vector2i(400, 108)
+theme_type_variation = &"ResetAcceptDialog"
+dialog_text = "The practice \"%s\" has been reset to its starting point. You can now do it again from the start."
+dialog_autowrap = true

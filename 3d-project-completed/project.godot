@@ -25,10 +25,6 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="viewport"
 
-[dotnet]
-
-project/assembly_name="Your First 3D Game with Godot 4"
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/colorpicker_presets/plugin.cfg")

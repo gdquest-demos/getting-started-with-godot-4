@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=3 uid="uid://5l36tosihkeq"]
+
+[ext_resource type="Script" path="res://addons/gdpractice/tester/split_layout/split_layout.gd" id="1_dlxmn"]
+[ext_resource type="Theme" uid="uid://bk3rqtt0xeorm" path="res://addons/gdpractice/assets/theme.tres" id="2_fsela"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_bgs5q"]
+thickness = 6
+vertical = true
+
+[node name="SplitLayout" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_fsela")
+script = ExtResource("1_dlxmn")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PracticeSubViewportContainer" type="SubViewportContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="PracticeSubViewport" type="SubViewport" parent="HBoxContainer/PracticeSubViewportContainer"]
+unique_name_in_owner = true
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+physics_object_picking = true
+physics_object_picking_sort = true
+size = Vector2i(960, 1080)
+render_target_update_mode = 4
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+theme_override_styles/separator = SubResource("StyleBoxLine_bgs5q")
+
+[node name="SolutionSubViewportContainer" type="SubViewportContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SolutionSubViewport" type="SubViewport" parent="HBoxContainer/SolutionSubViewportContainer"]
+unique_name_in_owner = true
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+physics_object_picking = true
+physics_object_picking_sort = true
+size = Vector2i(960, 1080)
+render_target_update_mode = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="HBoxContainer/SolutionSubViewportContainer/SolutionSubViewport"]
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SolutionSubViewportContainer/SolutionSubViewport/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.133333, 0.0627451, 0.266667, 0.278431)
+
+[node name="Label" type="Label" parent="HBoxContainer/SolutionSubViewportContainer/SolutionSubViewport/CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -132.5
+offset_top = -250.0
+offset_right = 132.5
+offset_bottom = -170.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_fsela")
+theme_type_variation = &"LabelTesterReference"
+text = "Reference"
