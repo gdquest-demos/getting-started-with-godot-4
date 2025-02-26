@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp174uwgvqqr7"]
+
+[ext_resource type="Script" path="res://lessons_reference/challenges/time_left.gd" id="1_31pkx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6iwf4"]
+font_size = 40
+
+[node name="TimeLeftLabel" type="Label"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "Time: 60"
+horizontal_alignment = 1
+script = ExtResource("1_31pkx")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 40.0
+one_shot = true
+autostart = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.368627)
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+top_level = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -352.0
+offset_top = -156.5
+offset_right = 352.0
+offset_bottom = 156.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Congratulations, you won!"
+label_settings = SubResource("LabelSettings_6iwf4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
