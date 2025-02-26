@@ -54,7 +54,7 @@ grow_vertical = 2
 texture = ExtResource("3_r7as2")
 expand_mode = 1
 
-[node name="ShotSound" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("4_0d82q")
 max_polyphony = 4

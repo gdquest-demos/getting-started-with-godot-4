@@ -31,7 +31,6 @@ func take_damage():
 	hurt_sound.play()
 
 	if health == 0:
-		ko_sound.pitch_scale = randfn(1.0, 0.1)
 		ko_sound.play()
 
 		set_physics_process(false)
@@ -44,5 +43,5 @@ func take_damage():
 
 
 func _on_timer_timeout():
-	died.emit()
 	queue_free()
+	died.emit()

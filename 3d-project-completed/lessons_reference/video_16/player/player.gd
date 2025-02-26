@@ -28,7 +28,7 @@ func _physics_process(delta):
 		input_direction_2D.x, 0, input_direction_2D.y
 	)
 	var direction = transform.basis * input_direction_3D
-	
+
 	velocity.x = direction.x * SPEED
 	velocity.z = direction.z * SPEED
 
@@ -52,5 +52,4 @@ func shoot_bullet():
 	new_bullet.transform = %Marker3D.global_transform
 
 	%Timer.start()
-	
-	%ShotSound.play()
+	%AudioStreamPlayer.play()

@@ -2,10 +2,12 @@ extends Node3D
 
 var player_score = 0
 
+@onready var label := %Label
+
 
 func increase_score():
 	player_score += 1
-	%ScoreLabel.text = "Score: " + str(player_score)
+	label.text = "Score: " + str(player_score)
 
 
 func _on_kill_plane_body_entered(body):
@@ -13,11 +15,11 @@ func _on_kill_plane_body_entered(body):
 
 
 func _on_mob_spawner_3d_mob_spawned(mob):
-	do_poof(mob.global_position)
 	mob.died.connect(func():
 		increase_score()
 		do_poof(mob.global_position)
 	)
+	do_poof(mob.global_position)
 
 
 func do_poof(mob_position):
