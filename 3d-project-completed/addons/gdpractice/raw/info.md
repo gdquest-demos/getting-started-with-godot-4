@@ -1,1 +1,0 @@
-- `video-game-controller-icon.svg`: https://publicdomainvectors.org/en/free-clipart/Gamepad/40445.html

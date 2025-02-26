@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://brv1jmhrpfw7p"]
 
 [ext_resource type="PackedScene" uid="uid://cb4uxoephhm18" path="res://mob/bat/bat_model.glb" id="1_tpnu0"]
-[ext_resource type="Material" uid="uid://c28yvvp6nnmq4" path="res://mob/bat/bat_material.tres" id="3_41uov"]
+[ext_resource type="Material" uid="uid://c28yvvp6nnmq4" path="res://lessons_reference/video_16/mob/bat/bat_material.tres" id="3_41uov"]
 
 [sub_resource type="Animation" id="Animation_mms1t"]
 resource_name = "Idle"

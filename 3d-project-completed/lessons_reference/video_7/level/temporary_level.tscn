@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbih1sfmquu3m"]
+[gd_scene load_steps=7 format=3 uid="uid://cbih1sfmquu3m"]
 
 [ext_resource type="Texture2D" uid="uid://ismvrp3hwx22" path="res://level/checkboard.png" id="1_p2q5e"]
-[ext_resource type="Material" uid="uid://cp4gi8r3s3twb" path="res://level/platforms.tres" id="2_6dlms"]
 [ext_resource type="PackedScene" uid="uid://d35f4kvrfqy0c" path="res://lessons_reference/video_7/player/player.tscn" id="3_ansrf"]
 
 [sub_resource type="Environment" id="Environment_pev5d"]
@@ -27,6 +26,18 @@ volumetric_fog_emission = Color(0.0431373, 0.0431373, 0.0431373, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ooyhk"]
 albedo_color = Color(1, 0.717647, 0.188235, 1)
+albedo_texture = ExtResource("1_p2q5e")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pmwtt"]
+albedo_color = Color(0.286275, 0.682353, 0.427451, 1)
+albedo_texture = ExtResource("1_p2q5e")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dm87"]
+albedo_color = Color(0.286275, 0.682353, 0.427451, 1)
 albedo_texture = ExtResource("1_p2q5e")
 uv1_triplanar = true
 uv1_triplanar_sharpness = 4.0
@@ -63,13 +74,13 @@ material = SubResource("StandardMaterial3D_ooyhk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 use_collision = true
 size = Vector3(17, 11, 15)
-material = ExtResource("2_6dlms")
+material = SubResource("StandardMaterial3D_pmwtt")
 
 [node name="Platform7" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 26)
 use_collision = true
 size = Vector3(9, 11, 9)
-material = ExtResource("2_6dlms")
+material = SubResource("StandardMaterial3D_4dm87")
 
 [node name="Player" parent="." instance=ExtResource("3_ansrf")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.507239, 0)

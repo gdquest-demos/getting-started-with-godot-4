@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://d3kp34dihjeyd" path="res://lessons_reference/video_16/player/player.tscn" id="1_fqdcw"]
 [ext_resource type="Script" path="res://lessons_reference/video_16/game.gd" id="1_xym6k"]
-[ext_resource type="Material" uid="uid://spdpie6nlr1q" path="res://level/bridges.tres" id="4_mc4jw"]
+[ext_resource type="Material" uid="uid://spdpie6nlr1q" path="res://lessons_reference/video_16/level/bridges.tres" id="4_mc4jw"]
 [ext_resource type="PackedScene" uid="uid://xtl5acmpaa04" path="res://lessons_reference/video_16/mob/spawner_3d.tscn" id="5_7vlo8"]
 [ext_resource type="PackedScene" uid="uid://dfwbq2vombjvr" path="res://lessons_reference/video_16/mob/mob.tscn" id="5_787o4"]
-[ext_resource type="Material" uid="uid://cp4gi8r3s3twb" path="res://level/platforms.tres" id="5_l41we"]
+[ext_resource type="Material" uid="uid://cp4gi8r3s3twb" path="res://lessons_reference/video_16/level/platforms.tres" id="5_l41we"]
 
 [sub_resource type="Environment" id="Environment_pev5d"]
 background_mode = 1
