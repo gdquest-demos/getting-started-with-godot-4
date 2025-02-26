@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbih1sfmquu3m"]
+
+[ext_resource type="Texture2D" uid="uid://ismvrp3hwx22" path="res://level/checkboard.png" id="1_p2q5e"]
+[ext_resource type="Material" uid="uid://cp4gi8r3s3twb" path="res://level/platforms.tres" id="2_6dlms"]
+[ext_resource type="PackedScene" uid="uid://d35f4kvrfqy0c" path="res://lessons_reference/video_7/player/player.tscn" id="3_ansrf"]
+
+[sub_resource type="Environment" id="Environment_pev5d"]
+background_mode = 1
+background_color = Color(0, 0.807843, 1, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.815625, 0.702063, 0.54125, 1)
+ambient_light_sky_contribution = 0.31
+tonemap_mode = 2
+tonemap_exposure = 1.05
+tonemap_white = 0.95
+ssao_intensity = 1.0
+glow_normalized = true
+glow_intensity = 0.2
+fog_enabled = true
+fog_light_color = Color(0, 0.478431, 0.764706, 1)
+fog_density = 0.002
+fog_height = 0.52
+fog_height_density = 0.1319
+volumetric_fog_density = 0.1525
+volumetric_fog_albedo = Color(0.203922, 0.203922, 1, 1)
+volumetric_fog_emission = Color(0.0431373, 0.0431373, 0.0431373, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ooyhk"]
+albedo_color = Color(1, 0.717647, 0.188235, 1)
+albedo_texture = ExtResource("1_p2q5e")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 4.0
+
+[node name="TemporaryLevel" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pev5d")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.707107, -0.612373, 0.353553, 0, 0.5, 0.866026, -0.707107, -0.612373, 0.353553, 0, 10, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 40.0
+
+[node name="Bridge2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.5)
+use_collision = true
+size = Vector3(4, 1, 3)
+material = SubResource("StandardMaterial3D_ooyhk")
+
+[node name="Bridge5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14.5)
+use_collision = true
+size = Vector3(4, 1, 3)
+material = SubResource("StandardMaterial3D_ooyhk")
+
+[node name="Bridge6" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.5)
+use_collision = true
+size = Vector3(4, 1, 3)
+material = SubResource("StandardMaterial3D_ooyhk")
+
+[node name="Platform6" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+use_collision = true
+size = Vector3(17, 11, 15)
+material = ExtResource("2_6dlms")
+
+[node name="Platform7" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 26)
+use_collision = true
+size = Vector3(9, 11, 9)
+material = ExtResource("2_6dlms")
+
+[node name="Player" parent="." instance=ExtResource("3_ansrf")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.507239, 0)

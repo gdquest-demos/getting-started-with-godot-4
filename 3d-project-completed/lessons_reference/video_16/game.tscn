@@ -51,7 +51,7 @@ theme_override_font_sizes/font_size = 60
 text = "Score: 0"
 
 [node name="Player" parent="." instance=ExtResource("1_fqdcw")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7, 2.00724, -7.5)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7, 0.507239, -7.5)
 
 [node name="KillPlane" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -2.15, -6.5)
