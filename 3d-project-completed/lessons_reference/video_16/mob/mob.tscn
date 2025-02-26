@@ -18,7 +18,7 @@ unique_name_in_owner = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_gkbwe")
 
-[node name="DeathTimer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
 one_shot = true
 
@@ -33,4 +33,4 @@ unique_name_in_owner = true
 stream = ExtResource("4_qnk8k")
 max_db = -10.0
 
-[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -5,8 +5,10 @@ signal died
 var speed = randf_range(2.0, 4.0)
 var health = 3
 
-@onready var player = get_node("/root/Game/Player")
 @onready var bat_model = %bat_model
+@onready var timer = %Timer
+
+@onready var player = get_node("/root/Game/Player")
 
 @onready var hurt_sound = %HurtSound
 @onready var ko_sound = %KOSound
@@ -33,16 +35,14 @@ func take_damage():
 		ko_sound.play()
 
 		set_physics_process(false)
-
 		gravity_scale = 1.0
-
-		var direction_back = player.global_position.direction_to(global_position)
+		var direction = player.global_position.direction_to(global_position)
 		var random_upward_force = Vector3.UP * randf() * 5.0
-		apply_central_impulse(direction_back.rotated(Vector3.UP, randf_range(-0.2, 0.2)) * 10.0 + random_upward_force)
+		apply_central_impulse(direction.rotated(Vector3.UP, randf_range(-0.2, 0.2)) * 10.0 + random_upward_force)
 
-		%DeathTimer.start()
+		timer.start()
 
 
-func _on_death_timer_timeout():
+func _on_timer_timeout():
 	died.emit()
 	queue_free()
