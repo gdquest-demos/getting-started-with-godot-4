@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cbih1sfmquu3m"]
 
 [ext_resource type="Texture2D" uid="uid://ismvrp3hwx22" path="res://level/checkboard.png" id="1_p2q5e"]
-[ext_resource type="Material" uid="uid://cp4gi8r3s3twb" path="res://level/platforms.tres" id="2_6dlms"]
+[ext_resource type="Material" uid="uid://cp4gi8r3s3twb" path="res://lessons_reference/video_16/level/platforms.tres" id="2_6dlms"]
 [ext_resource type="PackedScene" uid="uid://d35f4kvrfqy0c" path="res://lessons_reference/video_7/player/player.tscn" id="3_ansrf"]
 
 [sub_resource type="Environment" id="Environment_pev5d"]

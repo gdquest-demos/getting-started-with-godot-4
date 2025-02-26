@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://d3kp34dihjeyd"]
 
 [ext_resource type="Script" path="res://lessons_reference/video_16/player/player.gd" id="1_g3eiy"]
-[ext_resource type="PackedScene" uid="uid://b6nrg32r2wq86" path="res://player/simple_gun/blue_gun.tscn" id="3_43sda"]
+[ext_resource type="PackedScene" uid="uid://b6nrg32r2wq86" path="res://lessons_reference/video_16/player/simple_gun/blue_gun.tscn" id="3_43sda"]
 [ext_resource type="Texture2D" uid="uid://courndspfmq8n" path="res://player/reticle.png" id="3_r7as2"]
 [ext_resource type="AudioStream" uid="uid://b60djage857j5" path="res://player/gun_shoot.wav" id="4_0d82q"]
 
