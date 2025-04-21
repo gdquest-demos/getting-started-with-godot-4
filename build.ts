@@ -20,7 +20,7 @@ await ensureDir(dirs.out);
 
 
 const zipDirectory = async (dir: string, outDir: string, skip?: RegExp) => {
-    for await (const dirEntry of walk(".")) {
+    for await (const dirEntry of walk(dir)) {
         if (dirEntry.isFile) {
             const relativePath = dirEntry.path.replace(dir, "");
             if (skip && skip.test(relativePath)) {
@@ -32,7 +32,7 @@ const zipDirectory = async (dir: string, outDir: string, skip?: RegExp) => {
         }
     }
     const tmpFileName = await Deno.makeTempFile({ prefix: 'zip' });
-    await zip.compress(tmpFileName, "./", { excludeSrc: true })
+    await zip.compress(outDir, tmpFileName, { excludeSrc: true })
     return tmpFileName;
 }
 
