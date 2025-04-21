@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d35f4kvrfqy0c"]
 
-[ext_resource type="Script" path="res://lessons_reference/video_7/player/player.gd" id="1_27n23"]
+[ext_resource type="Script" uid="uid://dlbukkhb0r7gs" path="res://lessons_reference/video_7/player/player.gd" id="1_27n23"]
 [ext_resource type="PackedScene" uid="uid://b6nrg32r2wq86" path="res://lessons_reference/video_16/player/simple_gun/blue_gun.tscn" id="2_2red5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ctapl"]

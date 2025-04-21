@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c2oal6rrmeo67"]
 
 [ext_resource type="PackedScene" uid="uid://cbhp570drcrsj" path="res://mob/spawner/spawner_model.glb" id="1_ius6p"]
-[ext_resource type="Shader" path="res://mob/spawner/spawner_halo.gdshader" id="2_4qrtt"]
+[ext_resource type="Shader" uid="uid://cm274ruttg57j" path="res://mob/spawner/spawner_halo.gdshader" id="2_4qrtt"]
 [ext_resource type="Material" uid="uid://jvnbftghahty" path="res://mob/spawner/spawner_screen_material.tres" id="3_7ans1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7ugqq"]
@@ -73,8 +73,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_avbtx"]
 _data = {
-"Idle": SubResource("Animation_uvjom"),
-"RESET": SubResource("Animation_3s57u")
+&"Idle": SubResource("Animation_uvjom"),
+&"RESET": SubResource("Animation_3s57u")
 }
 
 [node name="Spawner" type="Node3D"]

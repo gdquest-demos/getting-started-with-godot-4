@@ -8,7 +8,7 @@
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a08pi"]
 _data = {
-"poof": ExtResource("5_yvyul")
+&"poof": ExtResource("5_yvyul")
 }
 
 [node name="smoke_puff" type="Node3D"]

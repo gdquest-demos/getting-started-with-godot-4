@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bp174uwgvqqr7"]
 
-[ext_resource type="Script" path="res://lessons_reference/challenges/time_left.gd" id="1_31pkx"]
+[ext_resource type="Script" uid="uid://fcnmp3d7jon1" path="res://lessons_reference/challenges/time_left.gd" id="1_31pkx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6iwf4"]
 font_size = 40

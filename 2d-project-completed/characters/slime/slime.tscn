@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://ogik4s70pgwl"]
 
 [ext_resource type="Texture2D" uid="uid://dvgfmy6vtvjji" path="res://characters/slime/slime_body.png" id="1_3j35h"]
-[ext_resource type="Script" path="res://characters/slime/slime.gd" id="1_87y5x"]
+[ext_resource type="Script" uid="uid://c055juj57t86b" path="res://characters/slime/slime.gd" id="1_87y5x"]
 [ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://characters/ground_shadow.png" id="1_cq7ej"]
 [ext_resource type="Texture2D" uid="uid://c078jrp2yvc4s" path="res://characters/slime/slime_face.png" id="2_ygydt"]
 [ext_resource type="Texture2D" uid="uid://btbxea1f3vwot" path="res://characters/slime/slime_body_hurt.png" id="4_0qu0c"]
@@ -205,10 +205,10 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j6cum"]
 _data = {
-"RESET": SubResource("Animation_y4lve"),
-"hurt": SubResource("Animation_lu163"),
-"idle": SubResource("Animation_71vdi"),
-"walk": SubResource("Animation_l6fy2")
+&"RESET": SubResource("Animation_y4lve"),
+&"hurt": SubResource("Animation_lu163"),
+&"idle": SubResource("Animation_71vdi"),
+&"walk": SubResource("Animation_l6fy2")
 }
 
 [node name="Slime" type="Node2D"]

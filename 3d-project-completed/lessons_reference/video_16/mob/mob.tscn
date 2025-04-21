@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dfwbq2vombjvr"]
 
-[ext_resource type="Script" path="res://lessons_reference/video_16/mob/mob.gd" id="1_ebh3x"]
+[ext_resource type="Script" uid="uid://bv3jltj3o05ny" path="res://lessons_reference/video_16/mob/mob.gd" id="1_ebh3x"]
 [ext_resource type="PackedScene" uid="uid://12e7gwo50sef" path="res://lessons_reference/video_16/mob/bat/bat_model.tscn" id="2_5vr7j"]
 [ext_resource type="AudioStream" uid="uid://bec5opkuf77c7" path="res://mob/mob_take_damage.wav" id="3_sikhy"]
 [ext_resource type="AudioStream" uid="uid://ha0bp3cygkq1" path="res://mob/mob_ko.wav" id="4_qnk8k"]

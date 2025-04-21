@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2m608gyssept"]
 
-[ext_resource type="Script" path="res://mob.gd" id="1_xhyow"]
+[ext_resource type="Script" uid="uid://ojg88pe48jk5" path="res://mob.gd" id="1_xhyow"]
 [ext_resource type="PackedScene" uid="uid://ogik4s70pgwl" path="res://characters/slime/slime.tscn" id="3_n2uyc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ypitm"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://6ufbc40i0ikp"]
 
 [ext_resource type="PackedScene" uid="uid://cexmab3mm00h4" path="res://player/projectile/projectile_model.glb" id="1_wr8wo"]
-[ext_resource type="Shader" path="res://player/projectile/projectile.gdshader" id="2_i5ur6"]
+[ext_resource type="Shader" uid="uid://co5jxefsyvjbo" path="res://player/projectile/projectile.gdshader" id="2_i5ur6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vlgnn"]
 render_priority = 0

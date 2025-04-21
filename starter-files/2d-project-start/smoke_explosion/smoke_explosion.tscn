@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://dhmhmrth6rdce"]
 
-[ext_resource type="Shader" path="res://smoke_explosion/smoke_explosion.gdshader" id="1_bmef6"]
-[ext_resource type="Script" path="res://smoke_explosion/smoke_explosion.gd" id="1_kb8ql"]
+[ext_resource type="Shader" uid="uid://cjjy1aucj6gji" path="res://smoke_explosion/smoke_explosion.gdshader" id="1_bmef6"]
+[ext_resource type="Script" uid="uid://bmcptrd1f7ok" path="res://smoke_explosion/smoke_explosion.gd" id="1_kb8ql"]
 
 [sub_resource type="Gradient" id="Gradient_obal6"]
 interpolation_mode = 1
@@ -30,10 +30,10 @@ noise = SubResource("FastNoiseLite_ti4n0")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dssfe"]
 resource_local_to_scene = true
 shader = ExtResource("1_bmef6")
-shader_parameter/offset = 2.0
-shader_parameter/texture_offset = Vector2(0, 0)
 shader_parameter/voronoi_sampler = SubResource("NoiseTexture2D_uji5e")
 shader_parameter/edge_curve = SubResource("CurveTexture_p664q")
+shader_parameter/offset = 2.0
+shader_parameter/texture_offset = Vector2(0, 0)
 shader_parameter/color_gradient = SubResource("GradientTexture1D_mxd0d")
 
 [sub_resource type="Animation" id="Animation_6fv2e"]
@@ -116,8 +116,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8msef"]
 _data = {
-"RESET": SubResource("Animation_6fv2e"),
-"explosion": SubResource("Animation_viyco")
+&"RESET": SubResource("Animation_6fv2e"),
+&"explosion": SubResource("Animation_viyco")
 }
 
 [node name="SmokeExplosion" type="Node2D"]

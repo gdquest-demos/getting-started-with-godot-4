@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://wawlsqcberu6"]
 
-[ext_resource type="Script" path="res://lessons_reference/video_16/player/bullet_3d.gd" id="1_gxepa"]
+[ext_resource type="Script" uid="uid://wniyqyk2io5j" path="res://lessons_reference/video_16/player/bullet_3d.gd" id="1_gxepa"]
 [ext_resource type="PackedScene" uid="uid://caxbqhwe5nxb3" path="res://lessons_reference/video_16/player/projectile/projectile.tscn" id="2_pfejm"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4mnn0"]

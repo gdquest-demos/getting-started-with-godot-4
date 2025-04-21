@@ -128,8 +128,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t57jj"]
 _data = {
-"Idle": SubResource("Animation_mms1t"),
-"RESET": SubResource("Animation_7lw6s")
+&"Idle": SubResource("Animation_mms1t"),
+&"RESET": SubResource("Animation_7lw6s")
 }
 
 [sub_resource type="Animation" id="Animation_dh2rk"]
@@ -162,7 +162,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6sosp"]
 _data = {
-"hurt": SubResource("Animation_dh2rk")
+&"hurt": SubResource("Animation_dh2rk")
 }
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_1tyul"]

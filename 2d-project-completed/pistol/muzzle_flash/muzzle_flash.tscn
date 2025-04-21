@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://fulwcb7msoxb"]
 
-[ext_resource type="Script" path="res://pistol/muzzle_flash/muzzle_flash.gd" id="1_qee16"]
+[ext_resource type="Script" uid="uid://b428neo6pc13x" path="res://pistol/muzzle_flash/muzzle_flash.gd" id="1_qee16"]
 [ext_resource type="Texture2D" uid="uid://brgpjilf7s2ul" path="res://pistol/muzzle_flash/muzzle_flash.png" id="1_yxyu1"]
 
 [node name="MuzzleFlash" type="Node2D"]

@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dp7sxe5xl5shk"]
+[gd_scene load_steps=6 format=3 uid="uid://dp7sxe5xl5shk"]
 
-[ext_resource type="Texture2D" uid="uid://ismvrp3hwx22" path="res://level/checkboard.png" id="1_cig4d"]
-[ext_resource type="PackedScene" uid="uid://d35f4kvrfqy0c" path="res://lessons_reference/video_7/player/player.tscn" id="3_kbfiv"]
+[ext_resource type="Texture2D" uid="uid://bos7rridjkps1" path="res://level/checkboard.png" id="1_cig4d"]
 
 [sub_resource type="Environment" id="Environment_pev5d"]
 background_mode = 1
@@ -81,6 +80,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 26)
 use_collision = true
 size = Vector3(9, 11, 9)
 material = SubResource("StandardMaterial3D_7l0sc")
-
-[node name="Player" parent="." instance=ExtResource("3_kbfiv")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)

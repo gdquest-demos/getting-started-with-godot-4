@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://pbmyh1qru7p"]
 
-[ext_resource type="Script" path="res://characters/happy_boo/happy_boo.gd" id="1_kg7lb"]
+[ext_resource type="Script" uid="uid://dwvngmjrqmcf7" path="res://characters/happy_boo/happy_boo.gd" id="1_kg7lb"]
 [ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://characters/ground_shadow.png" id="2_62bos"]
 [ext_resource type="Texture2D" uid="uid://ng8e5ot0dtpd" path="res://characters/happy_boo/square_foot.png" id="3_186qq"]
 [ext_resource type="Texture2D" uid="uid://dhapxq8y8ow57" path="res://characters/happy_boo/square_lower_leg.png" id="4_plnsd"]
@@ -575,9 +575,9 @@ tracks/13/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wrcpu"]
 _data = {
-"RESET": SubResource("Animation_hed62"),
-"idle": SubResource("Animation_sablf"),
-"walk": SubResource("Animation_74kqe")
+&"RESET": SubResource("Animation_hed62"),
+&"idle": SubResource("Animation_sablf"),
+&"walk": SubResource("Animation_74kqe")
 }
 
 [node name="HappyBoo" type="Node2D"]
