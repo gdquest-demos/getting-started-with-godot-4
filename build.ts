@@ -36,7 +36,7 @@ const zipDirectory = async (dir: string, outDir: string, skip?: RegExp) => {
     return tmpFileName;
 }
 
-const zip2D = await zipDirectory(dirs.project2d, dirs.temp2D, /\.(import)/);
+const zip2D = await zipDirectory(dirs.project2d, dirs.temp2D);
 await Deno.copyFile(zip2D, join(dirs.out, "2d-project.zip"));
-const zip3D = await zipDirectory(dirs.project3d, dirs.temp3D);
+const zip3D = await zipDirectory(dirs.project3d, dirs.temp3D, /(\.import)|project\.godot/);
 await Deno.copyFile(zip3D, join(dirs.out, "3d-project.zip"));
