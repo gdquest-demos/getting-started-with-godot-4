@@ -21,11 +21,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="gun_model" parent="Camera3D" instance=ExtResource("2_2red5")]
 unique_name_in_owner = true
-transform = Transform3D(-0.300089, -0.0103925, 0.0153999, -0.0081543, 0.297613, 0.0419422, -0.0166934, 0.0414445, -0.297326, 0.362667, -0.130673, -0.446608)
+transform = Transform3D(-0.300089, -0.0103925, 0.0154, -0.0081543, 0.297613, 0.0419423, -0.0166934, 0.0414445, -0.297326, 0.362667, -0.130673, -0.446608)
 
 [node name="Marker3D" type="Marker3D" parent="Camera3D"]
 unique_name_in_owner = true
-transform = Transform3D(-0.428699, -0.0148464, 0.0219999, -0.011649, 0.425161, 0.0599174, -0.0238477, 0.0592063, -0.424751, 0.364214, -0.0933893, -0.624222)
+transform = Transform3D(0.42952, 0, 0, 0, 0.42952, 0, 0, 0, 0.42952, 0.364214, -0.0933893, -0.624222)
 gizmo_extents = 0.37
 
 [node name="Timer" type="Timer" parent="."]

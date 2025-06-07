@@ -43,6 +43,6 @@ func shoot_bullet():
 	var new_bullet = BULLET_3D.instantiate()
 	%Marker3D.add_child(new_bullet)
 
-	new_bullet.transform = %Marker3D.global_transform
+	new_bullet.global_transform = %Marker3D.global_transform
 
 	%Timer.start()
