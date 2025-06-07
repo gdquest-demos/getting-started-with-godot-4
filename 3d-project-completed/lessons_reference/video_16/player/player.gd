@@ -3,7 +3,6 @@ extends CharacterBody3D
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	%Marker3D.look_at(%Camera3D.global_position + %Camera3D.global_transform.basis.z * 1000)
 	%Marker3D.rotation_degrees.y += 2.0
 
 
