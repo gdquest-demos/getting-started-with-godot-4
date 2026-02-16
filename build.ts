@@ -80,7 +80,7 @@ const output3DPath = join(dirs.out, "3d-project-assets.zip");
 await createProjectZip(
   dirs.project2dStart,
   output2DPath,
-  [/\.(import)/, /project\.godot/],
+  [/\.(import)/],
 );
 console.log(`2D project zip created at: ${output2DPath}`);
 await createProjectZip(
