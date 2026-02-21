@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dhmhmrth6rdce"]
+[gd_scene format=3 uid="uid://dhmhmrth6rdce"]
 
 [ext_resource type="Shader" uid="uid://cjjy1aucj6gji" path="res://smoke_explosion/smoke_explosion.gdshader" id="1_bmef6"]
 [ext_resource type="Script" uid="uid://bmcptrd1f7ok" path="res://smoke_explosion/smoke_explosion.gd" id="1_kb8ql"]
@@ -24,8 +24,8 @@ noise_type = 2
 fractal_octaves = 1
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_uji5e"]
-seamless = true
 noise = SubResource("FastNoiseLite_ti4n0")
+seamless = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dssfe"]
 resource_local_to_scene = true
@@ -120,11 +120,11 @@ _data = {
 &"explosion": SubResource("Animation_viyco")
 }
 
-[node name="SmokeExplosion" type="Node2D"]
+[node name="SmokeExplosion" type="Node2D" unique_id=675191270]
 z_index = 10
 script = ExtResource("1_kb8ql")
 
-[node name="Smoke" type="ColorRect" parent="."]
+[node name="Smoke" type="ColorRect" parent="." unique_id=1026069877]
 unique_name_in_owner = true
 modulate = Color(0.396078, 0.396078, 0.396078, 1)
 material = SubResource("ShaderMaterial_dssfe")
@@ -142,9 +142,7 @@ grow_vertical = 2
 pivot_offset = Vector2(64, 64)
 color = Color(0.568627, 0.568627, 0.568627, 1)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1180165920]
 unique_name_in_owner = true
-autoplay = "RESET"
-libraries = {
-"": SubResource("AnimationLibrary_8msef")
-}
+libraries/ = SubResource("AnimationLibrary_8msef")
+autoplay = &"RESET"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbih1sfmquu3m"]
+[gd_scene format=3 uid="uid://cbih1sfmquu3m"]
 
 [ext_resource type="Texture2D" uid="uid://ismvrp3hwx22" path="res://level/checkboard.png" id="1_p2q5e"]
 [ext_resource type="PackedScene" uid="uid://d35f4kvrfqy0c" path="res://lessons_reference/video_7/player/player.tscn" id="3_ansrf"]
@@ -42,45 +42,45 @@ albedo_texture = ExtResource("1_p2q5e")
 uv1_triplanar = true
 uv1_triplanar_sharpness = 4.0
 
-[node name="TemporaryLevel" type="Node3D"]
+[node name="TemporaryLevel" type="Node3D" unique_id=1651017168]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1614669017]
 environment = SubResource("Environment_pev5d")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1702390162]
 transform = Transform3D(0.707107, -0.612373, 0.353553, 0, 0.5, 0.866026, -0.707107, -0.612373, 0.353553, 0, 10, 0)
 shadow_enabled = true
 directional_shadow_max_distance = 40.0
 
-[node name="Bridge2" type="CSGBox3D" parent="."]
+[node name="Bridge2" type="CSGBox3D" parent="." unique_id=1270643234]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.5)
 use_collision = true
 size = Vector3(4, 1, 3)
 material = SubResource("StandardMaterial3D_ooyhk")
 
-[node name="Bridge5" type="CSGBox3D" parent="."]
+[node name="Bridge5" type="CSGBox3D" parent="." unique_id=39205575]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14.5)
 use_collision = true
 size = Vector3(4, 1, 3)
 material = SubResource("StandardMaterial3D_ooyhk")
 
-[node name="Bridge6" type="CSGBox3D" parent="."]
+[node name="Bridge6" type="CSGBox3D" parent="." unique_id=1305900582]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.5)
 use_collision = true
 size = Vector3(4, 1, 3)
 material = SubResource("StandardMaterial3D_ooyhk")
 
-[node name="Platform6" type="CSGBox3D" parent="."]
+[node name="Platform6" type="CSGBox3D" parent="." unique_id=1778384632]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 use_collision = true
 size = Vector3(17, 11, 15)
 material = SubResource("StandardMaterial3D_pmwtt")
 
-[node name="Platform7" type="CSGBox3D" parent="."]
+[node name="Platform7" type="CSGBox3D" parent="." unique_id=794304581]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 26)
 use_collision = true
 size = Vector3(9, 11, 9)
 material = SubResource("StandardMaterial3D_4dm87")
 
-[node name="Player" parent="." instance=ExtResource("3_ansrf")]
+[node name="Player" parent="." unique_id=1400230547 instance=ExtResource("3_ansrf")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.507239, 0)

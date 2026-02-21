@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfwbq2vombjvr"]
+[gd_scene format=3 uid="uid://dfwbq2vombjvr"]
 
 [ext_resource type="Script" uid="uid://bv3jltj3o05ny" path="res://lessons_reference/video_16/mob/mob.gd" id="1_ebh3x"]
 [ext_resource type="PackedScene" uid="uid://12e7gwo50sef" path="res://lessons_reference/video_16/mob/bat/bat_model.tscn" id="2_5vr7j"]
@@ -7,28 +7,28 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_gkbwe"]
 
-[node name="Mob" type="RigidBody3D"]
+[node name="Mob" type="RigidBody3D" unique_id=1434403069]
 top_level = true
 gravity_scale = 0.0
 script = ExtResource("1_ebh3x")
 
-[node name="bat_model" parent="." instance=ExtResource("2_5vr7j")]
+[node name="bat_model" parent="." unique_id=923039711 instance=ExtResource("2_5vr7j")]
 unique_name_in_owner = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1824436900]
 shape = SubResource("SphereShape3D_gkbwe")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1829245766]
 unique_name_in_owner = true
 one_shot = true
 
-[node name="HurtSound" type="AudioStreamPlayer3D" parent="."]
+[node name="HurtSound" type="AudioStreamPlayer3D" parent="." unique_id=1908651615]
 unique_name_in_owner = true
 stream = ExtResource("3_sikhy")
 max_db = -10.0
 max_polyphony = 4
 
-[node name="KOSound" type="AudioStreamPlayer3D" parent="."]
+[node name="KOSound" type="AudioStreamPlayer3D" parent="." unique_id=2044959007]
 unique_name_in_owner = true
 stream = ExtResource("4_qnk8k")
 max_db = -10.0

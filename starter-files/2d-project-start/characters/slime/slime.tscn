@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ogik4s70pgwl"]
+[gd_scene format=3 uid="uid://ogik4s70pgwl"]
 
 [ext_resource type="Texture2D" uid="uid://dvgfmy6vtvjji" path="res://characters/slime/slime_body.png" id="1_3j35h"]
 [ext_resource type="Script" uid="uid://dnbjp2524b1py" path="res://characters/slime/slime.gd" id="1_87y5x"]
@@ -211,35 +211,33 @@ _data = {
 &"walk": SubResource("Animation_l6fy2")
 }
 
-[node name="Slime" type="Node2D"]
+[node name="Slime" type="Node2D" unique_id=2008890567]
 script = ExtResource("1_87y5x")
 
-[node name="GroundShadow" type="Sprite2D" parent="."]
+[node name="GroundShadow" type="Sprite2D" parent="." unique_id=2019923751]
 modulate = Color(0.898039, 0.878431, 0.831373, 1)
 z_index = -1
 z_as_relative = false
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_cq7ej")
 
-[node name="Anchor" type="Marker2D" parent="."]
+[node name="Anchor" type="Marker2D" parent="." unique_id=794902193]
 
-[node name="SlimeBody" type="Sprite2D" parent="Anchor"]
+[node name="SlimeBody" type="Sprite2D" parent="Anchor" unique_id=1727508908]
 texture = ExtResource("1_3j35h")
 offset = Vector2(0, -36)
 
-[node name="SlimeBodyHurt" type="Sprite2D" parent="Anchor/SlimeBody"]
+[node name="SlimeBodyHurt" type="Sprite2D" parent="Anchor/SlimeBody" unique_id=2002072866]
 modulate = Color(1, 1, 1, 0)
 texture = ExtResource("4_0qu0c")
 offset = Vector2(0, -36)
 
-[node name="Face" type="Marker2D" parent="Anchor"]
+[node name="Face" type="Marker2D" parent="Anchor" unique_id=1541035147]
 position = Vector2(0, -25)
 
-[node name="SlimeFace" type="Sprite2D" parent="Anchor/Face"]
+[node name="SlimeFace" type="Sprite2D" parent="Anchor/Face" unique_id=403368551]
 texture = ExtResource("2_ygydt")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2007851046]
 unique_name_in_owner = true
-libraries = {
-"": SubResource("AnimationLibrary_j6cum")
-}
+libraries/ = SubResource("AnimationLibrary_j6cum")

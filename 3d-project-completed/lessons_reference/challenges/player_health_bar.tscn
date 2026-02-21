@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dls18eeij47k4"]
+[gd_scene format=3 uid="uid://dls18eeij47k4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cc56i"]
 bg_color = Color(0.152941, 0.168627, 0.188235, 1)
@@ -26,7 +26,7 @@ corner_radius_bottom_left = 20
 [sub_resource type="LabelSettings" id="LabelSettings_dsttn"]
 font_size = 68
 
-[node name="HealthBar" type="ProgressBar"]
+[node name="HealthBar" type="ProgressBar" unique_id=833361077]
 z_index = 100
 offset_left = 141.0
 offset_top = 39.0
@@ -37,7 +37,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_dhpp2")
 value = 100.0
 show_percentage = false
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1620910305]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5

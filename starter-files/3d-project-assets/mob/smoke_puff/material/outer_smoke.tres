@@ -1,6 +1,6 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ctnipgxo3l72h"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://ctnipgxo3l72h"]
 
-[ext_resource type="Shader" path="res://mob/smoke_puff/material/outer_smoke.gdshader" id="1_0emiy"]
+[ext_resource type="Shader" uid="uid://spi71y1qu06o" path="res://mob/smoke_puff/material/outer_smoke.gdshader" id="1_0emiy"]
 
 [resource]
 resource_local_to_scene = true

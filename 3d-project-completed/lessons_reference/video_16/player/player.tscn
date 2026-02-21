@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3kp34dihjeyd"]
+[gd_scene format=3 uid="uid://d3kp34dihjeyd"]
 
 [ext_resource type="Script" uid="uid://8vhepp8ap6hu" path="res://lessons_reference/video_16/player/player.gd" id="1_g3eiy"]
 [ext_resource type="PackedScene" uid="uid://b6nrg32r2wq86" path="res://lessons_reference/video_16/player/simple_gun/blue_gun.tscn" id="3_43sda"]
@@ -9,36 +9,36 @@
 radius = 0.338193
 height = 1.5
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" unique_id=1480405679]
 collision_layer = 2
 script = ExtResource("1_g3eiy")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=385716473]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.742761, 0)
 shape = SubResource("CapsuleShape3D_ctapl")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=311821961]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="gun_model" parent="Camera3D" instance=ExtResource("3_43sda")]
+[node name="gun_model" parent="Camera3D" unique_id=1404521477 instance=ExtResource("3_43sda")]
 unique_name_in_owner = true
 transform = Transform3D(-0.300089, -0.0103925, 0.0153999, -0.0081543, 0.297613, 0.0419422, -0.0166934, 0.0414445, -0.297326, 0.362667, -0.130673, -0.446608)
 
-[node name="Marker3D" type="Marker3D" parent="Camera3D"]
+[node name="Marker3D" type="Marker3D" parent="Camera3D" unique_id=123656935]
 unique_name_in_owner = true
 transform = Transform3D(0.42952, 0, 0, 0, 0.42952, 0, 0, 0, 0.42952, 0.364214, -0.0933893, -0.624222)
 gizmo_extents = 0.37
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=147374953]
 unique_name_in_owner = true
 process_callback = 0
 wait_time = 0.1
 one_shot = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=22888132]
 
-[node name="Reticle" type="TextureRect" parent="."]
+[node name="Reticle" type="TextureRect" parent="." unique_id=1177377576]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -53,7 +53,7 @@ grow_vertical = 2
 texture = ExtResource("3_r7as2")
 expand_mode = 1
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=981369725]
 unique_name_in_owner = true
 stream = ExtResource("4_0d82q")
 max_polyphony = 4

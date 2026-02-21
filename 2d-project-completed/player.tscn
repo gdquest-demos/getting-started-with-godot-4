@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsw8raqgacxsc"]
+[gd_scene format=3 uid="uid://dsw8raqgacxsc"]
 
 [ext_resource type="Script" uid="uid://bjpua3hfywlnl" path="res://player.gd" id="1_73bic"]
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="2_bl5ih"]
@@ -13,31 +13,31 @@ size = Vector2(84, 54)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5sny"]
 bg_color = Color(0.623529, 0.866667, 0.317647, 1)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=1546396198]
 motion_mode = 1
 script = ExtResource("1_73bic")
 
-[node name="HappyBoo" parent="." instance=ExtResource("2_bl5ih")]
+[node name="HappyBoo" parent="." unique_id=984748070 instance=ExtResource("2_bl5ih")]
 unique_name_in_owner = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2129353866]
 shape = SubResource("RectangleShape2D_csncd")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=473099899]
 
-[node name="Gun" parent="." instance=ExtResource("3_bt0kc")]
+[node name="Gun" parent="." unique_id=1561364329 instance=ExtResource("3_bt0kc")]
 position = Vector2(0, -40)
 
-[node name="HurtBox" type="Area2D" parent="."]
+[node name="HurtBox" type="Area2D" parent="." unique_id=698633368]
 unique_name_in_owner = true
 collision_layer = 0
 collision_mask = 2
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=440365805]
 shape = SubResource("RectangleShape2D_kfffa")
 
-[node name="HealthBar" type="ProgressBar" parent="."]
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=384523252]
 unique_name_in_owner = true
 z_index = 100
 offset_left = -83.0

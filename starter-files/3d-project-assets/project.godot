@@ -10,4 +10,4 @@ config_version=5
 
 [application]
 
-config/features=PackedStringArray("4.5")
+config/features=PackedStringArray("4.6")

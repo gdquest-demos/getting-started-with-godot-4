@@ -1,4 +1,4 @@
-[gd_resource type="SkeletonModificationStack2D" load_steps=3 format=3 uid="uid://dtf0pmja4mcaa"]
+[gd_resource type="SkeletonModificationStack2D" format=3 uid="uid://dtf0pmja4mcaa"]
 
 [sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_7lb5u"]
 target_nodepath = NodePath("FootLIK")

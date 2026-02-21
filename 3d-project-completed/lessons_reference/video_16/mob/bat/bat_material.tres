@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c28yvvp6nnmq4"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c28yvvp6nnmq4"]
 
 [ext_resource type="Texture2D" uid="uid://7dgg0k4xt4kf" path="res://mob/bat/bat_model_bat_palette.png" id="1_qtnm6"]
 

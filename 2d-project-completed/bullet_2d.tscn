@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://br65mgv2n0bbd"]
+[gd_scene format=3 uid="uid://br65mgv2n0bbd"]
 
 [ext_resource type="Script" uid="uid://coarsyh1eafkp" path="res://bullet_2d.gd" id="1_lg2ne"]
 [ext_resource type="Texture2D" uid="uid://dftkbqwsfd68r" path="res://pistol/projectile.png" id="2_q0pid"]
@@ -6,18 +6,18 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_naqkr"]
 radius = 15.0333
 
-[node name="Bullet2D" type="Area2D"]
+[node name="Bullet2D" type="Area2D" unique_id=336674534]
 top_level = true
 collision_layer = 0
 collision_mask = 3
 monitorable = false
 script = ExtResource("1_lg2ne")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=781331271]
 position = Vector2(-11, -1)
 texture = ExtResource("2_q0pid")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1998346021]
 shape = SubResource("CircleShape2D_naqkr")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

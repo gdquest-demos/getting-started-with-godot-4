@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://d35f4kvrfqy0c"]
+[gd_scene format=3 uid="uid://d35f4kvrfqy0c"]
 
 [ext_resource type="Script" uid="uid://dlbukkhb0r7gs" path="res://lessons_reference/video_7/player/player.gd" id="1_27n23"]
 [ext_resource type="PackedScene" uid="uid://b6nrg32r2wq86" path="res://lessons_reference/video_16/player/simple_gun/blue_gun.tscn" id="2_2red5"]
@@ -7,28 +7,28 @@
 radius = 0.338193
 height = 1.5
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" unique_id=207608955]
 collision_layer = 2
 script = ExtResource("1_27n23")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=462310069]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.742761, 0)
 shape = SubResource("CapsuleShape3D_ctapl")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1591191732]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="gun_model" parent="Camera3D" instance=ExtResource("2_2red5")]
+[node name="gun_model" parent="Camera3D" unique_id=1966486007 instance=ExtResource("2_2red5")]
 unique_name_in_owner = true
 transform = Transform3D(-0.300089, -0.0103925, 0.0154, -0.0081543, 0.297613, 0.0419423, -0.0166934, 0.0414445, -0.297326, 0.362667, -0.130673, -0.446608)
 
-[node name="Marker3D" type="Marker3D" parent="Camera3D"]
+[node name="Marker3D" type="Marker3D" parent="Camera3D" unique_id=1036461757]
 unique_name_in_owner = true
 transform = Transform3D(0.42952, 0, 0, 0, 0.42952, 0, 0, 0, 0.42952, 0.364214, -0.0933893, -0.624222)
 gizmo_extents = 0.37
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=683309181]
 unique_name_in_owner = true
 process_callback = 0
 wait_time = 0.1

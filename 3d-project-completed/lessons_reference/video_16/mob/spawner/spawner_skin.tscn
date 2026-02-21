@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c2oal6rrmeo67"]
+[gd_scene format=3 uid="uid://c2oal6rrmeo67"]
 
 [ext_resource type="PackedScene" uid="uid://cbhp570drcrsj" path="res://mob/spawner/spawner_model.glb" id="1_ius6p"]
 [ext_resource type="Shader" uid="uid://cm274ruttg57j" path="res://mob/spawner/spawner_halo.gdshader" id="2_4qrtt"]
@@ -77,27 +77,24 @@ _data = {
 &"RESET": SubResource("Animation_3s57u")
 }
 
-[node name="Spawner" type="Node3D"]
+[node name="Spawner" type="Node3D" unique_id=1170900114]
 
-[node name="Anchor" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.178748, 0)
+[node name="Anchor" type="Node3D" parent="." unique_id=1669517208]
 
-[node name="spawner" parent="Anchor" instance=ExtResource("1_ius6p")]
+[node name="spawner" parent="Anchor" unique_id=1719326947 instance=ExtResource("1_ius6p")]
 
-[node name="halo" parent="Anchor/spawner" index="0"]
+[node name="halo" parent="Anchor/spawner" index="0" unique_id=2147072352]
 material_override = SubResource("ShaderMaterial_7ugqq")
 
-[node name="Body" parent="Anchor/spawner" index="1"]
+[node name="Body" parent="Anchor/spawner" index="1" unique_id=1888642440]
 surface_material_override/0 = SubResource("StandardMaterial3D_r3187")
 surface_material_override/1 = ExtResource("3_7ans1")
 
-[node name="Top" parent="Anchor/spawner" index="2"]
+[node name="Top" parent="Anchor/spawner" index="2" unique_id=755360610]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.783957, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_avbtx")
-}
-autoplay = "Idle"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2110456771]
+libraries/ = SubResource("AnimationLibrary_avbtx")
+autoplay = &"Idle"
 
 [editable path="Anchor/spawner"]

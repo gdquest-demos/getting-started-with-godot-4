@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://pbmyh1qru7p"]
+[gd_scene format=3 uid="uid://pbmyh1qru7p"]
 
 [ext_resource type="Script" uid="uid://dwvngmjrqmcf7" path="res://characters/happy_boo/happy_boo.gd" id="1_kg7lb"]
 [ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://characters/ground_shadow.png" id="2_62bos"]
@@ -580,17 +580,15 @@ _data = {
 &"walk": SubResource("Animation_74kqe")
 }
 
-[node name="HappyBoo" type="Node2D"]
+[node name="HappyBoo" type="Node2D" unique_id=1320819343]
 script = ExtResource("1_kg7lb")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1745829420]
 unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_wrcpu")
 playback_default_blend_time = 0.2
-libraries = {
-"": SubResource("AnimationLibrary_wrcpu")
-}
 
-[node name="GroundShadow" type="Sprite2D" parent="."]
+[node name="GroundShadow" type="Sprite2D" parent="." unique_id=1447116262]
 modulate = Color(0.898039, 0.878431, 0.831373, 1)
 z_index = -1
 z_as_relative = false
@@ -598,54 +596,54 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_62bos")
 metadata/_edit_lock_ = true
 
-[node name="Colorizer" type="Node2D" parent="."]
+[node name="Colorizer" type="Node2D" parent="." unique_id=1479723964]
 modulate = Color(1, 0.572549, 0.176471, 1)
 
-[node name="SquareUpperLegL" type="Sprite2D" parent="Colorizer"]
+[node name="SquareUpperLegL" type="Sprite2D" parent="Colorizer" unique_id=1219398896]
 position = Vector2(-10.6303, -27.3998)
 rotation = 0.4009
 scale = Vector2(0.997829, 0.999794)
 texture = ExtResource("5_q2t1e")
 offset = Vector2(0, 6)
 
-[node name="SquareLowerLegL" type="Sprite2D" parent="Colorizer/SquareUpperLegL"]
-position = Vector2(0, 14)
+[node name="SquareLowerLegL" type="Sprite2D" parent="Colorizer/SquareUpperLegL" unique_id=491687320]
+position = Vector2(-4.76837e-07, 14)
 texture = ExtResource("4_plnsd")
 offset = Vector2(0, 6)
 
-[node name="SquareFootL" type="Sprite2D" parent="Colorizer/SquareUpperLegL/SquareLowerLegL"]
+[node name="SquareFootL" type="Sprite2D" parent="Colorizer/SquareUpperLegL/SquareLowerLegL" unique_id=351024173]
 position = Vector2(0, 12)
 rotation = -3.40666
 scale = Vector2(1.01116, 1)
 texture = ExtResource("3_186qq")
 offset = Vector2(-4, 0)
 
-[node name="SquareUpperLegR" type="Sprite2D" parent="Colorizer"]
+[node name="SquareUpperLegR" type="Sprite2D" parent="Colorizer" unique_id=550710884]
 position = Vector2(9.20459, -29.9444)
 rotation = -0.213676
 scale = Vector2(0.999794, 0.999794)
 texture = ExtResource("5_q2t1e")
 offset = Vector2(0, 6)
 
-[node name="SquareLowerLegR" type="Sprite2D" parent="Colorizer/SquareUpperLegR"]
+[node name="SquareLowerLegR" type="Sprite2D" parent="Colorizer/SquareUpperLegR" unique_id=1081702634]
 position = Vector2(-4.76837e-07, 14)
 texture = ExtResource("4_plnsd")
 offset = Vector2(0, 6)
 
-[node name="SquareFootR" type="Sprite2D" parent="Colorizer/SquareUpperLegR/SquareLowerLegR"]
+[node name="SquareFootR" type="Sprite2D" parent="Colorizer/SquareUpperLegR/SquareLowerLegR" unique_id=1872498452]
 position = Vector2(0, 12)
 rotation = -2.92296
 texture = ExtResource("3_186qq")
 offset = Vector2(-4, 0)
 
-[node name="SquareBody" type="Sprite2D" parent="Colorizer"]
+[node name="SquareBody" type="Sprite2D" parent="Colorizer" unique_id=1250003207]
 position = Vector2(-1.73067, -36.6061)
 rotation = -0.0250386
 scale = Vector2(0.9842, 0.990263)
 texture = ExtResource("6_w3ck4")
 offset = Vector2(0, -23)
 
-[node name="SquareFace" type="Sprite2D" parent="Colorizer/SquareBody"]
+[node name="SquareFace" type="Sprite2D" parent="Colorizer/SquareBody" unique_id=807754123]
 position = Vector2(0, -17)
 texture = ExtResource("7_h5h8s")
 metadata/_edit_lock_ = true

@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bh1ego7bi1olb"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bh1ego7bi1olb"]
 
 [ext_resource type="Shader" uid="uid://dhuj314m3wv1c" path="res://mob/spawner/spawner_screen.gdshader" id="1_3sboa"]
 [ext_resource type="Texture2D" uid="uid://xc2oy7gqkch5" path="res://mob/spawner/spawner_text.png" id="2_871b8"]

@@ -76,7 +76,7 @@ Settings/Show_Tooltips=true
 
 config/name="Your First 2D Game With Godot 4 (GDQuest)"
 run/main_scene="res://survivors_game.tscn"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.png"
 
 [display]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://drm47cnbptmx6"]
+[gd_scene format=3 uid="uid://drm47cnbptmx6"]
 
 [ext_resource type="Script" uid="uid://dvxh42a841ks3" path="res://lessons_reference/video_7/player/bullet_3d.gd" id="1_bdrs4"]
 [ext_resource type="PackedScene" uid="uid://6ufbc40i0ikp" path="res://lessons_reference/video_7/player/projectile/projectile.tscn" id="2_grlnh"]
@@ -6,15 +6,15 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_4mnn0"]
 radius = 0.1
 
-[node name="Bullet3D" type="Area3D"]
+[node name="Bullet3D" type="Area3D" unique_id=1170718578]
 top_level = true
 collision_layer = 2
 script = ExtResource("1_bdrs4")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=30525362]
 shape = SubResource("SphereShape3D_4mnn0")
 
-[node name="Projectile" parent="." instance=ExtResource("2_grlnh")]
+[node name="Projectile" parent="." unique_id=1908961528 instance=ExtResource("2_grlnh")]
 transform = Transform3D(-2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 0, 0, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

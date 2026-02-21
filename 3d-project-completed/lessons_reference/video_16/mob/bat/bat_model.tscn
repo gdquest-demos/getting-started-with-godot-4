@@ -1,8 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://12e7gwo50sef"]
+[gd_scene format=3 uid="uid://12e7gwo50sef"]
 
 [ext_resource type="Script" uid="uid://exask00kymck" path="res://lessons_reference/video_16/mob/bat/bat_model.gd" id="1_ppjak"]
 [ext_resource type="PackedScene" uid="uid://cb4uxoephhm18" path="res://mob/bat/bat_model.glb" id="1_tpnu0"]
-[ext_resource type="Material" uid="uid://c28yvvp6nnmq4" path="res://lessons_reference/video_16/mob/bat/bat_material.tres" id="3_uqgpt"]
+[ext_resource type="Texture2D" uid="uid://7dgg0k4xt4kf" path="res://mob/bat/bat_model_bat_palette.png" id="3_ynvxi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ynvxi"]
+resource_local_to_scene = true
+resource_name = "bat_mat"
+cull_mode = 2
+albedo_texture = ExtResource("3_ynvxi")
+roughness = 0.427273
 
 [sub_resource type="Animation" id="Animation_vf8tt"]
 resource_name = "Idle"
@@ -184,43 +191,40 @@ animation = &"Idle"
 mix_mode = 1
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_bslxy"]
-graph_offset = Vector2(-317.893, 39.6625)
+graph_offset = Vector2(-526.8755, -12.839209)
 nodes/Hurt/node = SubResource("AnimationNodeAnimation_a0k2n")
 nodes/Hurt/position = Vector2(-40, 208)
 nodes/Idle/node = SubResource("AnimationNodeAnimation_ri8va")
 nodes/Idle/position = Vector2(-40, 56)
 nodes/OneShot/node = SubResource("AnimationNodeOneShot_18omk")
 nodes/OneShot/position = Vector2(144, 72)
-node_connections = [&"OneShot", 0, &"Idle", &"OneShot", 1, &"Hurt", &"output", 0, &"OneShot"]
+node_connections = [&"output", 0, &"OneShot", &"OneShot", 0, &"Idle", &"OneShot", 1, &"Hurt"]
 
-[node name="bat_model" instance=ExtResource("1_tpnu0")]
+[node name="bat_model" unique_id=880120130 instance=ExtResource("1_tpnu0")]
 script = ExtResource("1_ppjak")
 
-[node name="Skeleton3D" parent="Armature" index="0"]
-bones/0/position = Vector3(0, -0.0223505, 0)
-bones/1/rotation = Quaternion(-0.0584059, 0.209811, -0.6589, 0.720013)
-bones/2/rotation = Quaternion(-0.169099, -0.0457482, 0.256938, 0.950419)
-bones/3/rotation = Quaternion(-0.108905, 0.0231328, 0.220387, 0.969038)
-bones/4/rotation = Quaternion(-0.0584059, -0.209811, 0.6589, 0.720013)
-bones/5/rotation = Quaternion(-0.169099, 0.0457482, -0.256938, 0.950419)
-bones/6/rotation = Quaternion(-0.108905, -0.0231328, -0.220387, 0.969038)
-bones/7/position = Vector3(0.130992, -0.227392, -0.0878515)
-bones/7/rotation = Quaternion(0.261968, 0.0834552, 0.265751, 0.924005)
-bones/8/rotation = Quaternion(3.83607e-08, 0.634168, 0.773195, 2.38925e-08)
-bones/10/position = Vector3(-0.130992, -0.227392, -0.0878515)
-bones/10/rotation = Quaternion(0.261968, -0.0834552, -0.265751, 0.924005)
-bones/11/rotation = Quaternion(2.89336e-08, 0.634168, 0.773195, 3.73251e-08)
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1719804195) index="0" unique_id=917950477]
+bones/0/position = Vector3(0, -0.018767357, 0)
+bones/1/rotation = Quaternion(-0.05915449, 0.21419965, -0.6683481, 0.70988035)
+bones/2/rotation = Quaternion(-0.1423129, -0.03807752, 0.2558638, 0.95542186)
+bones/3/rotation = Quaternion(-0.06286765, 0.033043668, 0.23123942, 0.97030103)
+bones/4/rotation = Quaternion(-0.05915449, -0.21419965, 0.6683481, 0.70988035)
+bones/5/rotation = Quaternion(-0.1423129, 0.03807752, -0.2558638, 0.95542186)
+bones/6/rotation = Quaternion(-0.06286765, -0.033043668, -0.23123942, 0.97030103)
+bones/7/position = Vector3(0.130992, -0.227392, -0.087851495)
+bones/7/rotation = Quaternion(0.26196814, 0.08345515, 0.26575115, 0.92400455)
+bones/8/rotation = Quaternion(3.931446e-08, 0.6549187, 0.7556994, 2.454446e-08)
+bones/10/position = Vector3(-0.130992, -0.227392, -0.087851495)
+bones/10/rotation = Quaternion(0.26196814, -0.08345515, -0.26575115, 0.92400455)
+bones/11/rotation = Quaternion(2.4279297e-08, 0.6549188, 0.75569934, 3.521661e-08)
 
-[node name="bat" parent="Armature/Skeleton3D" index="0"]
-surface_material_override/0 = ExtResource("3_uqgpt")
+[node name="bat" parent="Armature/Skeleton3D" index="0" unique_id=1705033732]
+surface_material_override/0 = SubResource("StandardMaterial3D_ynvxi")
 
-[node name="AnimationPlayer" parent="." index="1"]
-deterministic = true
-libraries = {
-"": SubResource("AnimationLibrary_guetf")
-}
+[node name="AnimationPlayer" parent="." index="1" unique_id=967827989]
+libraries/ = SubResource("AnimationLibrary_guetf")
 
-[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+[node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=1757533519]
 unique_name_in_owner = true
 root_node = NodePath("%AnimationTree/..")
 tree_root = SubResource("AnimationNodeBlendTree_bslxy")

@@ -1,12 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://fulwcb7msoxb"]
+[gd_scene format=3 uid="uid://fulwcb7msoxb"]
 
 [ext_resource type="Script" uid="uid://b428neo6pc13x" path="res://pistol/muzzle_flash/muzzle_flash.gd" id="1_qee16"]
 [ext_resource type="Texture2D" uid="uid://brgpjilf7s2ul" path="res://pistol/muzzle_flash/muzzle_flash.png" id="1_yxyu1"]
 
-[node name="MuzzleFlash" type="Node2D"]
+[node name="MuzzleFlash" type="Node2D" unique_id=1534631986]
 script = ExtResource("1_qee16")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1016103721]
 unique_name_in_owner = true
 texture = ExtResource("1_yxyu1")
 offset = Vector2(10, 0)
